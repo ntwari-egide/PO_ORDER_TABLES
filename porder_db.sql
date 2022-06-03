@@ -2659,18 +2659,18 @@ CREATE TABLE tb_AwXmlConfig
     id INT(4) AUTO_INCREMENT NOT NULL PRIMARY KEY,
     GuidKey NVARCHAR(100) NULL,
     BrandId NVARCHAR(100) NULL,
-    ExportMode NVARCHAR(2) NULL,
+    ExportMode NVARCHAR(100) NULL,
     KeyField NVARCHAR(100) NULL,
     TranslationLanguage NVARCHAR(100) NULL,
     CreateBy NVARCHAR(100) NULL,
     CreateDate DATETIME(6) NULL,
     LastBy NVARCHAR(100) NULL,
     LastDate TIMESTAMP(6) NULL,
-    FtpIp NVARCHAR(2) NULL,
+    FtpIp NVARCHAR(40) NULL,
     FtpLogin NVARCHAR(100) NULL,
     FtpPwd NVARCHAR(100) NULL,    
-    FtpModel CHAR(1) NULL,    
-    IsTwoXml NVARCHAR(1) NULL    
+    FtpModel CHAR(100) NULL,    
+    IsTwoXml NVARCHAR(10) NULL    
 );
 
 DESC tb_AwXmlConfig;
@@ -2694,18 +2694,18 @@ INSERT INTO tb_AwXmlConfig
 )
 VALUES
 (
-    GuidKey,
-    BrandId,
-    ExportMode,
-    KeyField,
-    TranslationLanguage,
-    CreateBy,
-    CreateDate,
-    LastBy,
-    LastDate,
-    FtpIp,
-    FtpLogin,
-    FtpPwd,    
-    FtpModel,    
-    IsTwoXml    
-)
+    "213413",
+    "234134",
+    "Y",
+    "KeyField",
+    "TranslationLanguage",
+    "12341",
+    "2022-05-08 09:14:07",
+    "1341234",
+    "2022-05-08 09:14:07",
+    "192.134.34.22",
+    "LoginId",
+    "pass@123",    
+    "FtpModel",    
+    "Y"    
+);
