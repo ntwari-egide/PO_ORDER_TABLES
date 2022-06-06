@@ -4597,3 +4597,143 @@ VALUES
     "simbol.jpg",
     "345345"
 );
+
+CREATE TABLE tb_care_icon_temp
+(
+    id INT(4) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    care_key NVARCHAR(100) NULL,
+    careicon_key NVARCHAR(100) NULL,
+    seqno INT(4) NULL,
+    sysicon NVARCHAR(1000) NULL,
+    sysicon_key  NVARCHAR(100) NULL,
+    type  NVARCHAR(100) NULL,
+    errormsg  NVARCHAR(100) NULL,
+    iconSymbol NVARCHAR(100) NULL,
+    IconTypeId  NVARCHAR(40) NULL
+);
+
+DESC tb_care_icon_temp;
+
+INSERT INTO tb_care_icon_temp
+(
+    care_key,
+    careicon_key,
+    seqno,
+    sysicon,
+    sysicon_key,
+    type,
+    errormsg,
+    iconSymbol,
+    IconTypeId
+)
+VALUES
+(
+    "2345235",
+    "43523544",
+    45,
+    "system icon",
+    "452543534",
+    "font awesome",
+    "Check the page description for more details...",
+    "bell",
+    "4353455"
+),
+(
+    "6343563",
+    "43523544",
+    23,
+    "system icon",
+    "452543534",
+    "font awesome",
+    "Check the page description for more details...",
+    "bell",
+    "4353455"
+),
+(
+    "735634",
+    "43523544",
+    34,
+    "system icon",
+    "452543534",
+    "font awesome",
+    "Check the page description for more details...",
+    "bell",
+    "4353455"
+),
+(
+    "634563465",
+    "363545655",
+    12,
+    "system icon",
+    "452543534",
+    "font awesome",
+    "Check the page description for more details...",
+    "bell",
+    "4353455"
+),
+(
+    "63245233",
+    "43523544",
+    74,
+    "system icon",
+    "452543534",
+    "font awesome",
+    "Check the page description for more details...",
+    "bell",
+    "4353455"
+),
+(
+    "56346556",
+    "43523544",
+    12,
+    "system icon",
+    "452543534",
+    "font awesome",
+    "Check the page description for more details...",
+    "bell",
+    "4353455"
+),
+(
+    "34534533",
+    "36345344",
+    734,
+    "system icon",
+    "452543534",
+    "font awesome",
+    "Check the page description for more details...",
+    "bell",
+    "4353455"
+),
+(
+    "56346556",
+    "43523544",
+    23,
+    "system icon",
+    "452543534",
+    "font awesome",
+    "Check the page description for more details...",
+    "bell",
+    "4353455"
+),
+(
+    "56346556",
+    "43523544",
+    23,
+    "system icon",
+    "452543534",
+    "font awesome",
+    "Check the page description for more details...",
+    "bell",
+    "4353455"
+),
+(
+    "56346556",
+    "43523544",
+    23,
+    "system icon",
+    "452543534",
+    "font awesome",
+    "Check the page description for more details...",
+    "bell",
+    "4353455"
+);
