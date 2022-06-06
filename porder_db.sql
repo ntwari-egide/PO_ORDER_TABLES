@@ -2709,3 +2709,1891 @@ VALUES
     "FtpModel",    
     "Y"    
 );
+
+CREATE TABLE tb_Brand_Artwork_Preview_Setting
+(
+    guid_key NVARCHAR(100) PRIMARY KEY NOT NULL,
+    brandid NVARCHAR(100) NOT NULL,
+    trans_type NVARCHAR(20) NULL,
+    country_code NVARCHAR(20) NULL,
+    percentage INT(4) NULL,
+    show_percentage CHAR(1) NULL,
+    part_group_seq INT(1) NULL,
+    part_group_show CHAR(1) NULL,
+    default_content NVARCHAR(8000) NULL,
+    created_date DATETIME(6) NULL,
+    created_by NVARCHAR(100) NULL,
+    modified_date DATETIME(6) NULL,
+    modified_by NVARCHAR(100) NULL
+);
+
+DESC tb_Brand_Artwork_Preview_Setting;
+
+INSERT INTO tb_Brand_Artwork_Preview_Setting
+VALUES
+(
+    "42353425435",
+    "3452353",
+    "PURCHARSE",
+    "RW3435453",
+    70,
+    'Y',
+    1,
+    'Y',
+    "Create a key phrase built around your core competency",
+    "2022-06-04 11:50:05",
+    "425454352453",
+    "2022-06-04 12:50:05",
+    "334523453544"
+),
+(
+    "3425325",
+    "3452353",
+    "PURCHARSE",
+    "RW3435453",
+    70,
+    'Y',
+    1,
+    'Y',
+    "Define your key core competency or best thing you offer. Take some time, sit down and really apply yourself to defining the single best thing that you do",
+    "2022-06-04 11:50:05",
+    "425454352453",
+    "2022-06-04 12:50:05",
+    "334523453544"
+),
+(
+    "43253253",
+    "3452353",
+    "PURCHARSE",
+    "RW3435453",
+    70,
+    'Y',
+    1,
+    'Y',
+    "Create a key phrase built around your core competency",
+    "2022-06-04 11:50:05",
+    "425454352453",
+    "2022-06-04 12:50:05",
+    "334523453544"
+),
+(
+    "63563546",
+    "3452353",
+    "PURCHARSE",
+    "RW3435453",
+    70,
+    'Y',
+    1,
+    'Y',
+    "Define your key core competency or best thing you offer. Take some time, sit down and really apply yourself to defining the single best thing that you do",
+    "2022-06-04 11:50:05",
+    "425454352453",
+    "2022-06-04 12:50:05",
+    "334523453544"
+),
+(
+    "254325345",
+    "3452353",
+    "PURCHARSE",
+    "RW3435453",
+    70,
+    'Y',
+    1,
+    'Y',
+    "Create a key phrase built around your core competency",
+    "2022-06-04 11:50:05",
+    "425454352453",
+    "2022-06-04 12:50:05",
+    "334523453544"
+);
+
+CREATE TABLE tb_Brand_Artwork_Preview_Setting_Detail
+(
+    guid_key NVARCHAR(100) PRIMARY KEY NOT NULL,
+    preview_key NVARCHAR(100) NOT NULL,
+    cont_key NVARCHAR(100) NULL,
+    gb_translation NVARCHAR(800) NULL
+);
+
+DESC tb_Brand_Artwork_Preview_Setting_Detail;
+
+INSERT INTO tb_Brand_Artwork_Preview_Setting_Detail
+VALUES
+(
+    "56354656",
+    "privew_key_34342",
+    "cont_key_2432423",
+    "translations goes here"
+),
+(
+    "3453534",
+    "privew_key_34342",
+    "cont_key_2432423",
+    "translations goes here"
+),
+(
+    "3453455",
+    "privew_key_34342",
+    "cont_key_2432423",
+    "translations goes here"
+),
+(
+    "34535345",
+    "privew_key_34342",
+    "cont_key_2432423",
+    "translations goes here"
+);
+
+CREATE TABLE tb_Brand_Category
+(
+    ID INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    guid_key NVARCHAR(100) NULL,
+    Category_Name  NVARCHAR(600) NULL,
+    Display  CHAR(1) NULL,
+    file_path  NVARCHAR(100) NULL,
+    CategoryDisplayRows  INT(4) NULL,
+    createBy  NVARCHAR(100) NULL,
+    createDate DATETIME(6) NULL,
+    UpdateBy  NVARCHAR(100) NULL,
+    UpdateDate DATETIME(6) NULL,
+    company_guid_key  NVARCHAR(100) NULL
+);
+
+DESC tb_Brand_Category;
+
+INSERT INTO tb_Brand_Category
+(
+    guid_key,
+    Category_Name,
+    Display,
+    file_path,
+    CategoryDisplayRows,
+    createBy,
+    createDate,
+    UpdateBy,
+    UpdateDate,
+    company_guid_key
+)
+VALUES
+(
+    "2342423",
+    "fashion",
+    'Y',
+    "/photos/brand.jpg",
+    34,
+    "3453454",
+    "2022-03-03 12:06:23",
+    "3453543",
+    "2022-09-03 12:06:23",
+    "company_34534"
+),
+(
+    "2342423",
+    "Personal brand",
+    'Y',
+    "/photos/brand.jpg",
+    12,
+    "3453454",
+    "2022-03-03 12:06:23",
+    "3453543",
+    "2022-09-03 12:06:23",
+    "company_34534"
+),
+(
+    "2342423",
+    "Product brand",
+    'Y',
+    "/photos/brand.jpg",
+    32,
+    "3453454",
+    "2022-03-03 12:06:23",
+    "3453543",
+    "2022-09-03 12:06:23",
+    "company_34534"
+),
+(
+    "2342423",
+    "Activist brand",
+    'Y',
+    "/photos/brand.jpg",
+    73,
+    "3453454",
+    "2022-03-03 12:06:23",
+    "3453543",
+    "2022-09-03 12:06:23",
+    "company_34534"
+);
+
+
+CREATE TABLE tb_Brand_Country_Code
+(
+    id INT(4) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    brandid NVARCHAR(100) NULL,
+    country_code_key NVARCHAR(100) NULL,
+    show_status NCHAR(20) NULL,
+    seqno INT(4) NULL,
+    alias NVARCHAR(100) NULL,
+    inkscape_sep NVARCHAR(100) NULL,
+    IsSeparateLang CHAR(1)
+);
+
+DESC tb_Brand_Country_Code;
+
+INSERT INTO tb_Brand_Country_Code
+(
+    brandid,
+    country_code_key,
+    show_status,
+    seqno,
+    alias,
+    inkscape_sep,
+    IsSeparateLang
+)
+VALUES
+(
+    "245245",
+    "tesla_india_3453",
+    "SHIPPED",
+    453,
+    "Gucci india",
+    "Ink scape 1",
+    'Y'
+),
+(
+    "245245",
+    "tesla_india_3453",
+    "SHIPPED",
+    453,
+    "Bmw india",
+    "Ink scape 1",
+    'Y'
+),
+(
+    "245245",
+    "teslati_india_3453",
+    "SHIPPED",
+    453,
+    "Telsati india",
+    "Ink scape 1",
+    'Y'
+),
+(
+    "245245",
+    "tesla_india_3453",
+    "SHIPPED",
+    453,
+    "Telsa india",
+    "Ink scape 1",
+    'Y'
+);
+
+CREATE TABLE tb_brand_erp_code
+(
+    ID INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    brandid NVARCHAR(100) NULL,
+    content NVARCHAR(400) NULL,
+    erp_status CHAR(1) NULL,
+    erpid INT(4) NULL
+);
+
+DESC tb_brand_erp_code;
+
+INSERT INTO tb_brand_erp_code
+(
+    brandid,
+    content,
+    erp_status,
+    erpid
+)
+VALUES
+(
+    "35435",
+    "software that organizations use to manage day-to-day business activities such as accounting, procurement,",
+    'Y',
+    654
+),
+(
+    "345352",
+    "software that organizations use to manage day-to-day business activities such as accounting, procurement,",
+    'Y',
+    454
+),
+(
+    "67345636",
+    "software that organizations use to manage day-to-day business activities such as accounting, procurement,",
+    'Y',
+    343
+),
+(
+    "3563563",
+    "software that organizations use to manage day-to-day business activities such as accounting, procurement,",
+    'Y',
+    23
+),
+(
+    "35635234",
+    "software that organizations use to manage day-to-day business activities such as accounting, procurement,",
+    'Y',
+    8675
+);
+
+CREATE TABLE tb_Brand_Fields
+(
+    id INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    brandid NVARCHAR(100) NULL,
+    fieldsid NVARCHAR(100) NULL,
+    show_status NCHAR(2),
+    seqNo INT(4),
+    contro_type NVARCHAR(100) NULL,
+    fContro_Name NVARCHAR(400) NULL,
+    file_path NVARCHAR(200) NULL,
+    htmlwidth NVARCHAR(100) NULL,
+    AwName NVARCHAR(100) NULL,
+    EdiFieldMapping  NVARCHAR(100) NULL,
+    ShowNoOrderForm  NCHAR(2) NULL,
+    MaxLength  NVARCHAR(20) NULL
+);
+
+DESC tb_Brand_Fields;
+
+INSERT INTO tb_Brand_Fields
+(
+    brandid,
+    fieldsid,
+    show_status,
+    seqNo,
+    contro_type,
+    fContro_Name,
+    file_path,
+    htmlwidth,
+    AwName,
+    EdiFieldMapping,
+    ShowNoOrderForm,
+    MaxLength
+)
+VALUES
+(
+    "brand_2432",
+    "354354",
+    'Y',
+    234,
+    "STRING",
+    "Brand field 2",
+    "/brand-file/file.jpg",
+    '3000',
+    "Name 2",
+    "Field mapping",
+    'N',
+    '5000'
+),
+(
+    "brand_2432",
+    "354354",
+    'Y',
+    234,
+    "STRING",
+    "Brand field 3",
+    "/brand-file/file.jpg",
+    '3000',
+    "Name 2",
+    "Field mapping",
+    'N',
+    '5000'
+),
+(
+    "brand_2432",
+    "354354",
+    'Y',
+    234,
+    "STRING",
+    "Brand field 4",
+    "/brand-file/file.jpg",
+    '3000',
+    "Name 2",
+    "Field mapping",
+    'N',
+    '5000'
+),
+(
+    "brand_2432",
+    "354354",
+    'Y',
+    234,
+    "STRING",
+    "Brand field 5",
+    "/brand-file/file.jpg",
+    '3000',
+    "Name 2",
+    "Field mapping",
+    'N',
+    '5000'
+),
+(
+    "brand_2432",
+    "354354",
+    'Y',
+    234,
+    "STRING",
+    "Brand field 6",
+    "/brand-file/file.jpg",
+    '3000',
+    "Name 2",
+    "Field mapping",
+    'N',
+    '5000'
+),
+(
+    "brand_2432",
+    "354354",
+    'Y',
+    234,
+    "STRING",
+    "Brand field 7",
+    "/brand-file/file.jpg",
+    '3000',
+    "Name 2",
+    "Field mapping",
+    'N',
+    '5000'
+),
+(
+    "brand_2432",
+    "354354",
+    'Y',
+    234,
+    "STRING",
+    "Brand field 8",
+    "/brand-file/file.jpg",
+    '3000',
+    "Name 2",
+    "Field mapping",
+    'N',
+    '5000'
+),
+(
+    "brand_2432",
+    "354354",
+    'Y',
+    234,
+    "STRING",
+    "Brand field 9",
+    "/brand-file/file.jpg",
+    '3000',
+    "Name 2",
+    "Field mapping",
+    'N',
+    '5000'
+),
+(
+    "brand_2432",
+    "354354",
+    'Y',
+    234,
+    "STRING",
+    "Brand field 10",
+    "/brand-file/file.jpg",
+    '3000',
+    "Name 2",
+    "Field mapping",
+    'N',
+    '5000'
+),
+(
+    "brand_2432",
+    "354354",
+    'Y',
+    234,
+    "STRING",
+    "Brand field 11",
+    "/brand-file/file.jpg",
+    '3000',
+    "Name 2",
+    "Field mapping",
+    'N',
+    '5000'
+);
+
+CREATE TABLE tb_Brand_item_ref
+(
+    id INT(4) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    brandid NVARCHAR(200) NULL,
+    item_guid_key NVARCHAR(200) NULL,
+    seqno INT(4) NULL
+);
+
+DESC tb_Brand_item_ref;
+
+INSERT INTO tb_Brand_item_ref
+(
+    brandid,
+    item_guid_key,
+    seqno
+)
+VALUES
+(
+   "453435",
+    "key_23432",
+    5443
+),
+(
+   "2342344",
+    "key_23432",
+    3453
+),
+(
+   "4353345",
+    "key_23432",
+    3453
+),
+(
+   "2342344",
+    "key_23432",
+    5675
+),
+(
+   "3452345",
+    "key_23432",
+    6575
+),
+(
+   "536546",
+    "key_23432",
+    567
+),
+(
+   "467465",
+    "key_23432",
+    5765
+),
+(
+   "75675",
+    "key_23432",
+    5565
+),
+(
+   "453435",
+    "key_23432",
+    5443
+),
+(
+   "2342344",
+    "key_23432",
+    3453
+),
+(
+   "4353345",
+    "key_23432",
+    3453
+);
+
+CREATE TABLE tb_BrandCategory
+(
+    ID INT(4) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    CategoryName NVARCHAR(100) NULL,
+    BrandId NVARCHAR(100) NULL,
+    IsEnabled CHAR(1) NULL,
+    CreateBy  NVARCHAR(100) NULL,
+    CreateDate DATETIME(6) NULL,
+    UpdateBy  NVARCHAR(100) NULL,
+    UpdateDate DATETIME(6) NULL
+);
+
+DESC tb_BrandCategory;
+
+INSERT INTO tb_BrandCategory
+(
+    CategoryName,
+    BrandId,
+    IsEnabled,
+    CreateBy,
+    CreateDate,
+    UpdateBy,
+    UpdateDate
+)
+VALUES
+(
+    "Personal brand",
+    "34535",
+    'Y',
+    "345435435",
+    "2022-06-04 12:04:04",
+    "635634555",
+    "2022-06-05 12:04:04"
+),
+(
+    "Service brand",
+    "34535",
+    'Y',
+    "345435435",
+    "2022-06-04 12:04:04",
+    "635634555",
+    "2022-06-05 12:04:04"
+),
+(
+    "Product brand",
+    "34535",
+    'Y',
+    "345435435",
+    "2022-06-04 12:04:04",
+    "635634555",
+    "2022-06-05 12:04:04"
+),
+(
+    "Activist brand",
+    "34535",
+    'Y',
+    "345435435",
+    "2022-06-04 12:04:04",
+    "635634555",
+    "2022-06-05 12:04:04"
+),
+(
+    "NGO brand",
+    "34535",
+    'Y',
+    "345435435",
+    "2022-06-04 12:04:04",
+    "635634555",
+    "2022-06-05 12:04:04"
+),
+(
+    "Luxury brand",
+    "34535",
+    'Y',
+    "345435435",
+    "2022-06-04 12:04:04",
+    "635634555",
+    "2022-06-05 12:04:04"
+),
+(
+    "Public brand",
+    "34535",
+    'Y',
+    "345435435",
+    "2022-06-04 12:04:04",
+    "635634555",
+    "2022-06-05 12:04:04"
+),
+(
+    "Value brand",
+    "34535",
+    'Y',
+    "345435435",
+    "2022-06-04 12:04:04",
+    "635634555",
+    "2022-06-05 12:04:04"
+);
+
+CREATE TABLE tb_BrandCustomRemark
+(
+    ID INT(4) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    BrandId NVARCHAR(100) NOT NULL,
+    IsEnable CHAR(1) NULL,
+    _separator NVARCHAR(10) NULL,
+    CreateBy NVARCHAR(100) NULL,
+    CreateDate DATETIME(6) NULL,
+    UpdateBy NVARCHAR(100) NULL,
+    UpdateDate DATETIME(6) NULL
+);
+
+DESC tb_BrandCustomRemark;
+
+INSERT INTO tb_BrandCustomRemark
+(
+    BrandId,
+    IsEnable,
+    _separator,
+    CreateBy,
+    CreateDate,
+    UpdateBy,
+    UpdateDate 
+)
+VALUES
+(
+    "252452",
+    'Y',
+    "gatsby",
+    "345435435",
+    "2022-06-04 12:04:04",
+    "635634555",
+    "2022-06-05 12:04:04"
+),
+(
+    "67456745",
+    'N',
+    "gatsby",
+    "345435435",
+    "2022-06-04 12:04:04",
+    "635634555",
+    "2022-06-05 12:04:04"
+),
+(
+    "4563456",
+    'Y',
+    "gatsby",
+    "345435435",
+    "2022-06-04 12:04:04",
+    "635634555",
+    "2022-06-05 12:04:04"
+),
+(
+    "7353656",
+    'Y',
+    "gatsby",
+    "345435435",
+    "2022-06-04 12:04:04",
+    "635634555",
+    "2022-06-05 12:04:04"
+),
+(
+    "8536345",
+    'N',
+    "gatsby",
+    "345435435",
+    "2022-06-04 12:04:04",
+    "635634555",
+    "2022-06-05 12:04:04"
+),
+(
+    "252452",
+    'Y',
+    "gatsby",
+    "345435435",
+    "2022-06-04 12:04:04",
+    "635634555",
+    "2022-06-05 12:04:04"
+),
+(
+    "67456745",
+    'N',
+    "gatsby",
+    "345435435",
+    "2022-06-04 12:04:04",
+    "635634555",
+    "2022-06-05 12:04:04"
+),
+(
+    "4563456",
+    'Y',
+    "gatsby",
+    "345435435",
+    "2022-06-04 12:04:04",
+    "635634555",
+    "2022-06-05 12:04:04"
+),
+(
+    "7353656",
+    'Y',
+    "gatsby",
+    "345435435",
+    "2022-06-04 12:04:04",
+    "635634555",
+    "2022-06-05 12:04:04"
+),
+(
+    "8536345",
+    'N',
+    "gatsby",
+    "345435435",
+    "2022-06-04 12:04:04",
+    "635634555",
+    "2022-06-05 12:04:04"
+);
+
+CREATE TABLE tb_BrandIconConfigure
+(
+    GuidKey NVARCHAR(100) NOT NULL PRIMARY KEY,
+    IconTypeId INT(4) NULL,
+    BrandId NVARCHAR(100) NULL,
+    Alias NVARCHAR(100) NULL,
+    SeqNo INT(4) NULL,
+    IconType CHAR(1) NULL,
+    IsEnable CHAR(1) NULL
+);
+
+DESC tb_BrandIconConfigure;
+
+INSERT INTO tb_BrandIconConfigure
+(
+    GuidKey ,
+    IconTypeId,
+    BrandId,
+    Alias,
+    SeqNo,
+    IconType,
+    IsEnable
+)
+VALUES
+(
+    "8365356",
+    84,
+    "34535435",
+    "font awesome",
+    435,
+    'F',
+    'Y'
+),
+(
+    "536346",
+    34,
+    "3653643",
+    "Fav awesome",
+    435,
+    'F',
+    'Y'
+),
+(
+    "353453",
+    23,
+    "34535435",
+    "Remix icons",
+    3453,
+    'F',
+    'Y'
+),
+(
+    "836734",
+    564,
+    "34535435",
+    "Boostrap icon",
+    4564,
+    'F',
+    'Y'
+),
+(
+    "73563463",
+    12,
+    "34535435",
+    "font awesome",
+    435,
+    'F',
+    'Y'
+),
+(
+    "73562345233",
+    12,
+    "34535435",
+    "font awesome",
+    435,
+    'F',
+    'Y'
+),
+(
+    "252352",
+    34,
+    "3653643",
+    "Fav awesome",
+    435,
+    'F',
+    'Y'
+),
+(
+    "6245233",
+    23,
+    "34535435",
+    "Remix icons",
+    3453,
+    'F',
+    'Y'
+),
+(
+    "836534",
+    564,
+    "34535435",
+    "Boostrap icon",
+    4564,
+    'F',
+    'Y'
+),
+(
+    "735634463",
+    12,
+    "34535435",
+    "font awesome",
+    435,
+    'F',
+    'Y'
+),
+(
+    "9578578",
+    12,
+    "34535435",
+    "font awesome",
+    435,
+    'F',
+    'Y'
+),
+(
+    "3452333",
+    34,
+    "3653643",
+    "Fav awesome",
+    435,
+    'F',
+    'Y'
+),
+(
+    "3653445",
+    23,
+    "34535435",
+    "Remix icons",
+    4345,
+    'F',
+    'Y'
+),
+(
+    "4444234",
+    564,
+    "34535435",
+    "Boostrap icon",
+    4564,
+    'F',
+    'Y'
+),
+(
+    "5433333",
+    343,
+    "73356345",
+    "font awesome",
+    435,
+    'F',
+    'Y'
+);
+
+CREATE TABLE tb_BrandLeft_Up
+(
+    Guid_key NVARCHAR(100) NOT NULL PRIMARY KEY,
+    Brandid NVARCHAR(100) NULL,
+    FieldId NVARCHAR(100) NULL,
+    FieldCode NVARCHAR(400) NULL,
+    CreateBy NVARCHAR(100) NULL,
+    CreateDate NVARCHAR(100) NULL,
+    Upcontent NVARCHAR(1200) NULL
+);
+
+DESC tb_BrandLeft_Up;
+
+INSERT INTO tb_BrandLeft_Up
+VALUES
+(
+    '7354624',
+    '345245',
+    '2542534',
+    '245234534',
+    "345435435",
+    "2022-06-04 12:04:04",
+    "Brand left up content"
+),
+(
+    '2452345',
+    '345245',
+    '2542534',
+    '245234534',
+    "345435435",
+    "2022-06-04 12:04:04",
+    "Brand left up content"
+),
+(
+    '4442343',
+    '345245',
+    '2542534',
+    '245234534',
+    "345435435",
+    "2022-06-04 12:04:04",
+    "Brand left up content"
+),
+(
+    '4435234',
+    '345245',
+    '2542534',
+    '245234534',
+    "345435435",
+    "2022-06-04 12:04:04",
+    "Brand left up content"
+),
+(
+    '6642533',
+    '345245',
+    '2542534',
+    '245234534',
+    "345435435",
+    "2022-06-04 12:04:04",
+    "Brand left up content"
+),
+(
+    '75356344',
+    '345245',
+    '2542534',
+    '245234534',
+    "345435435",
+    "2022-06-04 12:04:04",
+    "Brand left up content"
+),
+(
+    '55546345',
+    '345245',
+    '2542534',
+    '245234534',
+    "345435435",
+    "2022-06-04 12:04:04",
+    "Brand left up content"
+),
+(
+    '552345233',
+    '345245',
+    '2542534',
+    '245234534',
+    "345435435",
+    "2022-06-04 12:04:04",
+    "Brand left up content"
+),
+(
+    '44245235',
+    '345245',
+    '2542534',
+    '245234534',
+    "345435435",
+    "2022-06-04 12:04:04",
+    "Brand left up content"
+); 
+
+CREATE TABLE tb_BrandLeft_Up_Multi
+(
+    ID INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    FieldId NVARCHAR(100) NULL,
+    CreateBy NVARCHAR(100) NULL,
+    CreateDate NVARCHAR(100) NULL,
+    Upcontent1 NVARCHAR(600) NULL,
+    Upcontent2 NVARCHAR(600) NULL,
+    Upcontent3 NVARCHAR(600) NULL,
+    Upcontent4 NVARCHAR(600) NULL,
+    Upcontent5 NVARCHAR(600) NULL,
+    Type CHAR(1) NULL
+);
+
+DESC tb_BrandLeft_Up_Multi;
+
+INSERT INTO tb_BrandLeft_Up_Multi
+(
+    FieldId,
+    CreateBy,
+    CreateDate,
+    Upcontent1,
+    Upcontent2,
+    Upcontent3,
+    Upcontent4,
+    Upcontent5,
+    Type
+)
+VALUES
+(
+    "2453253",
+    "3452453",
+    "2022-03:04 20:20:04",
+    "up content 1",
+    "up content 2",
+    "up content 3",
+    "up content 4",
+    "up content 5",
+    'N'
+),
+(
+    "2543253",
+    "3452453",
+    "2022-03:04 20:20:04",
+    "up content 1",
+    "up content 2",
+    "up content 3",
+    "up content 4",
+    "up content 5",
+    'N'
+),
+(
+    "4325353",
+    "3452453",
+    "2022-03:04 20:20:04",
+    "up content 1",
+    "up content 2",
+    "up content 3",
+    "up content 4",
+    "up content 5",
+    'N'
+),
+(
+    "6234534",
+    "3452453",
+    "2022-03:04 20:20:04",
+    "up content 1",
+    "up content 2",
+    "up content 3",
+    "up content 4",
+    "up content 5",
+    'N'
+),
+(
+    "523452523",
+    "3452453",
+    "2022-03:04 20:20:04",
+    "up content 1",
+    "up content 2",
+    "up content 3",
+    "up content 4",
+    "up content 5",
+    'N'
+),
+(
+    "543252345",
+    "3452453",
+    "2022-03:04 20:20:04",
+    "up content 1",
+    "up content 2",
+    "up content 3",
+    "up content 4",
+    "up content 5",
+    'N'
+),
+(
+    "254325325",
+    "3452453",
+    "2022-03:04 20:20:04",
+    "up content 1",
+    "up content 2",
+    "up content 3",
+    "up content 4",
+    "up content 5",
+    'N'
+),
+(
+    "4325353",
+    "3452453",
+    "2022-03:04 20:20:04",
+    "up content 1",
+    "up content 2",
+    "up content 3",
+    "up content 4",
+    "up content 5",
+    'N'
+),
+(
+    "24532452",
+    "3452453",
+    "2022-03:04 20:20:04",
+    "up content 1",
+    "up content 2",
+    "up content 3",
+    "up content 4",
+    "up content 5",
+    'N'
+),
+(
+    "62435233",
+    "3452453",
+    "2022-03:04 20:20:04",
+    "up content 1",
+    "up content 2",
+    "up content 3",
+    "up content 4",
+    "up content 5",
+    'N'
+);
+
+CREATE TABLE tb_Care
+(
+    careId INT(4) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    care_key NVARCHAR(100) NULL,
+    id_number NVARCHAR(200) NULL,
+    Email_ind CHAR(10) NULL,
+    seqno INT(4) NULL,
+    CreateBy  NVARCHAR(100) NULL,
+    CreateDate DATETIME(6) NULL,
+    last_email DATETIME(6) NULL,
+    lastModifiedDate DATETIME(6) NULL,
+    ItmCompletedDate DATETIME(6) NULL,
+    LastSavedBy NVARCHAR(100) NULL,
+    Userid NVARCHAR(100) NULL,
+    brandid NVARCHAR(100) NULL,
+    Remak TEXT(16),
+    custom_number NVARCHAR(100) NULL
+);
+
+DESC tb_Care;
+
+INSERT INTO tb_Care
+(
+    care_key,
+    id_number,
+    Email_ind,
+    seqno,
+    CreateBy,
+    CreateDate,
+    last_email,
+    lastModifiedDate,
+    ItmCompletedDate,
+    LastSavedBy,
+    Userid,
+    brandid,
+    Remak,
+    custom_number
+)
+VALUES
+(
+    "5243532",
+    "199323423423422",
+    'Y',
+    "34523425",
+    "523453253",
+    "2022-03-04 20:12:33",
+    "2022-03-03 20:12:33",
+    "2022-06-04 20:12:33",
+    "2022-03-01 20:12:33",
+    "432534533",
+    "345444433",
+    "345334454",
+    "We are a design agency that aims to bring unprecedented change in space of digital media and branding with the services that makes the brand most relatable",
+    "3453"
+),
+(
+    "5243532",
+    "199323423423422",
+    'Y',
+    "34523425",
+    "523453253",
+    "2022-03-04 20:12:33",
+    "2022-03-03 20:12:33",
+    "2022-06-04 20:12:33",
+    "2022-03-01 20:12:33",
+    "432534533",
+    "345444433",
+    "345334454",
+    "We are a design agency that aims to bring unprecedented change in space of digital media and branding with the services that makes the brand most relatable",
+    "3453"
+),
+(
+    "5243532",
+    "199323423423422",
+    'Y',
+    "34523425",
+    "523453253",
+    "2022-03-04 20:12:33",
+    "2022-03-03 20:12:33",
+    "2022-06-04 20:12:33",
+    "2022-03-01 20:12:33",
+    "432534533",
+    "345444433",
+    "345334454",
+    "We are a design agency that aims to bring unprecedented change in space of digital media and branding with the services that makes the brand most relatable",
+    "3453"
+),
+(
+    "5243532",
+    "199323423423422",
+    'Y',
+    "34523425",
+    "523453253",
+    "2022-03-04 20:12:33",
+    "2022-03-03 20:12:33",
+    "2022-06-04 20:12:33",
+    "2022-03-01 20:12:33",
+    "432534533",
+    "345444433",
+    "345334454",
+    "We are a design agency that aims to bring unprecedented change in space of digital media and branding with the services that makes the brand most relatable",
+    "3453"
+),
+(
+    "5243532",
+    "199323423423422",
+    'Y',
+    "34523425",
+    "523453253",
+    "2022-03-04 20:12:33",
+    "2022-03-03 20:12:33",
+    "2022-06-04 20:12:33",
+    "2022-03-01 20:12:33",
+    "432534533",
+    "345444433",
+    "345334454",
+    "We are a design agency that aims to bring unprecedented change in space of digital media and branding with the services that makes the brand most relatable",
+    "3453"
+),
+(
+    "5243532",
+    "199323423423422",
+    'Y',
+    "34523425",
+    "523453253",
+    "2022-03-04 20:12:33",
+    "2022-03-03 20:12:33",
+    "2022-06-04 20:12:33",
+    "2022-03-01 20:12:33",
+    "432534533",
+    "345444433",
+    "345334454",
+    "We are a design agency that aims to bring unprecedented change in space of digital media and branding with the services that makes the brand most relatable",
+    "3453"
+),
+(
+    "5243532",
+    "199323423423422",
+    'Y',
+    "34523425",
+    "523453253",
+    "2022-03-04 20:12:33",
+    "2022-03-03 20:12:33",
+    "2022-06-04 20:12:33",
+    "2022-03-01 20:12:33",
+    "432534533",
+    "345444433",
+    "345334454",
+    "We are a design agency that aims to bring unprecedented change in space of digital media and branding with the services that makes the brand most relatable",
+    "3453"
+),
+(
+    "5243532",
+    "199323423423422",
+    'Y',
+    "34523425",
+    "523453253",
+    "2022-03-04 20:12:33",
+    "2022-03-03 20:12:33",
+    "2022-06-04 20:12:33",
+    "2022-03-01 20:12:33",
+    "432534533",
+    "345444433",
+    "345334454",
+    "We are a design agency that aims to bring unprecedented change in space of digital media and branding with the services that makes the brand most relatable",
+    "3453"
+);
+
+CREATE TABLE tb_Care_Country_Code
+(
+    id INT(4) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    brandid NVARCHAR(100) NULL,
+    country_code_key NVARCHAR(100) NULL,
+    show_status NCHAR(20) NULL,
+    seqno  INT(4) NULL,
+    alias NVARCHAR(100) NULL,
+    inkscape_sep NVARCHAR(100) NULL,
+    IsSeparateLang CHAR(1) NULL
+);
+
+DESC tb_Care_Country_Code;
+
+INSERT INTO tb_Care_Country_Code
+(
+    brandid,
+    country_code_key,
+    show_status,
+    seqno,
+    alias,
+    inkscape_sep,
+    IsSeparateLang
+)
+VALUES
+(
+    "23424235",
+    "RW_3453523",
+    "PUBLISHED",
+    323,
+    "RWANDA country code",
+    "ink cape seq",
+    'Y'
+),
+(
+    "23424235",
+    "RW_3453523",
+    "PUBLISHED",
+    323,
+    "RWANDA country code",
+    "ink cape seq",
+    'Y'
+),
+(
+    "23424235",
+    "IND_3453523",
+    "PUBLISHED",
+    323,
+    "INDIA country code",
+    "ink cape seq",
+    'Y'
+),
+(
+    "23424235",
+    "RW_3453523",
+    "PUBLISHED",
+    323,
+    "RWANDA country code",
+    "ink cape seq",
+    'Y'
+),
+(
+    "23424235",
+    "IND_3453523",
+    "PUBLISHED",
+    323,
+    "INDIA country code",
+    "ink cape seq",
+    'Y'
+),
+(
+    "23424235",
+    "IND_3453523",
+    "PUBLISHED",
+    323,
+    "INDIA country code",
+    "ink cape seq",
+    'Y'
+),
+(
+    "23424235",
+    "RW_3453523",
+    "PUBLISHED",
+    323,
+    "RWANDA country code",
+    "ink cape seq",
+    'Y'
+),
+(
+    "23424235",
+    "IND_3453523",
+    "PUBLISHED",
+    323,
+    "INDIA country code",
+    "ink cape seq",
+    'Y'
+),
+(
+    "23424235",
+    "IND_3453523",
+    "PUBLISHED",
+    323,
+    "INDIA country code",
+    "ink cape seq",
+    'Y'
+);
+
+CREATE TABLE tb_Care_dtL
+(
+    id INT(4) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    care_key NVARCHAR(100) NULL,
+    CareItem_key  NVARCHAR(100) NULL,
+    Cont_key  NVARCHAR(100) NULL,
+    seqno INT(4) NULL
+);
+
+DESC tb_Care_dtL;
+
+INSERT INTO tb_Care_dtL
+(
+    care_key,
+    CareItem_key,
+    Cont_key,
+    seqno
+)
+VALUES
+(
+    "354325345",
+    "42543253",
+    "625425353",
+    34
+),
+(
+    "5464365",
+    "3653646",
+    "63563465",
+    45
+),
+(
+    "6365456",
+    "42543253",
+    "365465",
+    23
+),
+(
+    "4525345",
+    "42543253",
+    "245235",
+    65
+),
+(
+    "2345235345",
+    "6245234",
+    "43444523",
+    12
+),
+(
+    "125423344",
+    "42543253",
+    "625425353",
+    23
+),
+(
+    "354325345",
+    "42543253",
+    "625425353",
+    34
+),
+(
+    "5464365",
+    "3653646",
+    "63563465",
+    45
+),
+(
+    "6365456",
+    "42543253",
+    "365465",
+    23
+),
+(
+    "4525345",
+    "42543253",
+    "245235",
+    65
+),
+(
+    "2345235345",
+    "6245234",
+    "43444523",
+    12
+),
+(
+    "125423344",
+    "42543253",
+    "625425353",
+    23
+);
+
+CREATE TABLE tb_care_dtl_temp
+(
+    id INT(4) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    care_key NVARCHAR(100) NULL,
+    CareItem_key NVARCHAR(100) NULL,
+    care NVARCHAR(1000) NULL,
+    Cont_key NVARCHAR(100) NULL,
+    seqno INT(4) NULL,
+    errormsg NVARCHAR(1000) NULL
+);
+
+DESC tb_care_dtl_temp;
+
+INSERT INTO tb_care_dtl_temp
+(
+    care_key,
+    CareItem_key,
+    care,
+    Cont_key,
+    seqno,
+    errormsg
+)
+VALUES
+(
+    "34524534",
+    '43523454',
+    "CARE 1",
+    "23422",
+    23,
+    "Please check link in description below"
+),
+(
+    "34524534",
+    '43523454',
+    "CARE 2",
+    "23422",
+    23,
+    "Please check link in description below"
+),
+(
+    "34524534",
+    '43523454',
+    "CARE 3",
+    "23422",
+    23,
+    "Please check link in description below"
+),
+(
+    "34524534",
+    '43523454',
+    "CARE 4",
+    "23422",
+    23,
+    "Please check link in description below"
+),
+(
+    "34524534",
+    '43523454',
+    "CARE 5",
+    "23422",
+    23,
+    "Please check link in description below"
+),
+(
+    "34524534",
+    '43523454',
+    "CARE 6",
+    "23422",
+    23,
+    "Please check link in description below"
+),
+(
+    "34524534",
+    '43523454',
+    "CARE 2",
+    "23422",
+    23,
+    "Please check link in description below"
+),
+(
+    "34524534",
+    '43523454',
+    "CARE 7",
+    "23422",
+    23,
+    "Please check link in description below"
+),
+(
+    "34524534",
+    '43523454',
+    "CARE 8",
+    "23422",
+    23,
+    "Please check link in description below"
+),
+(
+    "34524534",
+    '43523454',
+    "CARE 10",
+    "23422",
+    23,
+    "Please check link in description below"
+);
+
+CREATE TABLE tb_care_icon
+(
+    id INT(4) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    care_key NVARCHAR(100) NULL,
+    careicon_key NVARCHAR(100) NULL,
+    seqno INT(4) NULL,
+    sysicon_key NVARCHAR(100) NULL,
+    IconType CHAR(10) NULL,
+    IconTypeId INT(4) NULL
+);
+
+DESC tb_care_icon;
+
+INSERT INTO tb_care_icon
+(
+    care_key,
+    careicon_key,
+    seqno,
+    sysicon_key,
+    IconType,
+    IconTypeId
+)
+VALUES
+(
+    "4634636456",
+    "345325455",
+    43,
+    "RW5634566",
+    'F',
+    23
+),
+(
+    "4634636456",
+    "345325455",
+    54,
+    "RW5634566",
+    'F',
+    43
+),
+(
+    "4634636456",
+    "345325455",
+    65,
+    "RW5634566",
+    'F',
+    23
+),
+(
+    "4634636456",
+    "345325455",
+    43,
+    "RW5634566",
+    'F',
+    8
+),
+(
+    "4634636456",
+    "345325455",
+    43,
+    "RW5634566",
+    'F',
+    23
+),
+(
+    "4634636456",
+    "345325455",
+    54,
+    "RW5634566",
+    'F',
+    43
+),
+(
+    "4634636456",
+    "345325455",
+    65,
+    "RW5634566",
+    'F',
+    23
+),
+(
+    "4634636456",
+    "345325455",
+    43,
+    "RW5634566",
+    'F',
+    8
+);
+
+
+
+CREATE TABLE tb_care_icon_error
+(
+    id INT(4) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    care_key NVARCHAR(100) NULL,
+    careicon_key NVARCHAR(100) NULL,
+    seqno INT(4) NULL,
+    sysicon  NVARCHAR(1000) NULL,
+    sysicon_key  NVARCHAR(100) NULL,
+    type  NVARCHAR(100) NULL,
+    errormsg  NVARCHAR(100) NULL,
+    iconSymbol  NVARCHAR(100) NULL,
+    IconTypeId  NVARCHAR(40) NULL
+);
+
+DESC tb_care_icon_error;
+
+INSERT INTO tb_care_icon_error
+(
+    care_key,
+    careicon_key,
+    seqno,
+    sysicon,
+    sysicon_key,
+    type,
+    errormsg,
+    iconSymbol,
+    IconTypeId
+)
+VALUES
+(
+    "34542435",
+    "care_icon_345345",
+    24,
+    "icon 2",
+    "icon34543534",
+    "font awesome",
+    "Not found",
+    "simbol.jpg",
+    "345345"
+),
+(
+    "34542435",
+    "care_icon_345345",
+    24,
+    "icon 3",
+    "icon34543534",
+    "font awesome",
+    "Not found",
+    "simbol.jpg",
+    "345345"
+),
+(
+    "34542435",
+    "care_icon_345345",
+    24,
+    "icon4",
+    "icon34543534",
+    "font awesome",
+    "Not found",
+    "simbol.jpg",
+    "345345"
+),
+(
+    "34542435",
+    "care_icon_345345",
+    24,
+    "icon 5",
+    "icon34543534",
+    "font awesome",
+    "Not found",
+    "simbol.jpg",
+    "345345"
+),
+(
+    "34542435",
+    "care_icon_345345",
+    24,
+    "icon 6",
+    "icon34543534",
+    "font awesome",
+    "Not found",
+    "simbol.jpg",
+    "345345"
+),
+(
+    "34542435",
+    "care_icon_345345",
+    24,
+    "icon 7",
+    "icon34543534",
+    "font awesome",
+    "Not found",
+    "simbol.jpg",
+    "345345"
+),
+(
+    "34542435",
+    "care_icon_345345",
+    24,
+    "icon 8",
+    "icon34543534",
+    "font awesome",
+    "Not found",
+    "simbol.jpg",
+    "345345"
+),
+(
+    "34542435",
+    "care_icon_345345",
+    24,
+    "icon 9",
+    "icon34543534",
+    "font awesome",
+    "Not found",
+    "simbol.jpg",
+    "345345"
+),
+(
+    "34542435",
+    "care_icon_345345",
+    24,
+    "icon 10",
+    "icon34543534",
+    "font awesome",
+    "Not found",
+    "simbol.jpg",
+    "345345"
+),
+(
+    "34542435",
+    "care_icon_345345",
+    24,
+    "icon 11",
+    "icon34543534",
+    "font awesome",
+    "Not found",
+    "simbol.jpg",
+    "345345"
+);
