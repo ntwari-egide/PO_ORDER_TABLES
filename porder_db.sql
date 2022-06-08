@@ -12042,3 +12042,721 @@ VALUES
     "2022-06-04 18:03:23"
 );
 
+CREATE TABLE tb_D365Contact
+(
+    GuidKey NVARCHAR(100) NOT NULL PRIMARY KEY,
+    DynCustomerID NVARCHAR(100) NULL,
+    DynContactID NVARCHAR(100) NULL,
+    ContactType NVARCHAR(100) NULL,
+    ContactTitle NVARCHAR(500) NULL,
+    FirstName NVARCHAR(500) NULL,
+    MiddelName NVARCHAR(500) NULL,
+    LastName NVARCHAR(500) NULL,
+    FullName NVARCHAR(500) NULL,
+    Email TEXT NULL,
+    Phone NVARCHAR(500) NULL,
+    Fax NVARCHAR(500) NULL,
+    DeletedInDyn NVARCHAR(20) NULL,
+    ModifiedDate DATETIME(6) NULL,
+    UpdateDate DATETIME(6) NULL
+);
+
+DESC tb_D365Contact;
+
+INSERT INTO tb_D365Contact
+VALUES
+(
+    "98452353",
+    "2435354",
+    "7399534",
+    "Soft Contact Lenses",
+    "Soft Contact Lenses",
+    "John",
+    "",
+    "Doe",
+    "John doe",
+    "doe@gmail.com",
+    "+2507835345435",
+    "3452354",
+    "DELETED",
+    "2022-03-05 12:03:12",
+    "2022-03-05 12:03:12"
+),
+(
+    "9452353",
+    "2435354",
+    "7399534",
+    "Soft Contact Lenses",
+    "Soft Contact Lenses",
+    "John",
+    "",
+    "Peter",
+    "John doe",
+    "doe@gmail.com",
+    "+2507453434",
+    "3452354",
+    "DELETED",
+    "2022-03-05 12:03:12",
+    "2022-03-05 12:03:12"
+),
+(
+    "7452353",
+    "2435354",
+    "7399534",
+    "Soft Contact Lenses",
+    "Soft Contact Lenses",
+    "John",
+    "",
+    "Peter",
+    "John doe",
+    "peter@gmail.com",
+    "+250783450345",
+    "3452354",
+    "DELETED",
+    "2022-03-05 12:03:12",
+    "2022-03-05 12:03:12"
+),
+(
+    "5652353",
+    "2435354",
+    "7399534",
+    "Soft Contact Lenses",
+    "Soft Contact Lenses",
+    "Luc",
+    "",
+    "Doe",
+    "John doe",
+    "Luc@gmail.com",
+    "+2507345345",
+    "3452354",
+    "DELETED",
+    "2022-03-05 12:03:12",
+    "2022-03-05 12:03:12"
+);
+
+CREATE TABLE tb_CountryCode(
+    id INT(4) AUTO_INCREMENT NOT NULL,
+    guid_key NVARCHAR(100) NOT NULL,
+    Country_Type NVARCHAR(20) NULL,
+    country_code NVARCHAR(20) NULL,
+    country_name NVARCHAR(100) NULL,
+    seqno INT(4) NULL,
+    CONSTRAINT PK_tb_CountryCode PRIMARY KEY(id, guid_key)
+);
+DESC tb_CountryCode;
+INSERT INTO
+    tb_CountryCode(
+        guid_key,
+        Country_Type,
+        country_code,
+        country_name,
+        seqno
+    )
+VALUES
+    (
+        "83568683-2d56-4cef-860d-da02c7b639ee",
+        "IA200001 CH-GD",
+        "C00001",
+        12
+    ),
+    (
+        "9363955-84h4-4cef-860d-da02c7b639ee",
+        "IA200001 CH-GD",
+        "C00002",
+        3254
+    ),
+    (
+        "0037645-2d56-4cef-860d-da02c7b639ee",
+        "IA2004951 CH-GD",
+        "C00003",
+        1243
+    ),
+    (
+        "0749864-84h4-4cef-860d-da02c7b639ee",
+        "IA2h5001 CH-GD",
+        "C00004",
+        3884
+    ),
+    (
+        "0884584-84h4-4cef-860d-da02c7b639ee",
+        "IA298401 CH-GD",
+        "C00005",
+        93775
+    ),
+    (
+        "07430824-973-4cef-860d-da02c7b639ee",
+        "I3j55001 CH-GD",
+        "C00004",
+        1193
+    ),
+    (
+        "0809344-84h4-4cef-860d-da02c7b639ee",
+        "IA24301 CH-GD",
+        "C00006",
+        17
+    ),
+    (
+        "9992664-973-4cef-860d-da02c7b639ee",
+        "I3j55001 CH-GD",
+        "C00007",
+        "Canada",
+        90
+    ),
+    (
+        "8899107-84h4-4cef-860d-da02c7b639ee",
+        "IA24301 CH-GD",
+        "C00008",
+        "Tanzania",
+        100
+    ),
+    (
+        "9992664-973-4cef-860d-da02c7b639ee",
+        "I3j55001 CH-GD",
+        "C00009",
+        "Japan",
+        232074
+    ),
+    (
+        "7783645-84h4-4cef-860d-da02c7b639ee",
+        "IA24301 CH-GD",
+        "C000010",
+        "South Korea",
+        8873
+    );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE tb_countrycode_qr (
+    guid_key NVARCHAR(100) NOT NULL,
+    brandid NVARCHAR(100) NULL,
+    country_code_key NVARCHAR(100) NULL,
+    seqno INT(4) NULL,
+    c_url NVARCHAR(300) NULL,
+    icon_symbol NVARCHAR(200) NULL,
+    alias NVARCHAR(100) NULL,
+    show_status CHAR(1) NULL
+);
+DESC tb_countrycode_qr
+INSERT INTO
+    tb_countrycode_qr(
+        guid_key,
+        brandid,
+        country_code_key,
+        seqno,
+        c_url,
+        icon_symbol,
+        alias,
+        show_status
+    )
+VALUES
+    (
+        "83568683-2d56-4cef-860d-da02c7b639ee",
+        "IA200001 CH-GD",
+        "C00001",
+        12,
+        "curl example.com",
+        "example icon",
+        "alias",
+        "T"
+    ),
+    (
+        "9363955-84h4-4cef-860d-da02c7b639ee",
+        "IA200001 CH-GD",
+        "C00002",
+        3254,
+        "curl example.com 2",
+        "example icon 2",
+        "alias1",
+        "T"
+    ),
+    (
+        "0037645-2d56-4cef-860d-da02c7b639ee",
+        "IA2004951 CH-GD",
+        "C00003",
+        1243,
+        "curl example.com 3",
+        "example icon 3",
+        "alias3",
+        "F"
+    ),
+    (
+        "0749864-84h4-4cef-860d-da02c7b639ee",
+        "IA2h5001 CH-GD",
+        "C00004",
+        3884,
+        "curl example.com 4",
+        "example icon 4",
+        "alias 4",
+        "T"
+    ),
+    (
+        "0884584-84h4-4cef-860d-da02c7b639ee",
+        "IA298401 CH-GD",
+        "C00005",
+        93775,
+        "curl example.com 5",
+        "example icon 5",
+        "alias 5",
+        "F"
+    ),
+    (
+        "07430824-973-4cef-860d-da02c7b639ee",
+        "I3j55001 CH-GD",
+        "C00004",
+        1193,
+        "curl example.com 6",
+        "example icon 6",
+        "alias 6",
+        "F"
+    ),
+    (
+        "0809344-84h4-4cef-860d-da02c7b639ee",
+        "IA24301 CH-GD",
+        "C00006",
+        17,
+        "curl example.com 7",
+        "example icon 7",
+        "alias 7",
+        "T"
+    ),
+    (
+        "9992664-973-4cef-860d-da02c7b639ee",
+        "I3j55001 CH-GD",
+        "C00007",
+        90,
+        "curl example.com 8",
+        "example icon 8",
+        "alias 8",
+        "F"
+    ),
+    (
+        "8899107-84h4-4cef-860d-da02c7b639ee",
+        "IA24301 CH-GD",
+        "C00008",
+        100,
+        "curl example.com 9",
+        "example icon 9",
+        "alias 9",
+        "T"
+    ),
+    (
+        "9992664-973-4cef-860d-da02c7b639ee",
+        "I3j55001 CH-GD",
+        "C00009",
+        232074,
+        "curl example.com 10",
+        "example icon 10",
+        "alias 10",
+        "T"
+    );
+CREATE TABLE tb_cust(
+    id int(4) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    guid_key NVARCHAR(100) NULL,
+    SubCod NVARCHAR(300) NULL,
+    EngName NVARCHAR(1000) NULL,
+    ChiName NVARCHAR(400) NULL,
+    Dept VARCHAR(50) NULL,
+    erp_name NVARCHAR(100) NULL,
+    rights_group CHAR(1),
+    admin NVARCHAR(100) NULL,
+    passwd VARCHAR(50) NULL,
+    passwd2 NVARCHAR(50),
+    leadSource NVARCHAR(100) NULL,
+    Tel VARCHAR(25) NULL,
+    Contact NVARCHAR(510) NULL,
+    Fax VARCHAR(25) NULL,
+    Mobile VARCHAR(25) NULL,
+    Gemail NVARCHAR(1000) NULL,
+    Factory_Code NVARCHAR(510) NULL,
+    URL VARCHAR(100) NULL,
+    Office_EngAddr NVARCHAR(1000) NULL,
+    Office_ChiAddr NVARCHAR(1000) NULL,
+    Rmk NVARCHAR(510) NULL,
+    PTerm VARCHAR(10) NULL,
+    Discount_Rate INT(9) NULL,
+    CLimit INT(9) NULL,
+    Business_Registration_No VARCHAR(50) NULL,
+    employee INT(4) NULL,
+    Delivery_CpyName NVARCHAR(50) NULL,
+    Delivery_Phone NVARCHAR(100) NULL,
+    Delivery_Fax NVARCHAR(100) NULL,
+    Delivery_Email NVARCHAR(100) NULL,
+    Delivery_Contact NVARCHAR(100) NULL,
+    Delivery_Address NVARCHAR(1000) NULL,
+    lastAdminLogon DATETIME(6) NULL,
+    Created_date DATETIME(6) NULL,
+    Created_by NVARCHAR(100) NULL,
+    last_updated_by NVARCHAR(100) NULL,
+    last_updated_date DATETIME(6) NULL,
+    brand_orderfrom INT(4) NULL,
+    Country NVARCHAR(20) NULL,
+    City NVARCHAR(20) NULL,
+    Post_code NVARCHAR(20) NULL,
+    State INT(4) NULL,
+    ERP_Customer_No NVARCHAR(200) NULL,
+    lineofbusiness NVARCHAR(100) NULL,
+    currency NVARCHAR(40) NULL,
+    segmentid NVARCHAR(510) NULL,
+    freedelivery NVARCHAR(100) NULL,
+    paymentterm NVARCHAR(100) NULL,
+    deliveryterm NVARCHAR(100) NULL,
+    paymenttermdescription NVARCHAR(2000) NULL,
+    CreateType NVARCHAR(100) NULL,
+    DarftEmail NVARCHAR(50) NULL,
+    AutoArtworkPDFModel NVARCHAR(60) NULL,
+    OwnerAuthority CHAR(1) NULL,
+    IsModify BIT(8) NULL,
+    DownProFileStatus CHAR(1) NULL,
+    MyOrder CHAR(1) NULL,
+    enablePrint CHAR(1) NULL,
+    AutoArtworkPDFModelForCS NVARCHAR(100) NULL,
+    ClientCode NVARCHAR(400) NULL,
+    DynCustomerID NVARCHAR(100) NULL
+);
+DESC tb_cust;
+
+INSERT INTO
+    tb_cust(
+        guid_key,
+        SubCod,
+        EngName,
+        ChiName,
+        Dept,
+        erp_name,
+        rights_group,
+        admin,
+        passwd,
+        passwd2,
+        leadSource,
+        Tel,
+        Contact,
+        Fax,
+        Mobile,
+        Gemail,
+        Factory_Code,
+        URL,
+        Office_EngAddr,
+        Office_ChiAddr,
+        Rmk,
+        PTerm,
+        Discount_Rate,
+        CLimit,
+        Business_Registration_No,
+        employee,
+        Delivery_CpyName,
+        Delivery_Phone,
+        Delivery_Fax,
+        Delivery_Email,
+        Delivery_Contact,
+        Delivery_Address,
+        lastAdminLogon,
+        Created_date,
+        Created_by,
+        last_updated_by,
+        last_updated_date,
+        brand_orderfrom,
+        Country,
+        City,
+        Post_code,
+        State,
+        ERP_Customer_No,
+        lineofbusiness,
+        currency,
+        segmentid,
+        freedelivery,
+        paymentterm,
+        deliveryterm,
+        paymenttermdescription,
+        CreateType,
+        DarftEmail,
+        AutoArtworkPDFModel,
+        OwnerAuthority,
+        IsModify,
+        DownProFileStatus,
+        MyOrder,
+        enablePrint,
+        AutoArtworkPDFModelForCS,
+        ClientCode,
+        DynCustomerID
+    )
+VALUES
+    (
+        "83568683-2d56-4cef-860d-da02c7b639ee",
+        "S00001",
+        "Jean",
+        "Paul",
+        "Dept1",
+        "err_name",
+        "R",
+        "jean",
+        "jean@123",
+        "jean@123",
+        "leadsource",
+        "7342-453-535",
+        "842-535-245",
+        "-",
+        "mobile",
+        "gmail",
+        "F0001",
+        "https://example.com",
+        "--------------",
+        "--------------",
+        "rmk",
+        "pterm",
+        25,
+        10,
+        "09876543234",
+        8398,
+        "XXXXXXXX",
+        "delivphone",
+        "delivfax",
+        "deli@gmail.com",
+        "delivery-contact",
+        "--------------",
+        "2021-02-12",
+        "2021-02-08",
+        "XX YY",
+        "XX YY",
+        "2021-01-18",
+        123,
+        "IA200001 CH-GD",
+        "IA200001SZ",
+        "IA200001 CH-199",
+        3883,
+        "ERP_Customer_No",
+        "lineofbusiness",
+        "$$$",
+        "933-43253-5354",
+        "free delivery",
+        "payment term",
+        "delivery term",
+        "paymenttermdescription",
+        "CreateType",
+        "draft mail",
+        "AutoArtworkPDFModel",
+        "Y",
+        B'11111110',
+        "N",
+        "4",
+        "T",
+        "AutoArtworkPDFModelForCS",
+        "client code",
+        "DynCustomerID"
+    );
+
+
+CREATE TABLE tb_Cust_invoice_addr(
+    guid_key NVARCHAR(100) NOT NULL PRIMARY KEY,
+    SubCod NVARCHAR(500) NULL,
+    company_name NVARCHAR(500) NULL,
+    address NVARCHAR(500) NULL,
+    contact_person NVARCHAR(800) NULL,
+    phone NVARCHAR(500) NULL,
+    fax NVARCHAR(500) NULL,
+    email NVARCHAR(1000) NULL,
+    seqno INT(4) NULL,
+    address2 NVARCHAR(800) NULL,
+    address3 NVARCHAR(800) NULL,
+    cust_guid_key NVARCHAR(100) NULL,
+    delivery_code NVARCHAR(200) NULL,
+    invoice_code NVARCHAR(200) NULL,
+    CreateDtae DATETIME(6) NULL,
+    AddressId NVARCHAR(100) NULL,
+    ContactId NVARCHAR(100) NULL
+);
+DESC tb_Cust_invoice_addr;
+INSERT INTO
+    tb_Cust_invoice_addr(
+        guid_key,
+        SubCod,
+        company_name,
+        address,
+        contact_person,
+        phone,
+        fax,
+        email,
+        seqno,
+        address2,
+        address3,
+        cust_guid_key,
+        delivery_code,
+        invoice_code,
+        CreateDtae,
+        AddressId,
+        ContactId
+    )
+VALUES
+    (
+        "9003944-2d56-4cef-860d-da02c7b639ee",
+        "S0001",
+        "xxxx",
+        "----------",
+        "X-X-X-X",
+        "424-535-245",
+        "-",
+        "",
+        2938,
+        "----------",
+        "----------",
+        "9283474-2d56-4cef-860d-da02c7b639ee",
+        "765342535",
+        "IC0937473",
+        "2021-04-12",
+        "AD--------",
+        "CI987654"
+    ),
+    (
+        "0992374-2d56-4cef-860d-da02c7b639ee",
+        "S0002",
+        "xxxx",
+        "----------",
+        "X-X-X-X",
+        "424-535-245",
+        "-",
+        "",
+        4235,
+        "----------",
+        "----------",
+        "335563-2d56-4cef-860d-da02c7b639ee",
+        "765342535",
+        "IC0937473",
+        "2021-04-12",
+        "AD--------",
+        "CI987654"
+    ),
+    (
+        "223843-2d56-4cef-860d-da02c7b639ee",
+        "S0003",
+        "xxxx",
+        "----------",
+        "X-X-X-X",
+        "424-535-245",
+        "-",
+        "",
+        1102,
+        "----------",
+        "----------",
+        "9283474-2d56-4cef-860d-da02c7b639ee",
+        "765342535",
+        "IC0937473",
+        "2021-04-12",
+        "AD--------",
+        "CI987654"
+    ),
+    (
+        "993746-2d56-4cef-860d-da02c7b639ee",
+        "S0004",
+        "xxxx",
+        "----------",
+        "X-X-X-X",
+        "424-535-245",
+        "-",
+        "",
+        9937,
+        "----------",
+        "----------",
+        "9283474-2d56-4cef-860d-da02c7b639ee",
+        "765342535",
+        "IC0937473",
+        "2021-04-12",
+        "AD--------",
+        "CI987654"
+    ),
+    (
+        "2998730-2d56-4cef-860d-da02c7b639ee",
+        "S0006",
+        "xxxx",
+        "----------",
+        "X-X-X-X",
+        "424-535-245",
+        "-",
+        "",
+        4353,
+        "----------",
+        "----------",
+        "9283474-2d56-4cef-860d-da02c7b639ee",
+        "765342535",
+        "IC0937473",
+        "2021-04-12",
+        "AD--------",
+        "CI987654"
+    ),
+    (
+        "298746-2d56-4cef-860d-da02c7b639ee",
+        "S0007",
+        "xxxx",
+        "----------",
+        "X-X-X-X",
+        "424-535-245",
+        "-",
+        "",
+        445,
+        "----------",
+        "----------",
+        "335563-2d56-4cef-860d-da02c7b639ee",
+        "765342535",
+        "IC0937473",
+        "2021-04-12",
+        "AD--------",
+        "CI987654"
+    ),
+    (
+        "202765-2d56-4cef-860d-da02c7b639ee",
+        "S0008",
+        "xxxx",
+        "----------",
+        "X-X-X-X",
+        "424-535-245",
+        "-",
+        "",
+        1102,
+        "----------",
+        "----------",
+        "9283474-2d56-4cef-860d-da02c7b639ee",
+        "765342535",
+        "IC0937473",
+        "2021-04-12",
+        "AD--------",
+        "CI987654"
+    ),
+    (
+        "48885-2d56-4cef-860d-da02c7b639ee",
+        "S00010",
+        "xxxx",
+        "----------",
+        "X-X-X-X",
+        "424-535-245",
+        "-",
+        "",
+        9937,
+        "----------",
+        "----------",
+        "9283474-2d56-4cef-860d-da02c7b639ee",
+        "765342535",
+        "IC0937473",
+        "2021-04-12",
+        "AD--------",
+        "CI987654"
+    );
