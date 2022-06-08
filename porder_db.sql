@@ -11850,7 +11850,7 @@ CREATE TABLE tb_Cust_FactoryCode
 
 DESC tb_Cust_FactoryCode;
 
-INSERT INTO
+INSERT INTO tb_Cust_FactoryCode
 (
     guid_key,
     SubCod,
@@ -11859,9 +11859,186 @@ INSERT INTO
 )
 VALUES
 (
-    "34535",
+    "82452",
+    "546",
+    "code_43534",
+    23
+),
+(
+    "82345",
+    "tesla_india_435345",
+    "code_43534",
+    345
+),
+(
+    "82453",
     "tesla_india_435345",
     "code_43534",
     12
+),
+(
+    "42433",
+    "tesla_india_435345",
+    "code_43534",
+    23
+),
+(
+    "934654",
+    "546",
+    "code_43534",
+    74
+),
+(
+    "62345",
+    "tesla_india_435345",
+    "code_43534",
+    424
+),
+(
+    "962453",
+    "tesla_india_435345",
+    "code_43534",
+    94
+),
+(
+    "92433",
+    "tesla_india_435345",
+    "code_43534",
+    65
+);
+
+CREATE TABLE tb_D365Address
+(
+    GuidKey NVARCHAR(100) NOT NULL PRIMARY KEY,
+    DynCustomerID NVARCHAR(100) NULL,
+    DynAddressID NVARCHAR(100) NULL,
+    AddressType NVARCHAR(100) NULL,
+    IsPrimary NVARCHAR(20) NULL,
+    Name NVARCHAR(500) NULL,
+    Address TEXT NULL,
+    Zip NVARCHAR(400) NULL,
+    City NVARCHAR(100) NULL,
+    CountryCode NVARCHAR(100) NULL,
+    DeletedInDyn NVARCHAR(20) NULL,
+    FormattedAddress TEXT NULL,
+    ModifiedDate DATETIME(6) NULL,
+    UpdateDate DATETIME(6) NULL
+);
+
+DESC tb_D365Address;
+
+INSERT INTO tb_D365Address
+VALUES
+(
+    "4452345",
+    "345234535",
+    "34523453",
+    "79787987",
+    "Y",
+    "Bangalore",
+    "Karnataka down town",
+    "3453543",
+    "Mumbai",
+    "3452345",
+    "23534545",
+    "MUMBAI",
+    "2022-03-04 12:03:23",
+    "2022-06-04 18:03:23"
+),
+(
+    "543254",
+    "345234535",
+    "34523453",
+    "79787987",
+    "Y",
+    "Chennai",
+    "Tamil Nadu down town",
+    "3453543",
+    "Mumbai",
+    "3452345",
+    "23534545",
+    "MUMBAI",
+    "2022-03-04 12:03:23",
+    "2022-06-04 18:03:23"
+),
+(
+    "7452345",
+    "345234535",
+    "34523453",
+    "79787987",
+    "Y",
+    "Kolkata",
+    "Kolkata down town",
+    "3453543",
+    "Kolkata",
+    "3452345",
+    "23534545",
+    "MUMBAI",
+    "2022-03-04 12:03:23",
+    "2022-06-04 18:03:23"
+),
+(
+    "9952345",
+    "345234535",
+    "34523453",
+    "79787987",
+    "Y",
+    "Mumbai",
+    "Mumbai down town",
+    "3453543",
+    "Mumbai",
+    "3452345",
+    "23534545",
+    "MUMBAI",
+    "2022-03-04 12:03:23",
+    "2022-06-04 18:03:23"
+),
+(
+    "5752345",
+    "345234535",
+    "34523453",
+    "79787987",
+    "Y",
+    "Jaipur",
+    "Jaipur down town",
+    "3453543",
+    "Jaipur",
+    "3452345",
+    "23534545",
+    "Rajasthan",
+    "2022-03-04 12:03:23",
+    "2022-06-04 18:03:23"
+),
+(
+    "8052345",
+    "345234535",
+    "34523453",
+    "79787987",
+    "Y",
+    "Kochi",
+    "Kochi down town",
+    "3453543",
+    "Kochi",
+    "3452345",
+    "23534545",
+    "Kerela",
+    "2022-03-04 12:03:23",
+    "2022-06-04 18:03:23"
+),
+(
+    "9002345",
+    "345234535",
+    "34523453",
+    "79787987",
+    "Y",
+    "Trivandrum",
+    "Trivandrum down town",
+    "3453543",
+    "Trivandrum",
+    "3452345",
+    "23534545",
+    "Kerela",
+    "2022-03-04 12:03:23",
+    "2022-06-04 18:03:23"
 );
 
