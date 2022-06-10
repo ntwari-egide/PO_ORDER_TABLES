@@ -17646,3 +17646,1390 @@ VALUES
         'ERPEntityID',
         'MyAtexControl'
     );
+
+
+    -- today
+
+CREATE TABLE tb_erpftpLog
+(
+    guid_key NVARCHAR(100) NOT NULL PRIMARY KEY,
+    ftp_type NVARCHAR(100) NULL,
+    createtime DATETIME(6) NULL,
+    order_no NVARCHAR(100) NULL,
+    erp TEXT NULL,
+    ftp_ip  NVARCHAR(200) NULL,
+    ftp_admin NVARCHAR(100) NULL,
+    ftp_pwd NVARCHAR(100) NULL,
+    ftp_passive NVARCHAR(100) NULL,
+    error_message TEXT NULL
+);
+
+DESC tb_erpftpLog;
+
+INSERT INTO tb_erpftpLog
+VALUES
+(
+    "546346554-2d56-4cef-860d-da02c7b639ee",
+    "ftp type",
+    "2022-04-12 12:04:23",
+    "3452345345",
+    "erp",
+    "192.168.2.22",
+    "1128366-2d56-4cef-860d-da02c7b639ee",
+    "pass@123",
+    "Etiam gravida nec tortor ac pretium",
+    "Donec hendrerit consequat odio, ac mattis diam ultricies vestibulum. Vivamus sed mollis quam. Quisque elit dolor, semper non sem accumsan"
+),
+(
+    "3324534-2d56-4cef-860d-da02c7b639ee",
+    "ftp type",
+    "2022-04-12 12:04:23",
+    "3452345345",
+    "erp",
+    "192.168.2.22",
+    "1128366-2d56-4cef-860d-da02c7b639ee",
+    "pass@123",
+    "Etiam gravida nec tortor ac pretium",
+    "Donec hendrerit consequat odio, ac mattis diam ultricies vestibulum. Vivamus sed mollis quam. Quisque elit dolor, semper non sem accumsan"
+),
+(
+    "7245343-2d56-4cef-860d-da02c7b639ee",
+    "ftp type",
+    "2022-04-12 12:04:23",
+    "3452345345",
+    "erp",
+    "192.168.2.22",
+    "1128366-2d56-4cef-860d-da02c7b639ee",
+    "pass@123",
+    "Etiam gravida nec tortor ac pretium",
+    "Donec hendrerit consequat odio, ac mattis diam ultricies vestibulum. Vivamus sed mollis quam. Quisque elit dolor, semper non sem accumsan"
+),
+(
+    "723333-2d56-4cef-860d-da02c7b639ee",
+    "ftp type",
+    "2022-04-12 12:04:23",
+    "3452345345",
+    "erp",
+    "192.168.2.22",
+    "1128366-2d56-4cef-860d-da02c7b639ee",
+    "pass@123",
+    "Etiam gravida nec tortor ac pretium",
+    "Donec hendrerit consequat odio, ac mattis diam ultricies vestibulum. Vivamus sed mollis quam. Quisque elit dolor, semper non sem accumsan"
+);
+
+CREATE TABLE tb_ExcelOrderMapping
+(
+    ID INT(4) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    BrandId NVARCHAR(100) NULL,
+    DataField NVARCHAR(100) NULL,
+    ExcelField NVARCHAR(200) NULL,
+    FieldType NVARCHAR(100) NULL,
+    FieldCheck NVARCHAR(200) NULL,
+    IsClearZeros CHAR(1) NULL,
+    ListSeq INT(4) NULL,
+    NoDigits NVARCHAR(20) NULL,
+    _Separator NVARCHAR(20) NULL
+);
+
+DESC tb_ExcelOrderMapping;
+
+INSERT INTO tb_ExcelOrderMapping
+(
+    BrandId,
+    DataField,
+    ExcelField,
+    FieldType,
+    FieldCheck,
+    IsClearZeros,
+    ListSeq,
+    NoDigits,
+    _Separator
+)
+
+VALUES
+
+(
+    "723333-2d56-4cef-860d-da02c7b639ee",
+    "Etiam",
+    "dapibus",
+    "finibus",
+    "Interdum et malesuada fames",
+    'Y',
+    23,
+    "200",
+    "Separator"
+);
+
+CREATE TABLE tb_ExcelOrderSizeMapping
+(
+    ID INT(4) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    BrandId NVARCHAR(100) NULL,
+    SizeType NVARCHAR(100) NULL,
+    ExcelField NVARCHAR(100) NULL,
+    SeqNo INT(4) NULL,
+    DataType NVARCHAR(100) NULL,
+    SizeQtyIndex INT(4) NULL,
+    FieldCheck NVARCHAR(100) NULL,
+    SizeCustomName NVARCHAR(100) NULL
+);
+
+DESC tb_ExcelOrderSizeMapping;
+
+INSERT INTO tb_ExcelOrderSizeMapping
+(
+    BrandId,
+    SizeType,
+    ExcelField,
+    SeqNo,
+    DataType,
+    SizeQtyIndex,
+    FieldCheck,
+    SizeCustomName 
+)
+VALUES
+(
+    "723333-2d56-4cef-860d-da02c7b639ee",
+    "3400",
+    "Order size",
+    123,
+    "TEXT",
+    '300',
+    "field check",
+    'px'
+),
+(
+    "723333-2d56-4cef-860d-da02c7b639ee",
+    "3400",
+    "Order number",
+    123,
+    "TEXT",
+    '300',
+    "field check",
+    'px'
+),
+(
+    "723333-2d56-4cef-860d-da02c7b639ee",
+    "3400",
+    "Order by",
+    123,
+    "TEXT",
+    '300',
+    "field check",
+    'px'
+),
+(
+    "723333-2d56-4cef-860d-da02c7b639ee",
+    "3400",
+    "Order content",
+    123,
+    "TEXT",
+    '300',
+    "field check",
+    'px'
+);
+
+CREATE TABLE tb_Fields
+(
+    id INT(4) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    field_name NVARCHAR(400) NULL
+);
+
+DESC tb_Fields;
+
+INSERT INTO tb_Fields
+(
+    field_name
+)
+VALUES
+(
+    "Order No"
+),
+(
+    "Order count"
+),
+(
+    "Ordered by"
+),
+(
+    "Order size"
+),
+(
+    "Ordered at"
+),
+(
+    "company name"
+);
+
+CREATE TABLE tb_font
+(
+    id BIGINT(8) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    font_title TEXT NULL,
+    font_name TEXT NULL,
+    font_url TEXT NULL,
+    font_date DATETIME NULL
+);
+
+DESC tb_font;
+
+INSERT INTO tb_font
+(
+    font_title,
+    font_name,
+    font_url,
+    font_date
+)
+VALUES
+(
+    "Roboto",
+    "Roboto,Sans",
+    "https://fonts.google.com/specimen/Roboto",
+    "2022-03-05 12:04:04"
+);
+
+CREATE TABLE tb_Gender
+(
+    id INT(4) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    Gender NVARCHAR(500) NULL,
+    brandid NVARCHAR(100) NULL
+);
+
+DESC tb_Gender;
+
+INSERT INTO tb_Gender
+(
+    Gender,
+    brandid
+)
+VALUES
+(
+    "Female",
+    "723333-2d56-4cef-860d-da02c7b639ee"
+);
+
+CREATE TABLE tb_Grp_Mem
+(
+    ID INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    grpID INT(4) NULL,
+    MemID NVARCHAR(100) NULL,
+    dept NVARCHAR(200) NULL
+);
+
+DESC tb_Grp_Mem;
+
+INSERT INTO tb_Grp_Mem
+(
+    grpID,
+    MemID,
+    dept
+)
+VALUES
+(
+    234,
+    "34253454535",
+    "Maecenas vulputate ligula eget nulla fermentum vehicula"
+);
+
+CREATE TABLE tb_gstar_plant_code
+(
+    guid_key NVARCHAR(200) NOT NULL PRIMARY KEY,
+    plant_code NVARCHAR(100) NULL,
+    storage_location NVARCHAR(100) NULL,
+    country_region NVARCHAR(100) NULL,
+    status  NVARCHAR(20) NULL,
+    size_zuhe NVARCHAR(20) NULL
+);
+
+DESC tb_gstar_plant_code;
+
+INSERT INTO tb_gstar_plant_code
+(
+    guid_key,
+    plant_code,
+    storage_location,
+    country_region,
+    status,
+    size_zuhe
+)
+VALUES
+(
+    "657457-2d56-4cef-860d-da02c7b639ee",
+    "4352345435",
+    "INDIA",
+    "NEW DELHI",
+    "STORED",
+    "300"
+),
+(
+    "3245345-2d56-4cef-860d-da02c7b639ee",
+    "4352345435",
+    "INDIA",
+    "NEW DELHI",
+    "STORED",
+    "300"
+),
+(
+    "45432-2d56-4cef-860d-da02c7b639ee",
+    "4352345435",
+    "INDIA",
+    "NEW DELHI",
+    "STORED",
+    "300"
+),
+(
+    "735455-2d56-4cef-860d-da02c7b639ee",
+    "4352345435",
+    "INDIA",
+    "NEW DELHI",
+    "STORED",
+    "300"
+);
+
+CREATE TABLE tb_gstar_vendor
+(
+    guid_key NVARCHAR(100) NOT NULL PRIMARY KEY,
+    commodity NVARCHAR(100) NULL,
+    vendor_name TEXT NULL,
+    vendor_short_code NVARCHAR(100) NULL,
+    two_digit_manu_code NVARCHAR(100) NULL,
+    coo  NVARCHAR(100) NULL,
+    status NVARCHAR(20) NULL
+);
+
+DESC tb_gstar_vendor;
+
+INSERT INTO tb_gstar_vendor(
+    guid_key,
+    commodity,
+    vendor_name,
+    vendor_short_code,
+    two_digit_manu_code,
+    coo,
+    status
+)
+VALUES
+(
+    "735455-2d56-4cef-860d-da02c7b639ee",
+    "Aenean et cursus",
+    "nisl metus tincidunt libero, ut tincidunt ipsum nisi id nisi",
+    "243523453",
+    "30",
+    "3425345345",
+    "WORKING"
+),
+(
+    "72345345-2d56-4cef-860d-da02c7b639ee",
+    "Aenean et cursus",
+    "ornare blandit massa. Cras auctor lacinia dolor, quis lacinia est",
+    "243523453",
+    "30",
+    "3425345345",
+    "WORKING"
+),
+(
+    "234545-2d56-4cef-860d-da02c7b639ee",
+    "Aenean et cursus",
+    "aucibus. Sed eros metus, volutpat non leo ac, euismod rutrum nisl.",
+    "243523453",
+    "30",
+    "3425345345",
+    "WORKING"
+),
+(
+    "356456-2d56-4cef-860d-da02c7b639ee",
+    "Aenean et cursus",
+    " ipsum primis in faucibus. Maecenas porta",
+    "243523453",
+    "30",
+    "3425345345",
+    "WORKING"
+),
+(
+    "7233233-2d56-4cef-860d-da02c7b639ee",
+    "Aenean et cursus",
+    "Curabitur id ex sollicitudin est consectetur sagittis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed eros metu",
+    "243523453",
+    "30",
+    "3425345345",
+    "WORKING"
+);
+
+CREATE TABLE tb_Icon_Country_Code
+(
+    guid_key NVARCHAR(100) NOT NULL PRIMARY KEY,
+    brandid NVARCHAR(100) NULL,
+    country_code_key NVARCHAR(100) NULL,
+    show_status NVARCHAR(100) NULL,
+    seqno INT(4) NULL,
+    output_sort NVARCHAR(100) NULL,
+    Alias NVARCHAR(100) NULL,
+    AdditionalIcon NVARCHAR(100) NULL 
+);
+
+DESC tb_Icon_Country_Code;
+
+INSERT INTO tb_Icon_Country_Code
+VALUES
+(
+    "7233233-2d56-4cef-860d-da02c7b639ee",
+    "7233233-2d56-4cef-860d-da02c7b639e",
+    "Rw_943534",
+    "SHOW",
+    30,
+    "ASC",
+    "RWANDA",
+    ""
+),
+(
+    "43535-2d56-4cef-860d-da02c7b639ee",
+    "7233233-2d56-4cef-860d-da02c7b639e",
+    "IND_943534",
+    "SHOW",
+    30,
+    "ASC",
+    "INDIA",
+    ""
+),
+(
+    "6345564-2d56-4cef-860d-da02c7b639ee",
+    "7233233-2d56-4cef-860d-da02c7b639e",
+    "LA_943534",
+    "SHOW",
+    30,
+    "ASC",
+    "LOS ANGELES",
+    ""
+),
+(
+    "34253544-2d56-4cef-860d-da02c7b639ee",
+    "7233233-2d56-4cef-860d-da02c7b639e",
+    "RU_943534",
+    "SHOW",
+    30,
+    "ASC",
+    "RUSSIA",
+    ""
+);
+
+CREATE TABLE tb_IconDtlEDI
+(
+    id INT(4) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    care_key NVARCHAR(100) NULL,
+    careicon_key NVARCHAR(100) NULL,
+    seqno INT(4) NULL,
+    sysicon_key  NVARCHAR(100) NULL,
+    IconType CHAR(1) NULL,
+    IconTypeId INT(4) NULL
+);
+
+
+DESC tb_IconDtlEDI;
+
+INSERT INTO tb_IconDtlEDI
+(
+    care_key,
+    careicon_key,
+    seqno,
+    sysicon_key,
+    IconType,
+    IconTypeId
+)
+VALUES
+(
+    "3452345",
+    "345235",
+    23,
+    "34523455",
+    'F',
+    345
+);
+
+CREATE TABLE tb_IconRelation
+(
+    GuidKey NVARCHAR(100) NOT NULL PRIMARY KEY,
+    RelationId NVARCHAR(100) NULL,
+    BrandId NVARCHAR(100) NULL,
+    IconType NVARCHAR(20) NULL,
+    IconTypeId NVARCHAR(100) NULL,
+    MainIconKey NVARCHAR(100) NULL,
+    RelationType NVARCHAR(20) NULL,
+    CreateBy NVARCHAR(100) NULL,
+    CreateTime DATETIME(6) NULL
+);
+
+DESC tb_IconRelation;
+
+INSERT INTO tb_IconRelation
+VALUES
+(
+    "452345345-2d56-4cef-860d-da02c7b639ee",
+    "34253544-2d56-4cef-860d-da02c7b639ee",
+    "4543235",
+    "font awesome",
+    "check",
+    "check",
+    "432543543",
+    "3245234535435",
+    "2022-04-06 12:05:51"
+),
+(
+    "245342543-2d56-4cef-860d-da02c7b639ee",
+    "34253544-2d56-4cef-860d-da02c7b639ee",
+    "4543235",
+    "font awesome",
+    "check",
+    "check",
+    "432543543",
+    "3245234535435",
+    "2022-04-06 12:05:51"
+),
+(
+    "424523453-2d56-4cef-860d-da02c7b639ee",
+    "34253544-2d56-4cef-860d-da02c7b639ee",
+    "4543235",
+    "font awesome",
+    "check",
+    "check",
+    "432543543",
+    "3245234535435",
+    "2022-04-06 12:05:51"
+),
+(
+    "254235345-2d56-4cef-860d-da02c7b639ee",
+    "34253544-2d56-4cef-860d-da02c7b639ee",
+    "4543235",
+    "font awesome",
+    "check",
+    "check",
+    "432543543",
+    "3245234535435",
+    "2022-04-06 12:05:51"
+),
+(
+    "73563645-2d56-4cef-860d-da02c7b639ee",
+    "34253544-2d56-4cef-860d-da02c7b639ee",
+    "4543235",
+    "font awesome",
+    "check",
+    "check",
+    "432543543",
+    "3245234535435",
+    "2022-04-06 12:05:51"
+);
+
+CREATE TABLE tb_item_ref_type
+(
+    id INT(4) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name NVARCHAR(100) NULL,
+    parentid INT(4) NULL
+);
+
+DESC tb_item_ref_type;
+
+INSERT INTO tb_item_ref_type
+(
+    name,
+    parentid
+)
+VALUES
+(
+    "ec vehicula dui ipsum eu augue. Aenean ",
+    23 
+),
+(
+    "Interdum et malesuada fames ac ante",
+    43 
+),
+(
+    "primis in faucibus. Proin mollis purus a tempus placerat",
+    24 
+),
+(
+    "Fusce maximus posuere sapien in fringilla.",
+    634 
+),
+(
+    "ollicitudin nec mattis a, gravida sed mauris.",
+    345 
+);
+
+CREATE TABLE tb_item_reference
+(
+    id INT(4) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    guid_key NVARCHAR(100) NULL,
+    item_ref NVARCHAR(200) NULL,
+    item_ref_type NVARCHAR(100) NULL,
+    item_ref_desc NVARCHAR(800) NULL,
+    created_by NVARCHAR(100) NULL,
+    created_date DATETIME(6) NULL,
+    modified_by NVARCHAR(100) NULL,
+    modified_date DATETIME(6) NULL,
+    isEnable INT(4) NULL,
+    layout_file TEXT NULL,
+    brandid NVARCHAR(100) NULL,
+    is_nonsize NVARCHAR(2) NULL,
+    itemtag_id INT(4) NULL,
+    AwExcelModel NVARCHAR(2) NULL,
+    CountryQuantity NVARCHAR(100) NULL,
+    IsCareIndex CHAR(1) NULL,
+    ItemStatus NVARCHAR(60) NULL,
+    MOQ_NonSize NVARCHAR(100) NULL,
+    IsModify CHAR(1) NULL,
+    erp_item_code NVARCHAR(400) NULL,
+    ProductionFile NVARCHAR(200) NULL,
+    item_ref_sub_type NVARCHAR(200) NULL,
+    BrandCategory NVARCHAR(100) NULL,
+    hasqr NVARCHAR(2) NULL,
+    Wastage NVARCHAR(20) NULL,
+    BrandMappingId NVARCHAR(100) NULL,
+    enablePrint CHAR(1) NULL,
+    AutoPDFLinkType NVARCHAR(100) NULL,
+    EdiAddQtyPercent NVARCHAR(100) NULL,
+    QRCodeBgc NVARCHAR(100) NULL,
+    EnableDPPDFBySize CHAR(1) NULL,
+    BarcodeType  NVARCHAR(100) NULL,
+    EnableArtworkBarcode CHAR(1) NULL,
+    BarcodeFontSize FLOAT(9) NULL,
+    BarcodeTextFontSize FLOAT(9) NULL,
+    ArtworkLabel  NVARCHAR(60) NULL,
+    D365ItemCode  NVARCHAR(100) NULL
+);
+
+DESC tb_item_reference;
+
+INSERT INTO tb_item_reference
+(
+    guid_key,
+    item_ref,
+    item_ref_type,
+    item_ref_desc,
+    created_by,
+    created_date,
+    modified_by,
+    modified_date,
+    isEnable,
+    layout_file,
+    brandid,
+    is_nonsize,
+    itemtag_id,
+    AwExcelModel,
+    CountryQuantity,
+    IsCareIndex,
+    ItemStatus,
+    MOQ_NonSize,
+    IsModify,
+    erp_item_code,
+    ProductionFile,
+    item_ref_sub_type,
+    BrandCategory,
+    hasqr,
+    Wastage,
+    BrandMappingId,
+    enablePrint,
+    AutoPDFLinkType,
+    EdiAddQtyPercent,
+    QRCodeBgc,
+    EnableDPPDFBySize,
+    BarcodeType,
+    EnableArtworkBarcode,
+    BarcodeFontSize,
+    BarcodeTextFontSize,
+    ArtworkLabel,
+    D365ItemCode
+)
+VALUES
+(
+    "356456-2d56-4cef-860d-da02c7b639ee",
+    "345235435",
+    "ipsum",
+    " Cras auctor lacinia dolor,",
+    "356456-2d56-4cef-860d-da02c7b639ee",
+    "2022-04-04 12:04:07",
+    "356456-2d56-4cef-860d-da02c7b639ee",
+    "2022-04-04 12:04:07",
+    1,
+    "Curabitur ultrices eros lacus, ut tempor mi elementum vitae. Donec hendrerit consequat odio, ac mattis diam ultricies vestibulum. Vivamus sed mollis quam. Quisque elit dolor, semper non sem accumsan, hendrerit rutrum dui. Vivamus elementum massa suscipit convallis efficitur. Praesent bibendum mollis ex id volutpat. Curabitur id ex sollicitudin est consectetur sagittis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed eros metus, volutpat non leo ac, euismod rutrum nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin mollis purus a tempus placerat. Sed enim erat, pretium eu nunc a, dictum rutrum massa. Sed ante ipsum, tincidunt non eros id, porttitor tristique tortor.",
+    "23452345345",
+    'Y',
+    3454,
+    'Y',
+    "4000",
+    'Y',
+    "SHIPPED",
+    "4000",
+    'Y',
+    "DFASDF0345235",
+    "www.poorders.com/fasdf/file102.jpg",
+    "url",
+    "Fashion",
+    'Y',
+    "435000",
+    "435234535",
+    'Y',
+    "URL",
+    "60",
+    "Mauris suscipit facilisis lorem. Nam finibus orci in lectus ultricies condimentum",
+    'Y',
+    'Proin mollis purus a tempus',
+    'Y',
+    23,
+    "435345",
+    'malesuada fames ac ante ipsum primis',
+    "Interdum et malesuada fames ac ante ipsum primis in faucibus"
+);
+
+CREATE TABLE tb_itemLabelPrint
+(
+    guid_key NVARCHAR(100) NOT NULL PRIMARY KEY,
+    item_key NVARCHAR(100) NULL,
+    paperprint_key NVARCHAR(100) NULL
+);
+
+DESC tb_itemLabelPrint;
+
+INSERT INTO tb_itemLabelPrint
+VALUES
+(
+    "463543543-2d56-4cef-860d-da02c7b639ee",
+    "Interdum et malesuada fames",
+    "435235435"
+),
+(
+    "546346-2d56-4cef-860d-da02c7b639ee",
+    "ornare blandit massa",
+    "435235435"
+),
+(
+    "8234535-2d56-4cef-860d-da02c7b639ee",
+    "Donec hendrerit consequat",
+    "435235435"
+),
+(
+    "42343534-2d56-4cef-860d-da02c7b639ee",
+    "Proin mollis purus a tempus placerat",
+    "435235435"
+);
+
+CREATE TABLE tb_itemUploadJPGFile
+(
+    id INT(4) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    filename TEXT NULL,
+    item TEXT NULL,
+    uploadtime DATETIME(6) NULL
+);
+
+DESC tb_itemUploadJPGFile;
+
+INSERT INTO tb_itemUploadJPGFile
+(
+    item,
+    uploadtime
+)
+VALUES
+(
+    "Curabitur ultrices eros lacus, ut tempor mi elementum vitae. Donec hendrerit consequat odio, ac mattis diam ultricies vestibulum. Vivamus sed mollis quam. Quisque elit dolor, semper non sem accumsan, hendrerit rutrum dui. Vivamus elementum massa suscipit convallis efficitur. Praesent bibendum mollis ex id volutpat. Curabitur id ex sollicitudin est consectetur sagittis. Interdum et malesuada fame",
+    "2022-04-05 12:40:43"
+),
+(
+    "ante ipsum primis in faucibus. Sed eros metus, volutpat non leo ac, euismod rutrum nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin mollis",
+    "2022-04-05 12:40:43"
+),
+(
+    "Nunc elementum, leo et ullamcorper placerat, sem turpis mattis risus, nec varius sem magna at mi. Phasellus mattis elementum eros eget sagittis.",
+    "2022-04-05 12:40:43"
+);
+
+CREATE TABLE tb_itemUploadJPGFileTemp
+(
+    id INT(4) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    filename TEXT NULL,
+    uploadtime DATETIME(6) NULL
+);
+
+DESC tb_itemUploadJPGFileTemp;
+
+INSERT INTO tb_itemUploadJPGFileTemp
+(
+    filename,
+    uploadtime
+)
+VALUES
+(
+    "Curabitur ultrices eros lacus",
+    "2022-04-05 12:40:43"
+),
+(
+    "ante ipsum primis in faucibus",
+    "2022-04-05 12:40:43"
+),
+(
+    "Nunc elementum, leo et ullamcorper",
+    "2022-04-05 12:40:43"
+);
+
+
+CREATE TABLE tb_LabelItem
+(
+    ID INT(4) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    Status NVARCHAR(100) NULL,
+    D365ItemCode NVARCHAR(100) NULL,
+    ItemCode NVARCHAR(200) NULL,
+    ItemName TEXT NULL,
+    RetailerCode NVARCHAR(100) NULL,
+    RetailerName NVARCHAR(100) NULL,
+    BrandCode NVARCHAR(100) NULL,
+    BrandName NVARCHAR(100) NULL,
+    ItemType NVARCHAR(100) NULL,
+    ItemSubType NVARCHAR(100) NULL,
+    ArtWorkThumbnailFile TEXT NULL,
+    ProductType NVARCHAR(100) NULL,
+    ProductSubtype NVARCHAR(100) NULL,
+    str_Retailer_Brand NVARCHAR(100) NULL,
+    ProductionLocation NVARCHAR(100) NULL,
+    MOQ NVARCHAR(20) NULL,
+    ProductionLeadTime NVARCHAR(20) NULL,
+    OrderMultiples NVARCHAR(100) NULL,
+    isConfigGroup NVARCHAR(100) NULL
+);
+
+DESC tb_LabelItem;
+
+INSERT INTO tb_LabelItem
+(
+    Status,
+    D365ItemCode,
+    ItemCode,
+    ItemName,
+    RetailerCode,
+    RetailerName,
+    BrandCode,
+    BrandName,
+    ItemType,
+    ItemSubType,
+    ArtWorkThumbnailFile,
+    ProductType,
+    ProductSubtype,
+    str_Retailer_Brand,
+    ProductionLocation,
+    MOQ,
+    ProductionLeadTime,
+    OrderMultiples,
+    isConfigGroup
+)
+VALUES
+(
+    "NEW",
+    "435235435",
+    "4352345345",
+    "Teslati Model 1",
+    "RetailerCode234124234",
+    "John retailer",
+    "425345345",
+    "Tesla",
+    "CAR",
+    "Electric car",
+    'Quisque mollis pretium ante, tristique porta sem accumsan et. Vivamus ut finibus dui, vel auctor purus. Fusce maximus posuere sapien in fringilla. Integer orci est, sollicitudin nec mattis',
+    'Electric',
+    'Car',
+    'Retailer Brand',
+    "INDIA",
+    "MOQ",
+    'ProductionLeadTime',
+    'YES',
+    'Y'
+);
+
+CREATE TABLE tb_LabelItemErp
+(
+    GuidKey NVARCHAR(100) NOT NULL PRIMARY KEY,
+    D365ItemCode NVARCHAR(100) NULL,
+    ErpId INT(4) NULL,
+    QtyMoq INT(4) NULL,
+    QtyOm INT(4) NULL,
+    ErpPrice FLOAT(8) NULL,
+    LeadTime INT(4) NULL
+);
+
+DESC tb_LabelItemErp;
+
+INSERT INTO tb_LabelItemErp
+(
+    GuidKey,
+    D365ItemCode,
+    ErpId,
+    QtyMoq,
+    QtyOm,
+    ErpPrice,
+    LeadTime
+)
+VALUES
+(
+    "234532453-2d56-4cef-860d-da02c7b639ee",
+    "345235345",
+    45,
+    500,
+    3400,
+    50000,
+    4000
+),
+(
+    "2425235-2d56-4cef-860d-da02c7b639ee",
+    "345235345",
+    43,
+    500,
+    320,
+    6000,
+    30000
+),
+(
+    "44425325-2d56-4cef-860d-da02c7b639ee",
+    "345235345",
+    23,
+    500,
+    500,
+    50000,
+    7000
+),
+(
+    "26234533-2d56-4cef-860d-da02c7b639ee",
+    "345235345",
+    43,
+    500,
+    320,
+    50000,
+    4000
+);
+
+CREATE TABLE tb_LAF_AwXmlConfig
+(
+    GuidKey NVARCHAR(100) NOT NULL PRIMARY KEY,
+    BrandId NVARCHAR(100) NULL,
+    ExportMode INT(4) NULL,
+    CreateBy NVARCHAR(200) NULL,
+    CreateDate DATETIME(6) NULL,
+    LastSaveBy NVARCHAR(200) NULL,
+    LastSaveDate DATETIME(6) NULL,
+    FtpIp  NVARCHAR(400) NULL,
+    FtpLogin NVARCHAR(400) NULL,
+    FtpPwd NVARCHAR(400) NULL,
+    FtpModel INT(4) NULL
+);
+
+DESC tb_LAF_AwXmlConfig;
+
+INSERT INTO tb_LAF_AwXmlConfig
+(
+    GuidKey,
+    BrandId,
+    ExportMode,
+    CreateBy,
+    CreateDate,
+    LastSaveBy,
+    LastSaveDate,
+    FtpIp,
+    FtpLogin,
+    FtpPwd,
+    FtpModel 
+)
+VALUES
+(
+    "4253453544-2d56-4cef-860d-da02c7b639ee",
+    '24534534',
+    344,
+    '432535435',
+    "2022-04-05 12:40:43",
+    '432535435',
+    "2022-04-05 12:40:43",
+    '345234543',
+    '34523534',
+    'pass@123',
+    65654
+),
+(
+    "73456346-2d56-4cef-860d-da02c7b639ee",
+    '452353535',
+    5655,
+    '432535435',
+    "2022-04-05 12:40:43",
+    '432535435',
+    "2022-04-05 12:40:43",
+    '345234543',
+    '34523534',
+    'pass@123',
+    800
+),
+(
+    "356346-2d56-4cef-860d-da02c7b639ee",
+    '24523453',
+    344,
+    '432535435',
+    "2022-04-05 12:40:43",
+    '432535435',
+    "2022-04-05 12:40:43",
+    '345234543',
+    '34523534',
+    'pass@123',
+    400
+),
+(
+    "745433-2d56-4cef-860d-da02c7b639ee",
+    '8543534345',
+    734,
+    '432535435',
+    "2022-04-05 12:40:43",
+    '432535435',
+    "2022-04-05 12:40:43",
+    '345234543',
+    '34523534',
+    'pass@123',
+    7000
+);
+
+CREATE TABLE tb_local_file
+(
+    guid_key NVARCHAR(100) NOT NULL PRIMARY KEY,
+    BrandId NVARCHAR(100) NULL,
+    SKU TEXT NULL,
+    BU TEXT NULL,
+    Material_Number TEXT NULL,
+    Incubate_Type TEXT NULL,
+    CADS TEXT NULL,
+    Division TEXT NULL,
+    Product_Description TEXT NULL,
+    Style_Number TEXT NULL,
+    Colorway_ID TEXT NULL,
+    Colorway_Name TEXT NULL,
+    Color_China TEXT NULL,
+    Color_TWN TEXT NULL,
+    Category TEXT NULL,
+    Category_China TEXT NULL,
+    Category_TWN TEXT NULL,
+    Gender_Class TEXT NULL,
+    Gender_China TEXT NULL,
+    Gender_TWN TEXT NULL,
+    Basic_Material_ID TEXT NULL,
+    Basic_Material TEXT NULL,
+    Size_Range_for_accessory TEXT NULL,
+    Vendor TEXT NULL,
+    Factory_Address TEXT NULL,
+    Sub_Category TEXT NULL,
+    Asia_Category TEXT NULL,
+    Asia_Sub_Category TEXT NULL,
+    Asia_Product_Bucket_I TEXT NULL,
+    Product_Bucket TEXT NULL,
+    Sub_Category_1 TEXT NULL,
+    Class TEXT NULL,
+    Family_Name TEXT NULL,
+    Basic_Material_Group TEXT NULL,
+    GB_Standard TEXT NULL,
+    Security_Technology_Category TEXT NULL,
+    Care_Code TEXT NULL,
+    Product_Grade TEXT NULL,
+    Special_Sizing_for_accessory TEXT NULL,
+    COO TEXT NULL
+);
+
+DESC tb_local_file;
+
+INSERT INTO tb_local_file
+VALUES
+(
+    "546456-2d56-4cef-860d-da02c7b639ee",
+    "432534534",
+    "sollicitudin",
+    "Interdum",
+    "3452353",
+    "Incubate Type",
+    "malesuada",
+    "maximus",
+    "Vivamus ut finibus dui, vel auctor purus. Fusce maximus posuere sapien in fringilla",
+    "Vivamus",
+    "342535345",
+    "Maecenas",
+    "435235345",
+    "23452354",
+    "Maecenas porta",
+    "Maecenas porta 4325345",
+    "Maecenas porta 1243523",
+    "Gender Class",
+    "nec varius sem magna",
+    "Curabitur quis dignissim lorem.",
+    "Curabitur ultrices eros lacus, ut tempor mi elementum vitae",
+    "Donec hendrerit consequat odio, ac mattis diam ultricies vestibulum",
+    "Sed enim erat, pretium eu nunc a, dictum rutrum massa",
+    "Maecenas mollis pharetra condimentum",
+    "In hac habitasse platea dictumst. Maecenas mollis pharetra condimentum",
+    "Nunc elementum, leo et ullamcorper placerat, sem turpis mattis risus",
+    "Curabitur quis dignissim lorem. Phasellus consectetur",
+    "Nulla molestie nibh ut mattis ultricies. In hac habitasse platea dictumst.",
+    "Quisque mollis pretium ante, tristique porta",
+    "Quisque mollis pretium ante, tristique porta",
+    "sub category 1",
+    "Quisque mollis pretium ante, tristique porta",
+    "Curabitur id ex sollicitudin est consectetur sagittis.",
+    "Curabitur id ex sollicitudin est consectetur sagittis.",
+    "Praesent bibendum mollis ex id volutpat",
+    "Duis faucibus sed ex at commodo",
+    "Pellentesque vulputate volutpat pulvinar",
+    "Praesent bibendum mollis ex id volutpat. Curabitur id",
+    "Maecenas mollis pharetra condimentum. Duis vel justo vel urna hendrerit fringilla.",
+    "Donec auctor lectus in mauris accumsan vehicula"
+),
+(
+    "3563456-2d56-4cef-860d-da02c7b639ee",
+    "432534534",
+    "sollicitudin",
+    "Interdum",
+    "3452353",
+    "Incubate Type",
+    "malesuada",
+    "maximus",
+    "Vivamus ut finibus dui, vel auctor purus. Fusce maximus posuere sapien in fringilla",
+    "Vivamus",
+    "342535345",
+    "Maecenas",
+    "435235345",
+    "23452354",
+    "Maecenas porta",
+    "Maecenas porta 4325345",
+    "Maecenas porta 1243523",
+    "Gender Class",
+    "nec varius sem magna",
+    "Curabitur quis dignissim lorem.",
+    "Curabitur ultrices eros lacus, ut tempor mi elementum vitae",
+    "Donec hendrerit consequat odio, ac mattis diam ultricies vestibulum",
+    "Sed enim erat, pretium eu nunc a, dictum rutrum massa",
+    "Maecenas mollis pharetra condimentum",
+    "In hac habitasse platea dictumst. Maecenas mollis pharetra condimentum",
+    "Nunc elementum, leo et ullamcorper placerat, sem turpis mattis risus",
+    "Curabitur quis dignissim lorem. Phasellus consectetur",
+    "Nulla molestie nibh ut mattis ultricies. In hac habitasse platea dictumst.",
+    "Quisque mollis pretium ante, tristique porta",
+    "Quisque mollis pretium ante, tristique porta",
+    "sub category 1",
+    "Quisque mollis pretium ante, tristique porta",
+    "Curabitur id ex sollicitudin est consectetur sagittis.",
+    "Curabitur id ex sollicitudin est consectetur sagittis.",
+    "Praesent bibendum mollis ex id volutpat",
+    "Duis faucibus sed ex at commodo",
+    "Pellentesque vulputate volutpat pulvinar",
+    "Praesent bibendum mollis ex id volutpat. Curabitur id",
+    "Maecenas mollis pharetra condimentum. Duis vel justo vel urna hendrerit fringilla.",
+    "Donec auctor lectus in mauris accumsan vehicula"
+),
+(
+    "234535345-2d56-4cef-860d-da02c7b639ee",
+    "432534534",
+    "sollicitudin",
+    "Interdum",
+    "3452353",
+    "Incubate Type",
+    "malesuada",
+    "maximus",
+    "Vivamus ut finibus dui, vel auctor purus. Fusce maximus posuere sapien in fringilla",
+    "Vivamus",
+    "342535345",
+    "Maecenas",
+    "435235345",
+    "23452354",
+    "Maecenas porta",
+    "Maecenas porta 4325345",
+    "Maecenas porta 1243523",
+    "Gender Class",
+    "nec varius sem magna",
+    "Curabitur quis dignissim lorem.",
+    "Curabitur ultrices eros lacus, ut tempor mi elementum vitae",
+    "Donec hendrerit consequat odio, ac mattis diam ultricies vestibulum",
+    "Sed enim erat, pretium eu nunc a, dictum rutrum massa",
+    "Maecenas mollis pharetra condimentum",
+    "In hac habitasse platea dictumst. Maecenas mollis pharetra condimentum",
+    "Nunc elementum, leo et ullamcorper placerat, sem turpis mattis risus",
+    "Curabitur quis dignissim lorem. Phasellus consectetur",
+    "Nulla molestie nibh ut mattis ultricies. In hac habitasse platea dictumst.",
+    "Quisque mollis pretium ante, tristique porta",
+    "Quisque mollis pretium ante, tristique porta",
+    "sub category 1",
+    "Quisque mollis pretium ante, tristique porta",
+    "Curabitur id ex sollicitudin est consectetur sagittis.",
+    "Curabitur id ex sollicitudin est consectetur sagittis.",
+    "Praesent bibendum mollis ex id volutpat",
+    "Duis faucibus sed ex at commodo",
+    "Pellentesque vulputate volutpat pulvinar",
+    "Praesent bibendum mollis ex id volutpat. Curabitur id",
+    "Maecenas mollis pharetra condimentum. Duis vel justo vel urna hendrerit fringilla.",
+    "Donec auctor lectus in mauris accumsan vehicula"
+);
+
+CREATE TABLE tb_local_file_error
+(
+    guid_key NVARCHAR(100) NOT NULL PRIMARY KEY,
+    BrandId NVARCHAR(100) NULL,
+    SKU TEXT NULL,
+    BU TEXT NULL,
+    Material_Number TEXT NULL,
+    Incubate_Type TEXT NULL,
+    CADS TEXT NULL,
+    Division TEXT NULL,
+    Product_Description TEXT NULL,
+    Style_Number TEXT NULL,
+    Colorway_ID TEXT NULL,
+    Colorway_Name TEXT NULL,
+    Color_China TEXT NULL,
+    Color_TWN TEXT NULL,
+    Category TEXT NULL,
+    Category_China TEXT NULL,
+    Category_TWN TEXT NULL,
+    Gender_Class TEXT NULL,
+    Gender_China TEXT NULL,
+    Gender_TWN TEXT NULL,
+    Basic_Material_ID TEXT NULL,
+    Basic_Material TEXT NULL,
+    Size_Range_for_accessory TEXT NULL,
+    Vendor TEXT NULL,
+    Factory_Address TEXT NULL,
+    Sub_Category TEXT NULL,
+    Asia_Category TEXT NULL,
+    Asia_Sub_Category TEXT NULL,
+    Asia_Product_Bucket_I TEXT NULL,
+    Product_Bucket TEXT NULL,
+    Sub_Category_1 TEXT NULL,
+    Class TEXT NULL,
+    Family_Name TEXT NULL,
+    Basic_Material_Group TEXT NULL,
+    GB_Standard TEXT NULL,
+    Security_Technology_Category TEXT NULL,
+    Care_Code TEXT NULL,
+    Product_Grade TEXT NULL,
+    Special_Sizing_for_accessory TEXT NULL,
+    COO TEXT NULL
+);
+
+DESC tb_local_file_error;
+
+INSERT INTO tb_local_file_error
+VALUES
+(
+    "546456-2d56-4cef-860d-da02c7b639ee",
+    "432534534",
+    "sollicitudin",
+    "Interdum",
+    "3452353",
+    "Incubate Type",
+    "malesuada",
+    "maximus",
+    "Vivamus ut finibus dui, vel auctor purus. Fusce maximus posuere sapien in fringilla",
+    "Vivamus",
+    "342535345",
+    "Maecenas",
+    "435235345",
+    "23452354",
+    "Maecenas porta",
+    "Maecenas porta 4325345",
+    "Maecenas porta 1243523",
+    "Gender Class",
+    "nec varius sem magna",
+    "Curabitur quis dignissim lorem.",
+    "Curabitur ultrices eros lacus, ut tempor mi elementum vitae",
+    "Donec hendrerit consequat odio, ac mattis diam ultricies vestibulum",
+    "Sed enim erat, pretium eu nunc a, dictum rutrum massa",
+    "Maecenas mollis pharetra condimentum",
+    "In hac habitasse platea dictumst. Maecenas mollis pharetra condimentum",
+    "Nunc elementum, leo et ullamcorper placerat, sem turpis mattis risus",
+    "Curabitur quis dignissim lorem. Phasellus consectetur",
+    "Nulla molestie nibh ut mattis ultricies. In hac habitasse platea dictumst.",
+    "Quisque mollis pretium ante, tristique porta",
+    "Quisque mollis pretium ante, tristique porta",
+    "sub category 1",
+    "Quisque mollis pretium ante, tristique porta",
+    "Curabitur id ex sollicitudin est consectetur sagittis.",
+    "Curabitur id ex sollicitudin est consectetur sagittis.",
+    "Praesent bibendum mollis ex id volutpat",
+    "Duis faucibus sed ex at commodo",
+    "Pellentesque vulputate volutpat pulvinar",
+    "Praesent bibendum mollis ex id volutpat. Curabitur id",
+    "Maecenas mollis pharetra condimentum. Duis vel justo vel urna hendrerit fringilla.",
+    "Donec auctor lectus in mauris accumsan vehicula"
+),
+(
+    "3563456-2d56-4cef-860d-da02c7b639ee",
+    "432534534",
+    "sollicitudin",
+    "Interdum",
+    "3452353",
+    "Incubate Type",
+    "malesuada",
+    "maximus",
+    "Vivamus ut finibus dui, vel auctor purus. Fusce maximus posuere sapien in fringilla",
+    "Vivamus",
+    "342535345",
+    "Maecenas",
+    "435235345",
+    "23452354",
+    "Maecenas porta",
+    "Maecenas porta 4325345",
+    "Maecenas porta 1243523",
+    "Gender Class",
+    "nec varius sem magna",
+    "Curabitur quis dignissim lorem.",
+    "Curabitur ultrices eros lacus, ut tempor mi elementum vitae",
+    "Donec hendrerit consequat odio, ac mattis diam ultricies vestibulum",
+    "Sed enim erat, pretium eu nunc a, dictum rutrum massa",
+    "Maecenas mollis pharetra condimentum",
+    "In hac habitasse platea dictumst. Maecenas mollis pharetra condimentum",
+    "Nunc elementum, leo et ullamcorper placerat, sem turpis mattis risus",
+    "Curabitur quis dignissim lorem. Phasellus consectetur",
+    "Nulla molestie nibh ut mattis ultricies. In hac habitasse platea dictumst.",
+    "Quisque mollis pretium ante, tristique porta",
+    "Quisque mollis pretium ante, tristique porta",
+    "sub category 1",
+    "Quisque mollis pretium ante, tristique porta",
+    "Curabitur id ex sollicitudin est consectetur sagittis.",
+    "Curabitur id ex sollicitudin est consectetur sagittis.",
+    "Praesent bibendum mollis ex id volutpat",
+    "Duis faucibus sed ex at commodo",
+    "Pellentesque vulputate volutpat pulvinar",
+    "Praesent bibendum mollis ex id volutpat. Curabitur id",
+    "Maecenas mollis pharetra condimentum. Duis vel justo vel urna hendrerit fringilla.",
+    "Donec auctor lectus in mauris accumsan vehicula"
+),
+(
+    "234535345-2d56-4cef-860d-da02c7b639ee",
+    "432534534",
+    "sollicitudin",
+    "Interdum",
+    "3452353",
+    "Incubate Type",
+    "malesuada",
+    "maximus",
+    "Vivamus ut finibus dui, vel auctor purus. Fusce maximus posuere sapien in fringilla",
+    "Vivamus",
+    "342535345",
+    "Maecenas",
+    "435235345",
+    "23452354",
+    "Maecenas porta",
+    "Maecenas porta 4325345",
+    "Maecenas porta 1243523",
+    "Gender Class",
+    "nec varius sem magna",
+    "Curabitur quis dignissim lorem.",
+    "Curabitur ultrices eros lacus, ut tempor mi elementum vitae",
+    "Donec hendrerit consequat odio, ac mattis diam ultricies vestibulum",
+    "Sed enim erat, pretium eu nunc a, dictum rutrum massa",
+    "Maecenas mollis pharetra condimentum",
+    "In hac habitasse platea dictumst. Maecenas mollis pharetra condimentum",
+    "Nunc elementum, leo et ullamcorper placerat, sem turpis mattis risus",
+    "Curabitur quis dignissim lorem. Phasellus consectetur",
+    "Nulla molestie nibh ut mattis ultricies. In hac habitasse platea dictumst.",
+    "Quisque mollis pretium ante, tristique porta",
+    "Quisque mollis pretium ante, tristique porta",
+    "sub category 1",
+    "Quisque mollis pretium ante, tristique porta",
+    "Curabitur id ex sollicitudin est consectetur sagittis.",
+    "Curabitur id ex sollicitudin est consectetur sagittis.",
+    "Praesent bibendum mollis ex id volutpat",
+    "Duis faucibus sed ex at commodo",
+    "Pellentesque vulputate volutpat pulvinar",
+    "Praesent bibendum mollis ex id volutpat. Curabitur id",
+    "Maecenas mollis pharetra condimentum. Duis vel justo vel urna hendrerit fringilla.",
+    "Donec auctor lectus in mauris accumsan vehicula"
+);
