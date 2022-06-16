@@ -21535,3 +21535,2832 @@ VALUES
     "My Atex Control"
 );
 
+CREATE TABLE tb_OwnerBrand
+(
+    GuidKey NVARCHAR(100) PRIMARY KEY NOT NULL,
+    MainCustKey NVARCHAR(100) NULL,
+    ViceBrandKey NVARCHAR(100) NULL,
+    SeqNo INT(4) NULL
+);
+
+DESC tb_OwnerBrand;
+
+INSERT INTO tb_OwnerBrand
+VALUES
+(
+    "7245343-2d56-4cef-860d-da02c7b639ee",
+    "3452345873593",
+    "353245345344",
+    12
+),
+(
+    "72452334-2d56-4cef-860d-da02c7b639ee",
+    "3452345873593",
+    "353245345344",
+    45
+),
+(
+    "452345343-2d56-4cef-860d-da02c7b639ee",
+    "3452345873593",
+    "353245345344",
+    64
+),
+(
+    "324534534-2d56-4cef-860d-da02c7b639ee",
+    "3452345873593",
+    "353245345344",
+    34
+),
+(
+    "1234243433-2d56-4cef-860d-da02c7b639ee",
+    "3452345873593",
+    "353245345344",
+    6
+);
+
+CREATE TABLE tb_OwnerCust
+(
+    GuidKey NVARCHAR(100) PRIMARY KEY NOT NULL,
+    MainCustKey NVARCHAR(100) NULL,
+    ViceBrandKey NVARCHAR(100) NULL,
+    SeqNo INT(4) NULL
+);
+
+DESC tb_OwnerCust;
+
+INSERT INTO tb_OwnerCust
+VALUES
+(
+    "7245343-2d56-4cef-860d-da02c7b639ee",
+    "3452345873593",
+    "353245345344",
+    12
+),
+(
+    "72452334-2d56-4cef-860d-da02c7b639ee",
+    "3452345873593",
+    "353245345344",
+    45
+),
+(
+    "452345343-2d56-4cef-860d-da02c7b639ee",
+    "3452345873593",
+    "353245345344",
+    64
+),
+(
+    "324534534-2d56-4cef-860d-da02c7b639ee",
+    "3452345873593",
+    "353245345344",
+    34
+),
+(
+    "1234243433-2d56-4cef-860d-da02c7b639ee",
+    "3452345873593",
+    "353245345344",
+    6
+);
+
+CREATE TABLE tb_OwnerRefreshLoginTemp
+(
+    GuidKey NVARCHAR(100) NOT NULL PRIMARY KEY,
+    ViceKey NVARCHAR(100) NULL,
+    CreateTime DATETIME(6) NULL
+);
+
+DESC tb_OwnerRefreshLoginTemp;
+
+INSERT INTO tb_OwnerRefreshLoginTemp
+VALUES
+(
+    "1234243433-2d56-4cef-860d-da02c7b639ee",
+    "34255345345",
+    "2022-04-05 12:04:23"
+),
+(
+    "3452345435-2d56-4cef-860d-da02c7b639ee",
+    "34255345345",
+    "2022-04-05 12:04:23"
+),
+(
+    "7245235344-2d56-4cef-860d-da02c7b639ee",
+    "34255345345",
+    "2022-04-05 12:04:23"
+),
+(
+    "45235345345-2d56-4cef-860d-da02c7b639ee",
+    "34255345345",
+    "2022-04-05 12:04:23"
+),
+(
+    "31412423424-2d56-4cef-860d-da02c7b639ee",
+    "34255345345",
+    "2022-04-05 12:04:23"
+);
+
+CREATE TABLE tb_PaperPrint
+(
+    guid_key NVARCHAR(100) NOT NULL PRIMARY KEY,
+    paperPrint_name TEXT NULL,
+    paperType_key NVARCHAR(100) NULL,
+    paperSize_key NVARCHAR(100) NULL,
+    printMargin_up INT(4) NULL,
+    printMargin_bottom INT(4) NULL,
+    printMargin_left INT(4) NULL,
+    printMargin_right INT(4) NULL,
+    printMargin_innerCross INT(4) NULL,
+    printMargin_innerDown INT(4) NULL,
+    print_option NVARCHAR(100) NULL,
+    printer_model NVARCHAR(500) NULL,
+    printer_ip NVARCHAR(500) NULL,
+    printer_port NVARCHAR(20) NULL,
+    enable CHAR(1) NULL,
+    create_date DATETIME(6) NULL,
+    create_by  NVARCHAR(500) NULL,
+    last_updated_date DATETIME(6) NULL,
+    last_updated_by NVARCHAR(500) NULL
+);
+
+DESC tb_PaperPrint;
+
+INSERT INTO tb_PaperPrint
+VALUES
+(
+    "4432545235-2d56-4cef-860d-da02c7b639ee",
+    "Cras efficitur dolor ultricies orci porta",
+    "34534534",
+    "72452354",
+    3400,
+    6400,
+    4400,
+    3400,
+    3400,
+    3400,
+    8400,
+    "3253453",
+    "52345353"
+    "192.168.1.1",
+    "600",
+    'Y',
+    "2022-04-06 23:03:23",
+    "342534543",
+    "2022-04-06 23:03:23",
+    "834529835"
+),
+(
+    "3452353453-2d56-4cef-860d-da02c7b639ee",
+    " Sed pharetra commodo libero quis bibendum",
+    "34534534",
+    "72452354",
+    3400,
+    6400,
+    4400,
+    3400,
+    5400,
+    3400,
+    8400,
+    "3253453",
+    "52345353"
+    "192.168.1.1",
+    "600",
+    'Y',
+    "2022-04-06 23:03:23",
+    "342534543",
+    "2022-04-06 23:03:23",
+    "834529835"
+),
+(
+    "724325-2d56-4cef-860d-da02c7b639ee",
+    " Integer feugiat enim a quam auctor lacinia",
+    "34534534",
+    "72452354",
+    3400,
+    6400,
+    4400,
+    3400,
+    3400,
+    5400,
+    8400,
+    "3253453",
+    "52345353"
+    "192.168.1.1",
+    "600",
+    'Y',
+    "2022-04-06 23:03:23",
+    "342534543",
+    "2022-04-06 23:03:23",
+    "834529835"
+),
+(
+    "424352345353-2d56-4cef-860d-da02c7b639ee",
+    "Aenean ac lectus maximus, tincidunt dui a, blandit odio",
+    "34534534",
+    "72452354",
+    3400,
+    6400,
+    4400,
+    3400,
+    3400,
+    5400,
+    8400,
+    "3253453",
+    "52345353"
+    "192.168.1.1",
+    "600",
+    'Y',
+    "2022-04-06 23:03:23",
+    "342534543",
+    "2022-04-06 23:03:23",
+    "834529835"
+),
+(
+    "967467455-2d56-4cef-860d-da02c7b639ee",
+    "Aliquam in tortor eu dolor gravida commodo",
+    "34534534",
+    "72452354",
+    3400,
+    6400,
+    4400,
+    3400,
+    3400,
+    5400,
+    8400,
+    "3253453",
+    "52345353"
+    "192.168.1.1",
+    "600",
+    'Y',
+    "2022-04-06 23:03:23",
+    "342534543",
+    "2022-04-06 23:03:23",
+    "834529835"
+);
+
+CREATE TABLE tb_PaperSize
+(
+    guid_key NVARCHAR(100) NOT NULL PRIMARY KEY,
+    paperSize_name NVARCHAR(100) NULL,
+    paperSize_width DECIMAL(9) NULL,
+    paperSize_height DECIMAL(9) NULL
+);
+
+DESC tb_PaperSize;
+
+INSERT INTO tb_PaperSize
+VALUES
+(
+    "9000854-2d56-4cef-860d-da02c7b639ee",
+    "Sed tincidunt elit placerat porta gravida",
+    2000,
+    6000
+),
+(
+    "6245234535-2d56-4cef-860d-da02c7b639ee",
+    "Maecenas rhoncus, nulla at gravida euismod",
+    2000,
+    6000
+),
+(
+    "425234534-2d56-4cef-860d-da02c7b639ee",
+    "Nunc sit amet purus mauris",
+    2000,
+    6000
+),
+(
+    "5324523535-2d56-4cef-860d-da02c7b639ee",
+    "Sed tincidunt elit placerat porta gravida.",
+    2000,
+    6000
+),
+(
+    "967467455-2d56-4cef-860d-da02c7b639ee",
+    "Pellentesque pellentesque vestibulum libero",
+    2000,
+    6000
+);
+
+CREATE TABLE tb_PaperType
+(
+    guid_key  NVARCHAR(100) NOT NULL PRIMARY KEY,
+    paperType_name NVARCHAR(100) NULL
+);
+
+DESC tb_PaperType;
+
+INSERT INTO tb_PaperType
+VALUES
+(
+    "967467455-2d56-4cef-860d-da02c7b639ee",
+    "Aenean ac lectus maximus, tincidunt dui a, blandit odio"
+),
+(
+    "452345345-2d56-4cef-860d-da02c7b639ee",
+    "sem enim euismod orci, in interdum dolor ante sit amet elit"
+),
+(
+    "345235544-2d56-4cef-860d-da02c7b639ee",
+    "Donec eros augue, porta vitae tempus dignissim, aliquam sit amet risus"
+),
+(
+    "725345353-2d56-4cef-860d-da02c7b639ee",
+    "Donec malesuada volutpat justo quis pellentesque. Morbi"
+),
+(
+    "212342142-2d56-4cef-860d-da02c7b639ee",
+    "Donec sit amet mauris consequat, consequat ex ac, efficitur ex"
+);
+
+CREATE TABLE tb_PartContentRelation
+(
+    GuidKey NVARCHAR(100) NOT NULL PRIMARY KEY,
+    TranslationCodeKey NVARCHAR(100) NULL,
+    PartKey NVARCHAR(100) NULL,
+    ContentKey NVARCHAR(100) NULL
+);
+
+DESC tb_PartContentRelation;
+
+INSERT INTO tb_PartContentRelation
+VALUES
+(
+    "212342142-2d56-4cef-860d-da02c7b639ee",
+    "43524534534534",
+    "72452353453444",
+    "83845834534544"
+),
+(
+    "31341242433344-2d56-4cef-860d-da02c7b639ee",
+    "43524534534534",
+    "72452353453444",
+    "83845834534544"
+),
+(
+    "62345235353444-2d56-4cef-860d-da02c7b639ee",
+    "43524534534534",
+    "72452353453444",
+    "83845834534544"
+),
+(
+    "45243534253544-2d56-4cef-860d-da02c7b639ee",
+    "43524534534534",
+    "72452353453444",
+    "83845834534544"
+),
+(
+    "624352345345345-2d56-4cef-860d-da02c7b639ee",
+    "43524534534534",
+    "72452353453444",
+    "83845834534544"
+);
+
+CREATE TABLE tb_Permission
+(
+    ID INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    DeptCode TEXT NULL,
+    DeptName TEXT NULL
+);
+
+DESC tb_Permission;
+
+INSERT INTO tb_Permission
+(
+    DeptCode,
+    DeptName
+)
+VALUES
+(
+    "In placerat dui nec est convallis varius. Aenean ac lectus maximus, tincidunt dui a, blandit odio",
+    "Aliquam erat volutpat. Morbi dapibus, lorem at congue dictum, sem enim euismod orci, in interdum dolor ante"
+),
+(
+    "Cras auctor risus vel iaculis condimentum",
+    "Aliquam in tortor eu dolor gravida commodo tempus finibus nisi. Phasellus efficitur lacus quam, eu volutpat sapien vulputate a"
+),
+(
+    "Sed nibh lectus, consequat sed tincidunt eget, consectetur vitae ligula",
+    "Nullam rhoncus urna velit, et imperdiet sapien scelerisque sit amet. Ut ultrices rhoncus ipsum non maximus"
+);
+
+CREATE TABLE tb_preview_Update
+(
+    Id INT(4) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    style_number NVARCHAR(100) NULL,
+    Update_StyleNumber NVARCHAR(100) NULL,
+    Update_time DATETIME(6) NULL,
+    Update_By NVARCHAR(100) NULL,
+    BrandID NVARCHAR(100) NULL,
+    Type NVARCHAR(40) NULL,
+    BrandName NVARCHAR(100) NULL,
+    Content_key NVARCHAR(100) NULL,
+    oldcustomName TEXT NULL,
+    newcustomName TEXT NULL,
+    isUpload NVARCHAR(10) NULL
+);
+
+DESC tb_preview_Update;
+
+INSERT INTO tb_preview_Update
+(
+    style_number,
+    Update_StyleNumber,
+    Update_time,
+    Update_By,
+    BrandID,
+    Type,
+    BrandName,
+    Content_key,
+    oldcustomName,
+    newcustomName,
+    isUpload
+)
+VALUES
+(
+    "35",
+    "43",
+    "2022-04-05 23:04:34",
+    "452345235435",
+    "345235345345",
+    "Duis arcu ex, vehicula",
+    "Cras auctor risus vel iaculis condimentum",
+    "345345",
+    "Nullam rhoncus",
+    "Donec interdum",
+    "YES"
+),
+(
+    "45",
+    "43",
+    "2022-04-05 23:04:34",
+    "24523535345",
+    "73563456455",
+    "Donec sit amet mauris consequat",
+    "Morbi commodo, urna at fringilla mollis, lectus nunc pharetra ligula",
+    "5423453",
+    "Nullam rhoncus",
+    "Donec interdum",
+    "YES"
+);
+
+CREATE TABLE tb_ProductLine
+(
+    GuidKey NVARCHAR(100) NOT NULL PRIMARY KEY,
+    BrandId NVARCHAR(100) NULL,
+    FieldId INT(4) NULL,
+    ProductLineName  NVARCHAR(400) NULL,
+    IsEnable NVARCHAR(2) NULL,
+    CreateBy NVARCHAR(100) NULL,
+    CreateDate DATETIME(6) NULL,
+    UpdateBy NVARCHAR(100) NULL,
+    UpdateDate DATETIME(6) NULL
+);
+
+DESC tb_ProductLine;
+
+INSERT INTO tb_ProductLine
+VALUES
+(
+    "45243534253544-2d56-4cef-860d-da02c7b639ee",
+    "435234535",
+    323,
+    "Cras auctor risus vel iaculis condimentum. Aliquam in tortor eu dolor gravida commodo tempus finibus nis",
+    'Y',
+    "3242342432",
+    "2022-04-05 23:04:34",
+    "4325353454",
+    "2022-04-05 23:04:34"
+),
+(
+    "52345353454-2d56-4cef-860d-da02c7b639ee",
+    "435234535",
+    400,
+    "Phasellus efficitur lacus quam, eu volutpat sapien vulputate a. Duis arcu ex, vehicula non molestie u",
+    'Y',
+    "3242342432",
+    "2022-04-05 23:04:34",
+    "4325353454",
+    "2022-04-05 23:04:34"
+),
+(
+    "25435234534-2d56-4cef-860d-da02c7b639ee",
+    "435234535",
+    323,
+    "Cras auctor risus vel iaculis condimentum. Aliquam in tortor eu dolor gravida commodo tempus finibus nis",
+    'Y',
+    "3242342432",
+    "2022-04-05 23:04:34",
+    "4325353454",
+    "2022-04-05 23:04:34"
+),
+(
+    "724523454354-2d56-4cef-860d-da02c7b639ee",
+    "435234535",
+    323,
+    "Vestibulum sodales varius tempor. Nunc sit amet purus mauris. Phasellus quis nulla",
+    'Y',
+    "3242342432",
+    "2022-04-05 23:04:34",
+    "4325353454",
+    "2022-04-05 23:04:34"
+);
+
+CREATE TABLE tb_ProductLineTranIcon
+(
+    GuidKey NVARCHAR(100) NOT NULL PRIMARY KEY,
+    ProductLineKey NVARCHAR(100) NULL,
+    TranIconType NVARCHAR(100) NULL,
+    TranIconKey NVARCHAR(100) NULL
+);
+
+DESC tb_ProductLineTranIcon;
+
+INSERT INTO tb_ProductLineTranIcon
+VALUES
+(
+    "724523454354-2d56-4cef-860d-da02c7b639ee",
+    "52345345345",
+    "43535435454",
+    "5463464645654"
+),
+(
+    "452345342534-2d56-4cef-860d-da02c7b639ee",
+    "52345345345",
+    "43535435454",
+    "5463464645654"
+),
+(
+    "345234534544-2d56-4cef-860d-da02c7b639ee",
+    "52345345345",
+    "43535435454",
+    "5463464645654"
+),
+(
+    "6254353453534-2d56-4cef-860d-da02c7b639ee",
+    "52345345345",
+    "43535435454",
+    "5463464645654"
+);
+
+CREATE TABLE tb_qr_ItemNo(
+    id CHAR(16) NOT NULL,
+    Num NVARCHAR(100) NOT NULL,
+    order_Number NVARCHAR(100) NULL,
+    Order_NotEncryption NVARCHAR(510) NULL,
+    Order_Encryption NVARCHAR(510) NULL,
+    link NVARCHAR(450) NULL,
+    link2 NVARCHAR(540) NULL,
+    Active BIT(1) NULL,
+    qrKey NVARCHAR(200) NULL
+);
+
+DESC tb_qr_ItemNo;
+
+INSERT INTO
+    tb_qr_ItemNo(
+        id,
+        Num,
+        order_Number,
+        Order_NotEncryption,
+        Order_Encryption,
+        link,
+        link2,
+        Active,
+        qrKey
+    )
+VALUES
+    (
+        '2',
+        "1883",
+        "324-4254-5353-536",
+        "order not encryption",
+        "order encryption",
+        "https://example.com",
+        "https://example.com2",
+        B '1',
+        "qrkey"
+    ),
+    (
+        '3',
+        "535794",
+        "324-4254-5353-536",
+        "order not encryption",
+        "order encryption",
+        "https://example.com",
+        "https://example.com2",
+        B '1',
+        "qrkey"
+    ),
+    (
+        '4',
+        "05735",
+        "324-4254-5353-536",
+        "order not encryption",
+        "order encryption",
+        "https://example.com",
+        "https://example.com2",
+        B '0',
+        "qrkey"
+    ),
+    (
+        '5',
+        "1883",
+        "324-4254-5353-536",
+        "order not encryption",
+        "order encryption",
+        "https://example.com",
+        "https://example.com2",
+        B '0',
+        "qrkey"
+    ),
+    (
+        '27',
+        "13667",
+        "324-4254-5353-536",
+        "order not encryption",
+        "order encryption",
+        "https://example.com",
+        "https://example.com2",
+        B '0',
+        "qrkey"
+    ),
+    (
+        '8',
+        "9531",
+        "324-4254-5353-536",
+        "order not encryption",
+        "order encryption",
+        "https://example.com",
+        "https://example.com2",
+        B '1',
+        "qrkey"
+    ),
+    (
+        '9',
+        "5367",
+        "324-4254-5353-536",
+        "order not encryption",
+        "order encryption",
+        "https://example.com",
+        "https://example.com2",
+        B '1',
+        "qrkey"
+    ),
+    (
+        '10',
+        "54246",
+        "324-4254-5353-536",
+        "order not encryption",
+        "order encryption",
+        "https://example.com",
+        "https://example.com2",
+        B '1',
+        "qrkey"
+    );
+
+CREATE TABLE tb_qr_ItemNo_asos(
+    id CHAR(38) NOT NULL,
+    order_Number NVARCHAR(100) NULL,
+    Order_NotEncryption NVARCHAR(510) NULL,
+    Order_Encryption NVARCHAR(510) NULL,
+    link NVARCHAR(450) NULL,
+    country_seqno NVARCHAR(20) NULL,
+    country_name NVARCHAR(400) NULL,
+    COUNTRY_content TEXT NULL,
+    COUNTRY_url NVARCHAR(400) NULL,
+    COUNTRY_content_url NVARCHAR(400) NULL
+);
+
+DESC tb_qr_ItemNo_asos;
+
+INSERT INTO
+    tb_qr_ItemNo_asos(
+        id,
+        order_Number,
+        Order_NotEncryption,
+        Order_Encryption,
+        link,
+        country_seqno,
+        country_name,
+        COUNTRY_content,
+        COUNTRY_url,
+        COUNTRY_content_url
+    )
+VALUES
+    (
+        "1883",
+        "324-4254-5353-536",
+        "order not encryption",
+        "order encryption",
+        "https://example.com",
+        "CS0001",
+        "USA",
+        "country content",
+        "https://usa.com",
+        "https://usa.com/content"
+    ),
+    (
+        "535794",
+        "324-4254-5353-536",
+        "order not encryption",
+        "order encryption",
+        "https://example.com",
+        "CS0002",
+        "China",
+        "country content",
+        "https://china.com",
+        "https://china.com/content"
+    ),
+    (
+        "05735",
+        "324-4254-5353-536",
+        "order not encryption",
+        "order encryption",
+        "https://example.com",
+        "CS0003",
+        "Autsria",
+        "country content",
+        "https://austria.com",
+        "https://austria.com/content"
+    ),
+    (
+        "1883",
+        "324-4254-5353-536",
+        "order not encryption",
+        "order encryption",
+        "https://example.com",
+        "CS0004",
+        "Poland",
+        "country content",
+        "https://poland.com",
+        "https://poland.com/content"
+    ),
+    (
+        "13667",
+        "324-4254-5353-536",
+        "order not encryption",
+        "order encryption",
+        "https://example.com",
+        "CS0005",
+        "UG",
+        "country content",
+        "https://ug.com",
+        "https://ug.com/content"
+    ),
+    (
+        "9531",
+        "324-4254-5353-536",
+        "order not encryption",
+        "order encryption",
+        "https://example.com",
+        "CS0007",
+        "Russia",
+        "country content",
+        "https://russia.com",
+        "https://russia.com/content"
+    ),
+    (
+        "5367",
+        "324-4254-5353-536",
+        "order not encryption",
+        "order encryption",
+        "https://example.com",
+        "CS0008",
+        "China",
+        "country content",
+        "https://china.com",
+        "https://china.com/content"
+    ),
+    (
+        "54246",
+        "324-4254-5353-536",
+        "order not encryption",
+        "order encryption",
+        "https://example.com",
+        "CS0002",
+        "China",
+        "country content",
+        "https://china.com",
+        "https://china.com/content"
+    );
+
+CREATE TABLE tb_qr_ItemNo_gstar_f(
+    id INT(4) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    order_Number NVARCHAR(100) NULL,
+    num NVARCHAR(100) NULL,
+    Style_Number NVARCHAR(100) NULL,
+    Colour NVARCHAR(100) NULL,
+    Size NVARCHAR(100) NULL,
+    Item_Qty NVARCHAR(100) NULL,
+    Check_No CHAR(1) NULL,
+    Order_NotEncryption NVARCHAR(510) NULL,
+    Order_Encryption NVARCHAR(510) NULL,
+    Active BIT(8) NULL,
+    Stricker NVARCHAR(510) NULL,
+    factoryBatch_id NVARCHAR(200) NULL,
+    manuBatch_id NVARCHAR(200) NULL,
+    c_code NVARCHAR(200) NULL,
+    s_code NVARCHAR(200) NULL,
+    link NVARCHAR(450) NULL,
+    link2 NVARCHAR(510) NULL,
+    factory_code NVARCHAR(510) NULL,
+    order_date DATETIME(6) NULL,
+    gstar_po_no NVARCHAR(100) NULL,
+    season_code NVARCHAR(100) NULL,
+    material_code NVARCHAR(100) NULL,
+    fabric_code NVARCHAR(100) NULL,
+    inseam NVARCHAR(100) NULL,
+    fabric NVARCHAR(200) NULL,
+    color NVARCHAR(100) NULL,
+    chinasize NVARCHAR(100) NULL,
+    downweight NVARCHAR(100) NULL,
+    sizetop NVARCHAR(100) NULL,
+    eanumber NVARCHAR(100) NULL,
+    ArtWorkStatus CHAR(1) NULL,
+    qrKey NVARCHAR(200) NULL
+);
+
+DESC tb_qr_ItemNo_gstar_f;
+
+INSERT INTO
+    tb_qr_ItemNo_gstar_f(
+        order_Number,
+        num,
+        Style_Number,
+        Colour,
+        Size,
+        Item_Qty,
+        Check_No,
+        Order_NotEncryption,
+        Order_Encryption,
+        Active,
+        Stricker,
+        factoryBatch_id,
+        manuBatch_id,
+        c_code,
+        s_code,
+        link,
+        link2,
+        factory_code,
+        order_date,
+        gstar_po_no,
+        season_code,
+        material_code,
+        fabric_code,
+        inseam,
+        fabric,
+        color,
+        chinasize,
+        downweight,
+        sizetop,
+        eanumber,
+        ArtWorkStatus,
+        qrKey
+    )
+VALUES
+    (
+        "28837369374",
+        "3938802",
+        "STYLE Number",
+        "blue",
+        "399 x 399",
+        "Item_Qty",
+        "1",
+        "Order_NotEncryption",
+        "Order_Encryption",
+        "1",
+        "stricker",
+        "factoryBatch_id",
+        "manuBatch_id",
+        "c_code",
+        "s_code",
+        "link",
+        "link2",
+        "factory_code",
+        "2021-04-18",
+        "gstar_po_no",
+        "season_code",
+        "material_code",
+        "fabric_code",
+        "inseam",
+        "fabric",
+        "color",
+        "chinasize",
+        "downweight",
+        "sizetop",
+        "eanumber",
+        "1",
+        "qrKey"
+    ),
+    (
+        "6543788735",
+        "3938802",
+        "STYLE Number",
+        "blue",
+        "399 x 399",
+        "Item_Qty",
+        "1",
+        "Order_NotEncryption",
+        "Order_Encryption",
+        "1",
+        "stricker",
+        "factoryBatch_id",
+        "manuBatch_id",
+        "c_code",
+        "s_code",
+        "link",
+        "link2",
+        "factory_code",
+        "2021-04-18",
+        "gstar_po_no",
+        "season_code",
+        "material_code",
+        "fabric_code",
+        "inseam",
+        "fabric",
+        "color",
+        "chinasize",
+        "downweight",
+        "sizetop",
+        "eanumber",
+        "1",
+        "qrKey"
+    ),
+    (
+        "74324768",
+        "3938802",
+        "STYLE Number",
+        "blue",
+        "399 x 399",
+        "Item_Qty",
+        "1",
+        "Order_NotEncryption",
+        "Order_Encryption",
+        "1",
+        "stricker",
+        "factoryBatch_id",
+        "manuBatch_id",
+        "c_code",
+        "s_code",
+        "link",
+        "link2",
+        "factory_code",
+        "2021-04-18",
+        "gstar_po_no",
+        "season_code",
+        "material_code",
+        "fabric_code",
+        "inseam",
+        "fabric",
+        "color",
+        "chinasize",
+        "downweight",
+        "sizetop",
+        "eanumber",
+        "1",
+        "qrKey"
+    ),
+    (
+        "943268832",
+        "3938802",
+        "STYLE Number",
+        "blue",
+        "399 x 399",
+        "Item_Qty",
+        "1",
+        "Order_NotEncryption",
+        "Order_Encryption",
+        "1",
+        "stricker",
+        "factoryBatch_id",
+        "manuBatch_id",
+        "c_code",
+        "s_code",
+        "link",
+        "link2",
+        "factory_code",
+        "2021-04-18",
+        "gstar_po_no",
+        "season_code",
+        "material_code",
+        "fabric_code",
+        "inseam",
+        "fabric",
+        "color",
+        "chinasize",
+        "downweight",
+        "sizetop",
+        "eanumber",
+        "1",
+        "qrKey"
+    ),
+    (
+        "111118777",
+        "3938802",
+        "STYLE Number",
+        "blue",
+        "399 x 399",
+        "Item_Qty",
+        "1",
+        "Order_NotEncryption",
+        "Order_Encryption",
+        "1",
+        "stricker",
+        "factoryBatch_id",
+        "manuBatch_id",
+        "c_code",
+        "s_code",
+        "link",
+        "link2",
+        "factory_code",
+        "2021-04-18",
+        "gstar_po_no",
+        "season_code",
+        "material_code",
+        "fabric_code",
+        "inseam",
+        "fabric",
+        "color",
+        "chinasize",
+        "downweight",
+        "sizetop",
+        "eanumber",
+        "1",
+        "qrKey"
+    ),
+    (
+        "55557333313",
+        "3938802",
+        "STYLE Number",
+        "blue",
+        "399 x 399",
+        "Item_Qty",
+        "1",
+        "Order_NotEncryption",
+        "Order_Encryption",
+        "1",
+        "stricker",
+        "factoryBatch_id",
+        "manuBatch_id",
+        "c_code",
+        "s_code",
+        "link",
+        "link2",
+        "factory_code",
+        "2021-04-18",
+        "gstar_po_no",
+        "season_code",
+        "material_code",
+        "fabric_code",
+        "inseam",
+        "fabric",
+        "color",
+        "chinasize",
+        "downweight",
+        "sizetop",
+        "eanumber",
+        "1",
+        "qrKey"
+    ),
+    (
+        "87654309762",
+        "3938802",
+        "STYLE Number",
+        "blue",
+        "399 x 399",
+        "Item_Qty",
+        "1",
+        "Order_NotEncryption",
+        "Order_Encryption",
+        "1",
+        "stricker",
+        "factoryBatch_id",
+        "manuBatch_id",
+        "c_code",
+        "s_code",
+        "link",
+        "link2",
+        "factory_code",
+        "2021-04-18",
+        "gstar_po_no",
+        "season_code",
+        "material_code",
+        "fabric_code",
+        "inseam",
+        "fabric",
+        "color",
+        "chinasize",
+        "downweight",
+        "sizetop",
+        "eanumber",
+        "1",
+        "qrKey"
+    ),
+    (
+        "4992877753",
+        "3938802",
+        "STYLE Number",
+        "blue",
+        "399 x 399",
+        "Item_Qty",
+        "1",
+        "Order_NotEncryption",
+        "Order_Encryption",
+        "1",
+        "stricker",
+        "factoryBatch_id",
+        "manuBatch_id",
+        "c_code",
+        "s_code",
+        "link",
+        "link2",
+        "factory_code",
+        "2021-04-18",
+        "gstar_po_no",
+        "season_code",
+        "material_code",
+        "fabric_code",
+        "inseam",
+        "fabric",
+        "color",
+        "chinasize",
+        "downweight",
+        "sizetop",
+        "eanumber",
+        "1",
+        "qrKey"
+    );
+
+CREATE TABLE tb_qr_ItemNo_gstar_QrOnly(
+    id INT(4) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    order_Number NVARCHAR(100) NULL,
+    num NVARCHAR(100) NULL,
+    Style_Number NVARCHAR(100) NULL,
+    Colour NVARCHAR(100) NULL,
+    Size NVARCHAR(100) NULL,
+    Item_Qty NVARCHAR(100) NULL,
+    Check_No CHAR(1) NULL,
+    Order_NotEncryption NVARCHAR(510) NULL,
+    Order_Encryption NVARCHAR(510) NULL,
+    Active BIT(8) NULL,
+    Stricker NVARCHAR(510) NULL,
+    factoryBatch_id NVARCHAR(200) NULL,
+    manuBatch_id NVARCHAR(200) NULL,
+    c_code NVARCHAR(200) NULL,
+    s_code NVARCHAR(200) NULL,
+    link NVARCHAR(450) NULL,
+    link2 NVARCHAR(510) NULL,
+    factory_code NVARCHAR(510) NULL,
+    order_date DATETIME(6) NULL,
+    gstar_po_no NVARCHAR(100) NULL,
+    season_code NVARCHAR(100) NULL,
+    material_code NVARCHAR(100) NULL,
+    fabric_code NVARCHAR(100) NULL,
+    inseam NVARCHAR(100) NULL,
+    fabric NVARCHAR(200) NULL,
+    color NVARCHAR(100) NULL,
+    chinasize NVARCHAR(100) NULL,
+    downweight NVARCHAR(100) NULL,
+    sizetop NVARCHAR(100) NULL,
+    eanumber NVARCHAR(100) NULL,
+    ArtWorkStatus CHAR(1) NULL,
+    qrKey NVARCHAR(200) NULL
+);
+
+DESC tb_qr_ItemNo_gstar_QrOnly;
+
+INSERT INTO
+    tb_qr_ItemNo_gstar_QrOnly(
+        order_Number,
+        num,
+        Style_Number,
+        Colour,
+        Size,
+        Item_Qty,
+        Check_No,
+        Order_NotEncryption,
+        Order_Encryption,
+        Active,
+        Stricker,
+        factoryBatch_id,
+        manuBatch_id,
+        c_code,
+        s_code,
+        link,
+        link2,
+        factory_code,
+        order_date,
+        gstar_po_no,
+        season_code,
+        material_code,
+        fabric_code,
+        inseam,
+        fabric,
+        color,
+        chinasize,
+        downweight,
+        sizetop,
+        eanumber,
+        ArtWorkStatus,
+        qrKey
+    )
+VALUES
+    (
+        "28837369374",
+        "3938802",
+        "STYLE Number",
+        "blue",
+        "399 x 399",
+        "Item_Qty",
+        "1",
+        "Order_NotEncryption",
+        "Order_Encryption",
+        "1",
+        "stricker",
+        "factoryBatch_id",
+        "manuBatch_id",
+        "c_code",
+        "s_code",
+        "link",
+        "link2",
+        "factory_code",
+        "2021-04-18",
+        "gstar_po_no",
+        "season_code",
+        "material_code",
+        "fabric_code",
+        "inseam",
+        "fabric",
+        "color",
+        "chinasize",
+        "downweight",
+        "sizetop",
+        "eanumber",
+        "1",
+        "qrKey"
+    ),
+    (
+        "6543788735",
+        "3938802",
+        "STYLE Number",
+        "blue",
+        "399 x 399",
+        "Item_Qty",
+        "1",
+        "Order_NotEncryption",
+        "Order_Encryption",
+        "1",
+        "stricker",
+        "factoryBatch_id",
+        "manuBatch_id",
+        "c_code",
+        "s_code",
+        "link",
+        "link2",
+        "factory_code",
+        "2021-04-18",
+        "gstar_po_no",
+        "season_code",
+        "material_code",
+        "fabric_code",
+        "inseam",
+        "fabric",
+        "color",
+        "chinasize",
+        "downweight",
+        "sizetop",
+        "eanumber",
+        "1",
+        "qrKey"
+    ),
+    (
+        "74324768",
+        "3938802",
+        "STYLE Number",
+        "blue",
+        "399 x 399",
+        "Item_Qty",
+        "1",
+        "Order_NotEncryption",
+        "Order_Encryption",
+        "1",
+        "stricker",
+        "factoryBatch_id",
+        "manuBatch_id",
+        "c_code",
+        "s_code",
+        "link",
+        "link2",
+        "factory_code",
+        "2021-04-18",
+        "gstar_po_no",
+        "season_code",
+        "material_code",
+        "fabric_code",
+        "inseam",
+        "fabric",
+        "color",
+        "chinasize",
+        "downweight",
+        "sizetop",
+        "eanumber",
+        "1",
+        "qrKey"
+    ),
+    (
+        "943268832",
+        "3938802",
+        "STYLE Number",
+        "blue",
+        "399 x 399",
+        "Item_Qty",
+        "1",
+        "Order_NotEncryption",
+        "Order_Encryption",
+        "1",
+        "stricker",
+        "factoryBatch_id",
+        "manuBatch_id",
+        "c_code",
+        "s_code",
+        "link",
+        "link2",
+        "factory_code",
+        "2021-04-18",
+        "gstar_po_no",
+        "season_code",
+        "material_code",
+        "fabric_code",
+        "inseam",
+        "fabric",
+        "color",
+        "chinasize",
+        "downweight",
+        "sizetop",
+        "eanumber",
+        "1",
+        "qrKey"
+    ),
+    (
+        "111118777",
+        "3938802",
+        "STYLE Number",
+        "blue",
+        "399 x 399",
+        "Item_Qty",
+        "1",
+        "Order_NotEncryption",
+        "Order_Encryption",
+        "1",
+        "stricker",
+        "factoryBatch_id",
+        "manuBatch_id",
+        "c_code",
+        "s_code",
+        "link",
+        "link2",
+        "factory_code",
+        "2021-04-18",
+        "gstar_po_no",
+        "season_code",
+        "material_code",
+        "fabric_code",
+        "inseam",
+        "fabric",
+        "color",
+        "chinasize",
+        "downweight",
+        "sizetop",
+        "eanumber",
+        "1",
+        "qrKey"
+    ),
+    (
+        "55557333313",
+        "3938802",
+        "STYLE Number",
+        "blue",
+        "399 x 399",
+        "Item_Qty",
+        "1",
+        "Order_NotEncryption",
+        "Order_Encryption",
+        "1",
+        "stricker",
+        "factoryBatch_id",
+        "manuBatch_id",
+        "c_code",
+        "s_code",
+        "link",
+        "link2",
+        "factory_code",
+        "2021-04-18",
+        "gstar_po_no",
+        "season_code",
+        "material_code",
+        "fabric_code",
+        "inseam",
+        "fabric",
+        "color",
+        "chinasize",
+        "downweight",
+        "sizetop",
+        "eanumber",
+        "1",
+        "qrKey"
+    ),
+    (
+        "87654309762",
+        "3938802",
+        "STYLE Number",
+        "blue",
+        "399 x 399",
+        "Item_Qty",
+        "1",
+        "Order_NotEncryption",
+        "Order_Encryption",
+        "1",
+        "stricker",
+        "factoryBatch_id",
+        "manuBatch_id",
+        "c_code",
+        "s_code",
+        "link",
+        "link2",
+        "factory_code",
+        "2021-04-18",
+        "gstar_po_no",
+        "season_code",
+        "material_code",
+        "fabric_code",
+        "inseam",
+        "fabric",
+        "color",
+        "chinasize",
+        "downweight",
+        "sizetop",
+        "eanumber",
+        "1",
+        "qrKey"
+    ),
+    (
+        "4992877753",
+        "3938802",
+        "STYLE Number",
+        "blue",
+        "399 x 399",
+        "Item_Qty",
+        "1",
+        "Order_NotEncryption",
+        "Order_Encryption",
+        "1",
+        "stricker",
+        "factoryBatch_id",
+        "manuBatch_id",
+        "c_code",
+        "s_code",
+        "link",
+        "link2",
+        "factory_code",
+        "2021-04-18",
+        "gstar_po_no",
+        "season_code",
+        "material_code",
+        "fabric_code",
+        "inseam",
+        "fabric",
+        "color",
+        "chinasize",
+        "downweight",
+        "sizetop",
+        "eanumber",
+        "1",
+        "qrKey"
+    );
+
+CREATE TABLE tb_qr_ItemNo_gstarChina(
+    id INT(4) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    order_Number NVARCHAR(100) NULL,
+    num NVARCHAR(100) NULL,
+    Style_Number NVARCHAR(100) NULL,
+    Colour NVARCHAR(100) NULL,
+    Size NVARCHAR(100) NULL,
+    Item_Qty NVARCHAR(100) NULL,
+    Check_No CHAR(1) NULL,
+    Order_NotEncryption NVARCHAR(510) NULL,
+    Order_Encryption NVARCHAR(510) NULL,
+    Active BIT(8) NULL,
+    Stricker NVARCHAR(510) NULL,
+    factoryBatch_id NVARCHAR(200) NULL,
+    manuBatch_id NVARCHAR(200) NULL,
+    c_code NVARCHAR(200) NULL,
+    s_code NVARCHAR(200) NULL,
+    link NVARCHAR(450) NULL,
+    link2 NVARCHAR(510) NULL,
+    factory_code NVARCHAR(510) NULL,
+    order_date DATETIME(6) NULL,
+    gstar_po_no NVARCHAR(100) NULL,
+    season_code NVARCHAR(100) NULL,
+    material_code NVARCHAR(100) NULL,
+    fabric_code NVARCHAR(100) NULL,
+    inseam NVARCHAR(100) NULL,
+    fabric NVARCHAR(200) NULL,
+    color NVARCHAR(100) NULL,
+    chinasize NVARCHAR(100) NULL,
+    downweight NVARCHAR(100) NULL,
+    sizetop NVARCHAR(100) NULL,
+    eanumber NVARCHAR(100) NULL,
+    ArtWorkStatus CHAR(1) NULL,
+    qrKey NVARCHAR(200) NULL
+);
+
+DESC tb_qr_ItemNo_gstarChina;
+
+INSERT INTO
+    tb_qr_ItemNo_gstarChina(
+        order_Number,
+        num,
+        Style_Number,
+        Colour,
+        Size,
+        Item_Qty,
+        Check_No,
+        Order_NotEncryption,
+        Order_Encryption,
+        Active,
+        Stricker,
+        factoryBatch_id,
+        manuBatch_id,
+        c_code,
+        s_code,
+        link,
+        link2,
+        factory_code,
+        order_date,
+        gstar_po_no,
+        season_code,
+        material_code,
+        fabric_code,
+        inseam,
+        fabric,
+        color,
+        chinasize,
+        downweight,
+        sizetop,
+        eanumber,
+        ArtWorkStatus,
+        qrKey
+    )
+VALUES
+    (
+        "28837369374",
+        "3938802",
+        "STYLE Number",
+        "blue",
+        "399 x 399",
+        "Item_Qty",
+        "1",
+        "Order_NotEncryption",
+        "Order_Encryption",
+        "1",
+        "stricker",
+        "factoryBatch_id",
+        "manuBatch_id",
+        "c_code",
+        "s_code",
+        "link",
+        "link2",
+        "factory_code",
+        "2021-04-18",
+        "gstar_po_no",
+        "season_code",
+        "material_code",
+        "fabric_code",
+        "inseam",
+        "fabric",
+        "color",
+        "chinasize",
+        "downweight",
+        "sizetop",
+        "eanumber",
+        "1",
+        "qrKey"
+    ),
+    (
+        "6543788735",
+        "3938802",
+        "STYLE Number",
+        "blue",
+        "399 x 399",
+        "Item_Qty",
+        "1",
+        "Order_NotEncryption",
+        "Order_Encryption",
+        "1",
+        "stricker",
+        "factoryBatch_id",
+        "manuBatch_id",
+        "c_code",
+        "s_code",
+        "link",
+        "link2",
+        "factory_code",
+        "2021-04-18",
+        "gstar_po_no",
+        "season_code",
+        "material_code",
+        "fabric_code",
+        "inseam",
+        "fabric",
+        "color",
+        "chinasize",
+        "downweight",
+        "sizetop",
+        "eanumber",
+        "1",
+        "qrKey"
+    ),
+    (
+        "74324768",
+        "3938802",
+        "STYLE Number",
+        "blue",
+        "399 x 399",
+        "Item_Qty",
+        "1",
+        "Order_NotEncryption",
+        "Order_Encryption",
+        "1",
+        "stricker",
+        "factoryBatch_id",
+        "manuBatch_id",
+        "c_code",
+        "s_code",
+        "link",
+        "link2",
+        "factory_code",
+        "2021-04-18",
+        "gstar_po_no",
+        "season_code",
+        "material_code",
+        "fabric_code",
+        "inseam",
+        "fabric",
+        "color",
+        "chinasize",
+        "downweight",
+        "sizetop",
+        "eanumber",
+        "1",
+        "qrKey"
+    ),
+    (
+        "943268832",
+        "3938802",
+        "STYLE Number",
+        "blue",
+        "399 x 399",
+        "Item_Qty",
+        "1",
+        "Order_NotEncryption",
+        "Order_Encryption",
+        "1",
+        "stricker",
+        "factoryBatch_id",
+        "manuBatch_id",
+        "c_code",
+        "s_code",
+        "link",
+        "link2",
+        "factory_code",
+        "2021-04-18",
+        "gstar_po_no",
+        "season_code",
+        "material_code",
+        "fabric_code",
+        "inseam",
+        "fabric",
+        "color",
+        "chinasize",
+        "downweight",
+        "sizetop",
+        "eanumber",
+        "1",
+        "qrKey"
+    ),
+    (
+        "111118777",
+        "3938802",
+        "STYLE Number",
+        "blue",
+        "399 x 399",
+        "Item_Qty",
+        "1",
+        "Order_NotEncryption",
+        "Order_Encryption",
+        "1",
+        "stricker",
+        "factoryBatch_id",
+        "manuBatch_id",
+        "c_code",
+        "s_code",
+        "link",
+        "link2",
+        "factory_code",
+        "2021-04-18",
+        "gstar_po_no",
+        "season_code",
+        "material_code",
+        "fabric_code",
+        "inseam",
+        "fabric",
+        "color",
+        "chinasize",
+        "downweight",
+        "sizetop",
+        "eanumber",
+        "1",
+        "qrKey"
+    ),
+    (
+        "55557333313",
+        "3938802",
+        "STYLE Number",
+        "blue",
+        "399 x 399",
+        "Item_Qty",
+        "1",
+        "Order_NotEncryption",
+        "Order_Encryption",
+        "1",
+        "stricker",
+        "factoryBatch_id",
+        "manuBatch_id",
+        "c_code",
+        "s_code",
+        "link",
+        "link2",
+        "factory_code",
+        "2021-04-18",
+        "gstar_po_no",
+        "season_code",
+        "material_code",
+        "fabric_code",
+        "inseam",
+        "fabric",
+        "color",
+        "chinasize",
+        "downweight",
+        "sizetop",
+        "eanumber",
+        "1",
+        "qrKey"
+    ),
+    (
+        "87654309762",
+        "3938802",
+        "STYLE Number",
+        "blue",
+        "399 x 399",
+        "Item_Qty",
+        "1",
+        "Order_NotEncryption",
+        "Order_Encryption",
+        "1",
+        "stricker",
+        "factoryBatch_id",
+        "manuBatch_id",
+        "c_code",
+        "s_code",
+        "link",
+        "link2",
+        "factory_code",
+        "2021-04-18",
+        "gstar_po_no",
+        "season_code",
+        "material_code",
+        "fabric_code",
+        "inseam",
+        "fabric",
+        "color",
+        "chinasize",
+        "downweight",
+        "sizetop",
+        "eanumber",
+        "1",
+        "qrKey"
+    ),
+    (
+        "4992877753",
+        "3938802",
+        "STYLE Number",
+        "blue",
+        "399 x 399",
+        "Item_Qty",
+        "1",
+        "Order_NotEncryption",
+        "Order_Encryption",
+        "1",
+        "stricker",
+        "factoryBatch_id",
+        "manuBatch_id",
+        "c_code",
+        "s_code",
+        "link",
+        "link2",
+        "factory_code",
+        "2021-04-18",
+        "gstar_po_no",
+        "season_code",
+        "material_code",
+        "fabric_code",
+        "inseam",
+        "fabric",
+        "color",
+        "chinasize",
+        "downweight",
+        "sizetop",
+        "eanumber",
+        "1",
+        "qrKey"
+    );
+
+CREATE TABLE tb_qr_Order_Po(
+    Order_Number NVARCHAR(100) NOT NULL,
+    Num NVARCHAR(100) NOT NULL,
+    Delivery_Note NVARCHAR(100) NOT NULL,
+    qrcode NVARCHAR(100) NULL,
+    imgname NVARCHAR(100) NULL,
+    Created_Date DATETIME(6) NULL
+);
+
+DESC tb_qr_Order_Po;
+
+INSERT INTO
+    tb_qr_Order_Po(
+        Order_Number,
+        Num,
+        Delivery_Note,
+        qrcode,
+        imgname,
+        Created_Date
+    )
+VALUES
+    (
+        "11183638",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27"
+    ),
+    (
+        "09876521839",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name 1",
+        "2020-06-12"
+    ),
+    (
+        "377719345",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27"
+    ),
+    (
+        "18849274543",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name 3",
+        "2020-01-27"
+    ),
+    (
+        "425732478",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27"
+    ),
+    (
+        "424614",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27"
+    ),
+    (
+        "11111118374",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name 5",
+        "2020-01-27"
+    ),
+    (
+        "399477295",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27"
+    ),
+    (
+        "277491745",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name 5",
+        "2020-01-27"
+    ),
+    (
+        "12983649274",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27"
+    );
+
+CREATE TABLE tb_qr_Order_Po_asos(
+    Order_Number NVARCHAR(100) NOT NULL,
+    Num NVARCHAR(100) NOT NULL,
+    Delivery_Note NVARCHAR(100) NOT NULL,
+    qrcode NVARCHAR(100) NULL,
+    imgname NVARCHAR(100) NULL,
+    Created_Date DATETIME(6) NULL,
+    QRPDFStatus CHAR(1) NULL
+);
+
+DESC tb_qr_Order_Po_asos;
+
+INSERT INTO
+    tb_qr_Order_Po_asos(
+        Order_Number,
+        Num,
+        Delivery_Note,
+        qrcode,
+        imgname,
+        Created_Date,
+        QRPDFStatus
+    )
+VALUES
+    (
+        "11183638",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27",
+        "1"
+    ),
+    (
+        "09876521839",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name 1",
+        "2020-06-12",
+        "0"
+    ),
+    (
+        "377719345",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27",
+        "1"
+    ),
+    (
+        "18849274543",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name 3",
+        "2020-01-27",
+        "0"
+    ),
+    (
+        "425732478",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27",
+        '1'
+    ),
+    (
+        "424614",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27",
+        '0'
+    ),
+    (
+        "11111118374",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name 5",
+        "2020-01-27",
+        '1'
+    ),
+    (
+        "399477295",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27",
+        '1'
+    ),
+    (
+        "277491745",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name 5",
+        "2020-01-27",
+        '0'
+    ),
+    (
+        "12983649274",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27",
+        '1'
+    );
+
+CREATE TABLE tb_qr_Order_Po_gstar(
+    Order_Number NVARCHAR(100) NOT NULL,
+    Num NVARCHAR(100) NOT NULL,
+    Delivery_Note NVARCHAR(100) NOT NULL,
+    qrcode NVARCHAR(100) NULL,
+    imgname NVARCHAR(100) NULL,
+    Created_Date DATETIME(6) NULL,
+    QRPDFStatus CHAR(1) NULL
+);
+
+DESC tb_qr_Order_Po_gstar;
+
+INSERT INTO
+    tb_qr_Order_Po_gstar(
+        Order_Number,
+        Num,
+        Delivery_Note,
+        qrcode,
+        imgname,
+        Created_Date,
+        QRPDFStatus
+    )
+VALUES
+    (
+        "11183638",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27",
+        "1"
+    ),
+    (
+        "09876521839",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name 1",
+        "2020-06-12",
+        "0"
+    ),
+    (
+        "377719345",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27",
+        "1"
+    ),
+    (
+        "18849274543",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name 3",
+        "2020-01-27",
+        "0"
+    ),
+    (
+        "425732478",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27",
+        '1'
+    ),
+    (
+        "424614",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27",
+        '0'
+    ),
+    (
+        "11111118374",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name 5",
+        "2020-01-27",
+        '1'
+    ),
+    (
+        "399477295",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27",
+        '1'
+    ),
+    (
+        "277491745",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name 5",
+        "2020-01-27",
+        '0'
+    ),
+    (
+        "12983649274",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27",
+        '1'
+    );
+
+CREATE TABLE tb_qr_Order_Po_gstar_f(
+    Order_Number NVARCHAR(100) NOT NULL,
+    Num NVARCHAR(100) NOT NULL,
+    Delivery_Note NVARCHAR(100) NOT NULL,
+    qrcode NVARCHAR(100) NULL,
+    imgname NVARCHAR(100) NULL,
+    Created_Date DATETIME(6) NULL,
+    QRPDFStatus CHAR(1) NULL
+);
+
+DESC tb_qr_Order_Po_gstar_f;
+
+INSERT INTO
+    tb_qr_Order_Po_gstar_f(
+        Order_Number,
+        Num,
+        Delivery_Note,
+        qrcode,
+        imgname,
+        Created_Date,
+        QRPDFStatus
+    )
+VALUES
+    (
+        "11183638",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27",
+        "1"
+    ),
+    (
+        "09876521839",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name 1",
+        "2020-06-12",
+        "0"
+    ),
+    (
+        "377719345",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27",
+        "1"
+    ),
+    (
+        "18849274543",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name 3",
+        "2020-01-27",
+        "0"
+    ),
+    (
+        "425732478",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27",
+        '1'
+    ),
+    (
+        "424614",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27",
+        '0'
+    ),
+    (
+        "11111118374",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name 5",
+        "2020-01-27",
+        '1'
+    ),
+    (
+        "399477295",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27",
+        '1'
+    ),
+    (
+        "277491745",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name 5",
+        "2020-01-27",
+        '0'
+    ),
+    (
+        "12983649274",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27",
+        '1'
+    );
+
+CREATE TABLE tb_qr_Order_Po_gstar_QrOnly(
+    Order_Number NVARCHAR(100) NOT NULL,
+    Num NVARCHAR(100) NOT NULL,
+    Delivery_Note NVARCHAR(100) NOT NULL,
+    qrcode NVARCHAR(100) NULL,
+    imgname NVARCHAR(100) NULL,
+    Created_Date DATETIME(6) NULL,
+    QRPDFStatus CHAR(1) NULL
+);
+
+DESC tb_qr_Order_Po_gstar_QrOnly;
+
+INSERT INTO
+    tb_qr_Order_Po_gstar_QrOnly(
+        Order_Number,
+        Num,
+        Delivery_Note,
+        qrcode,
+        imgname,
+        Created_Date,
+        QRPDFStatus
+    )
+VALUES
+    (
+        "11183638",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27",
+        "1"
+    ),
+    (
+        "09876521839",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name 1",
+        "2020-06-12",
+        "0"
+    ),
+    (
+        "377719345",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27",
+        "1"
+    ),
+    (
+        "18849274543",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name 3",
+        "2020-01-27",
+        "0"
+    ),
+    (
+        "425732478",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27",
+        '1'
+    ),
+    (
+        "424614",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27",
+        '0'
+    ),
+    (
+        "11111118374",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name 5",
+        "2020-01-27",
+        '1'
+    ),
+    (
+        "399477295",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27",
+        '1'
+    ),
+    (
+        "277491745",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name 5",
+        "2020-01-27",
+        '0'
+    ),
+    (
+        "12983649274",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27",
+        '1'
+    );
+
+CREATE TABLE tb_qr_Order_Po_gstarChina(
+    Order_Number NVARCHAR(100) NOT NULL,
+    Num NVARCHAR(100) NOT NULL,
+    Delivery_Note NVARCHAR(100) NOT NULL,
+    qrcode NVARCHAR(100) NULL,
+    imgname NVARCHAR(100) NULL,
+    Created_Date DATETIME(6) NULL,
+    QRPDFStatus CHAR(1) NULL
+);
+
+DESC tb_qr_Order_Po_gstarChina;
+
+INSERT INTO
+    tb_qr_Order_Po_gstarChina(
+        Order_Number,
+        Num,
+        Delivery_Note,
+        qrcode,
+        imgname,
+        Created_Date,
+        QRPDFStatus
+    )
+VALUES
+    (
+        "11183638",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27",
+        "1"
+    ),
+    (
+        "09876521839",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name 1",
+        "2020-06-12",
+        "0"
+    ),
+    (
+        "377719345",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27",
+        "1"
+    ),
+    (
+        "18849274543",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name 3",
+        "2020-01-27",
+        "0"
+    ),
+    (
+        "425732478",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27",
+        '1'
+    ),
+    (
+        "424614",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27",
+        '0'
+    ),
+    (
+        "11111118374",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name 5",
+        "2020-01-27",
+        '1'
+    ),
+    (
+        "399477295",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27",
+        '1'
+    ),
+    (
+        "277491745",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name 5",
+        "2020-01-27",
+        '0'
+    ),
+    (
+        "12983649274",
+        "388923",
+        "0000042",
+        "qr code",
+        "img name",
+        "2020-01-27",
+        '1'
+    );
+
+CREATE TABLE tb_qr_size_matrix(
+    id BIGINT(8) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    size_matrix_code NVARCHAR(100) NULL,
+    size_type NVARCHAR(100) NULL,
+    eur NVARCHAR(100) NULL,
+    us NVARCHAR(100) NULL,
+    mx NVARCHAR(400) NULL,
+    brazil NVARCHAR(100) NULL,
+    width_or_length NVARCHAR(100) NULL,
+    created_by NVARCHAR(100) NULL,
+    created_date DATETIME(6) NULL,
+    lst_updated_by NVARCHAR(100) NULL,
+    lst_updated_date DATETIME(6) NULL
+);
+
+DESC tb_qr_size_matrix;
+
+INSERT INTO
+    tb_qr_size_matrix(
+        size_matrix_code,
+        size_type,
+        eur,
+        us,
+        mx,
+        brazil,
+        width_or_length,
+        created_by,
+        created_date,
+        lst_updated_by,
+        lst_updated_date
+    )
+VALUES
+    (
+        "size_matrix_code 1",
+        "size_type 1",
+        "eur",
+        "us",
+        "mx",
+        "brazil",
+        "width_or_length",
+        "created_by",
+        "2021-07-15",
+        "lst_updated_by",
+        "2020-08-26"
+    ),
+    (
+        "size_matrix_code 2",
+        "size_type 2",
+        "eur",
+        "us",
+        "mx",
+        "brazil",
+        "width_or_length",
+        "created_by",
+        "2021-07-15",
+        "lst_updated_by",
+        "2020-08-26"
+    ),
+    (
+        "size_matrix_code 3",
+        "size_type 3",
+        "eur",
+        "us",
+        "mx",
+        "brazil",
+        "width_or_length",
+        "created_by",
+        "2021-07-15",
+        "lst_updated_by",
+        "2020-08-26"
+    ),
+    (
+        "size_matrix_code 4",
+        "size_type 4",
+        "eur",
+        "us",
+        "mx",
+        "brazil",
+        "width_or_length",
+        "created_by",
+        "2021-07-15",
+        "lst_updated_by",
+        "2020-08-26"
+    ),
+    (
+        "size_matrix_code 5",
+        "size_type 5",
+        "eur",
+        "us",
+        "mx",
+        "brazil",
+        "width_or_length",
+        "created_by",
+        "2021-07-15",
+        "lst_updated_by",
+        "2020-08-26"
+    ),
+    (
+        "size_matrix_code 6",
+        "size_type 6",
+        "eur",
+        "us",
+        "mx",
+        "brazil",
+        "width_or_length",
+        "created_by",
+        "2021-07-15",
+        "lst_updated_by",
+        "2020-08-26"
+    ),
+    (
+        "size_matrix_code 7",
+        "size_type 7",
+        "eur",
+        "us",
+        "mx",
+        "brazil",
+        "width_or_length",
+        "created_by",
+        "2021-07-15",
+        "lst_updated_by",
+        "2020-08-26"
+    ),
+    (
+        "size_matrix_code 8",
+        "size_type 8",
+        "eur",
+        "us",
+        "mx",
+        "brazil",
+        "width_or_length",
+        "created_by",
+        "2021-07-15",
+        "lst_updated_by",
+        "2020-08-26"
+    ),
+    (
+        "size_matrix_code 9",
+        "size_type 9",
+        "eur",
+        "us",
+        "mx",
+        "brazil",
+        "width_or_length",
+        "created_by",
+        "2021-07-15",
+        "lst_updated_by",
+        "2020-08-26"
+    ),
+    (
+        "size_matrix_code 10",
+        "size_type 10",
+        "eur",
+        "us",
+        "mx",
+        "brazil",
+        "width_or_length",
+        "created_by",
+        "2021-07-15",
+        "lst_updated_by",
+        "2020-08-26"
+    );
+
+CREATE TABLE tb_qr_size_matrix_china(
+    id BIGINT(8) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    length NVARCHAR(100) NULL,
+    china NVARCHAR(100) NULL,
+    eur NVARCHAR(100) NULL,
+    size_matrix_code NVARCHAR(100) NULL,
+    created_by NVARCHAR(100) NULL,
+    created_date DATETIME(6) NULL,
+    lst_updated_by NVARCHAR(100) NULL,
+    lst_updated_date DATETIME(6) NULL
+);
+
+DESC tb_qr_size_matrix_china;
+
+INSERT INTO
+    tb_qr_size_matrix_china(
+        length,
+        china,
+        eur,
+        size_matrix_code,
+        created_by,
+        created_date,
+        lst_updated_by,
+        lst_updated_date
+    )
+VALUES
+    (
+        "12",
+        "CHINA",
+        "euro",
+        "size_matrix_code",
+        "Marvin innos",
+        "2022-04-20",
+        "Mario",
+        "2022-04-24"
+    ),
+    (
+        "123",
+        "CHINA",
+        "euro",
+        "size_matrix_code",
+        "Marvin innos",
+        "2022-04-20",
+        "Mario",
+        "2022-04-24"
+    ),
+    (
+        "124",
+        "CHINA",
+        "euro",
+        "size_matrix_code",
+        "Marvin innos",
+        "2022-04-20",
+        "Mario",
+        "2022-04-24"
+    ),
+    (
+        "42",
+        "CHINA",
+        "euro",
+        "size_matrix_code",
+        "Marvin innos",
+        "2022-04-20",
+        "Mario",
+        "2022-04-24"
+    ),
+    (
+        "15",
+        "CHINA",
+        "euro",
+        "size_matrix_code",
+        "Marvin innos",
+        "2022-04-20",
+        "Mario",
+        "2022-04-24"
+    ),
+    (
+        "17",
+        "CHINA",
+        "euro",
+        "size_matrix_code",
+        "Marvin innos",
+        "2022-04-20",
+        "Mario",
+        "2022-04-24"
+    ),
+    (
+        "18",
+        "CHINA",
+        "euro",
+        "size_matrix_code",
+        "Marvin innos",
+        "2022-04-20",
+        "Mario",
+        "2022-04-24"
+    ),
+    (
+        "19",
+        "CHINA",
+        "euro",
+        "size_matrix_code",
+        "Marvin innos",
+        "2022-04-20",
+        "Mario",
+        "2022-04-24"
+    ),
+    (
+        "6",
+        "CHINA",
+        "euro",
+        "size_matrix_code",
+        "Marvin innos",
+        "2022-04-20",
+        "Mario",
+        "2022-04-24"
+    ),
+    (
+        "7",
+        "CHINA",
+        "euro",
+        "size_matrix_code",
+        "Marvin innos",
+        "2022-04-20",
+        "Mario",
+        "2022-04-24"
+    ),
+    (
+        "8",
+        "CHINA",
+        "euro",
+        "size_matrix_code",
+        "Marvin innos",
+        "2022-04-20",
+        "Mario",
+        "2022-04-24"
+    ),
+    (
+        "12",
+        "CHINA",
+        "euro",
+        "size_matrix_code",
+        "Marvin innos",
+        "2022-04-20",
+        "Mario",
+        "2022-04-24"
+    );
