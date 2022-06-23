@@ -33913,3 +33913,1255 @@ VALUES
         '1',
         '1'
     );
+
+CREATE TABLE tb_User_Client_Info(
+    ID INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    UserGID NVARCHAR(50) NULL,
+    FstName NVARCHAR(200) NULL,
+    IPAddress NVARCHAR(20) NULL,
+    UserAddress NVARCHAR(50) NULL,
+    BrowserType NVARCHAR(30) NULL,
+    BorwserVersion NVARCHAR(30) NULL,
+    LoginDate DATETIME(6) NULL
+);
+
+DESC tb_User_Client_Info;
+
+INSERT INTO
+    tb_User_Client_Info(
+        UserGID,
+        FstName,
+        IPAddress,
+        UserAddress,
+        BrowserType,
+        BorwserVersion,
+        LoginDate
+    )
+VALUES
+    (
+        '2888402',
+        'Kareem',
+        '10.10.143.25',
+        'UserAddress',
+        'Chrome',
+        'V2',
+        '2019-03-21'
+    ),
+    (
+        '8894243',
+        'Kareem',
+        '10.10.143.25',
+        'UserAddress',
+        'Chrome',
+        'V2',
+        '2019-03-21'
+    ),
+    (
+        '8654356',
+        'Kareem',
+        '10.10.143.25',
+        'UserAddress',
+        'Chrome',
+        'V2',
+        '2019-03-21'
+    ),
+    (
+        '9654564',
+        'Kareem',
+        '10.10.143.25',
+        'UserAddress',
+        'Mozilla',
+        'V2',
+        '2019-03-21'
+    ),
+    (
+        '7432453',
+        'Kareem',
+        '10.10.143.25',
+        'UserAddress',
+        'Chrome',
+        'V2',
+        '2019-03-21'
+    ),
+    (
+        '3991740',
+        'Kareem',
+        '10.10.143.25',
+        'UserAddress',
+        'Safari',
+        'V2',
+        '2019-03-21'
+    ),
+    (
+        '1113883',
+        'Kareem',
+        '10.10.143.25',
+        'UserAddress',
+        'Microsoft Edge',
+        'V2',
+        '2019-03-21'
+    ),
+    (
+        '1984040',
+        'Kareem',
+        '10.10.143.25',
+        'UserAddress',
+        'Chrome',
+        'V2',
+        '2019-03-21'
+    ),
+    (
+        '2888402',
+        'Kareem',
+        '10.10.143.25',
+        'UserAddress',
+        'Chrome',
+        'V2',
+        '2019-03-21'
+    ),
+    (
+        '2888402',
+        'Marie',
+        '10.10.143.25',
+        'UserAddress',
+        'Chrome',
+        'V2',
+        '2019-03-21'
+    );
+
+CREATE TABLE tb_Usr(
+    guid_key VARCHAR(50) NOT NULL PRIMARY KEY,
+    UsrID VARCHAR(50) NULL,
+    Pwd VARCHAR(65) NULL,
+    StaffNo VARCHAR(20) NULL,
+    FstName VARCHAR(35) NULL,
+    LstName VARCHAR(35) NULL,
+    ChiName VARCHAR(35) NULL,
+    DeptCod VARCHAR(10) NULL,
+    Title VARCHAR(10) NULL,
+    HKID VARCHAR(18) NULL,
+    DOB DATE NULL,
+    POB VARCHAR(50) NULL,
+    Sex CHAR(1) NULL,
+    AccNo VARCHAR(20) NULL,
+    JoinDte DATE NULL,
+    LeftDte DATE NULL,
+    Salary DECIMAL(19, 3) NULL,
+    Allowance DECIMAL(19, 3) NULL,
+    Tel VARCHAR(25) NULL,
+    mobile VARCHAR(25) NULL,
+    Email NVARCHAR(200) NULL,
+    Nationality VARCHAR(50) NULL,
+    Martial VARCHAR(20) NULL,
+    EngAddr VARCHAR(255) NULL,
+    ChiAddr VARCHAR(255) NULL,
+    OTCompType VARCHAR(10) NULL,
+    AccOT DECIMAL(19, 3) NULL,
+    EmpTerms VARCHAR(255) NULL,
+    Qualification VARCHAR(255) NULL,
+    CareerHis VARCHAR(255) NULL,
+    Rmk VARCHAR(255) NULL,
+    AnnualLeave DECIMAL(19, 3) NULL,
+    JoinPFund CHAR(1) NULL,
+    Bank NVARCHAR(50) NULL,
+    imgType CHAR(3) NULL,
+    email_pdm BIT(2) NULL,
+    email_translation BIT(2) NULL,
+    whichAdmin CHAR(3) NULL,
+    whichCountry VARCHAR(2) NULL,
+    IsLocked BIT(1) NULL,
+    Last_pwd_dte DATETIME(6) NULL,
+    email_backend BIT(2) NULL,
+    created_by NVARCHAR(50) NULL,
+    created_date DATETIME(6) NULL,
+    last_updated_by NVARCHAR(50) NULL,
+    last_updated_date DATETIME(6) NULL
+);
+
+DESC tb_Usr;
+
+INSERT INTO
+    tb_Usr(
+        guid_key,
+        UsrID,
+        Pwd,
+        StaffNo,
+        FstName,
+        LstName,
+        ChiName,
+        DeptCod,
+        Title,
+        HKID,
+        DOB,
+        POB,
+        Sex,
+        AccNo,
+        JoinDte,
+        LeftDte,
+        Salary,
+        Allowance,
+        Tel,
+        mobile,
+        Email,
+        Nationality,
+        Martial,
+        EngAddr,
+        ChiAddr,
+        OTCompType,
+        AccOT,
+        EmpTerms,
+        Qualification,
+        CareerHis,
+        Rmk,
+        AnnualLeave,
+        JoinPFund,
+        Bank,
+        imgType,
+        email_pdm,
+        email_translation,
+        whichAdmin,
+        whichCountry,
+        IsLocked,
+        Last_pwd_dte,
+        email_backend,
+        created_by,
+        created_date,
+        last_updated_by,
+        last_updated_date
+    )
+VALUES
+    (
+        'e8c439c4-2bc0-4304-8053-e818071b5293',
+        76453245,
+        'password123',
+        'Sf43234',
+        'Kareem',
+        'Mario',
+        'Mario',
+        'DeptCod',
+        'Professor',
+        'HKID',
+        '1985-04-28',
+        'POB details',
+        'M',
+        'AccNo',
+        '2016-07-10',
+        '2019-08-10',
+        150000,
+        12000,
+        '+254 828 834 5353',
+        '+254 828 834 5353',
+        'mar@gmail.com',
+        'USA',
+        'Martial',
+        'EngAddr',
+        'ChiAddr',
+        'OTCompType',
+        355000,
+        'EmpTerms',
+        'Qualification',
+        'CareerHis',
+        'Rmk',
+        235000,
+        '1',
+        'Bank',
+        'U',
+        B '1',
+        B '1',
+        'w/c',
+        '2',
+        B '0',
+        '2017-10-23',
+        B '0',
+        'created_by',
+        '2018-03-26',
+        'last_updated_by',
+        '2018-03-24'
+    ),
+    (
+        '2c5e1041-57f9-4b20-a338-43ba91ec6238',
+        76453245,
+        'password123',
+        'Sf43234',
+        'vARA',
+        'Mario',
+        'Mario',
+        'DeptCod',
+        'Professor',
+        'HKID',
+        '1985-04-28',
+        'POB details',
+        'M',
+        'AccNo',
+        '2016-07-10',
+        '2019-08-10',
+        150000,
+        12000,
+        '+254 828 834 5353',
+        '+254 828 834 5353',
+        'mar@gmail.com',
+        'USA',
+        'Martial',
+        'EngAddr',
+        'ChiAddr',
+        'OTCompType',
+        355000,
+        'EmpTerms',
+        'Qualification',
+        'CareerHis',
+        'Rmk',
+        235000,
+        '1',
+        'Bank',
+        'U',
+        B '1',
+        B '1',
+        'w/c',
+        '2',
+        B '0',
+        '2017-10-23',
+        B '0',
+        'created_by',
+        '2018-03-26',
+        'last_updated_by',
+        '2018-03-24'
+    ),
+    (
+        '36C4B890-E6CD-49BD-9197-7DAAA998F222',
+        753424,
+        'password123',
+        'Sf43234',
+        'Mutesa',
+        'Mario',
+        'Mario',
+        'DeptCod',
+        'Professor',
+        'HKID',
+        '1985-04-28',
+        'POB details',
+        'M',
+        'AccNo',
+        '2016-07-10',
+        '2019-08-10',
+        150000,
+        12000,
+        '+254 828 834 5353',
+        '+254 828 834 5353',
+        'mar@gmail.com',
+        'USA',
+        'Martial',
+        'EngAddr',
+        'ChiAddr',
+        'OTCompType',
+        355000,
+        'EmpTerms',
+        'Qualification',
+        'CareerHis',
+        'Rmk',
+        235000,
+        '1',
+        'Bank',
+        'U',
+        B '1',
+        B '1',
+        'w/c',
+        '2',
+        B '0',
+        '2017-10-23',
+        B '0',
+        'created_by',
+        '2018-03-26',
+        'last_updated_by',
+        '2018-03-24'
+    ),
+    (
+        '6D386D49-A9C2-4C2B-8B88-486AFAFA879F',
+        43543,
+        'password123',
+        'Sf43234',
+        'Ka8',
+        'Mario',
+        'Mario',
+        'DeptCod',
+        'Professor',
+        'HKID',
+        '1985-04-28',
+        'POB details',
+        'M',
+        'AccNo',
+        '2016-07-10',
+        '2019-08-10',
+        150000,
+        12000,
+        '+254 828 834 5353',
+        '+254 828 834 5353',
+        'mar@gmail.com',
+        'USA',
+        'Martial',
+        'EngAddr',
+        'ChiAddr',
+        'OTCompType',
+        355000,
+        'EmpTerms',
+        'Qualification',
+        'CareerHis',
+        'Rmk',
+        235000,
+        '1',
+        'Bank',
+        'U',
+        B '1',
+        B '1',
+        'w/c',
+        '2',
+        B '0',
+        '2017-10-23',
+        B '0',
+        'created_by',
+        '2018-03-26',
+        'last_updated_by',
+        '2018-03-24'
+    ),
+    (
+        '5CC03D1E-81B4-4983-8D7A-C5EFE2054A48',
+        6453243,
+        'password123',
+        'Sf43234',
+        'Kareem',
+        'Mario',
+        'Mario',
+        'DeptCod',
+        'Professor',
+        'HKID',
+        '1985-04-28',
+        'POB details',
+        'M',
+        'AccNo',
+        '2016-07-10',
+        '2019-08-10',
+        150000,
+        12000,
+        '+254 828 834 5353',
+        '+254 828 834 5353',
+        'mar@gmail.com',
+        'USA',
+        'Martial',
+        'EngAddr',
+        'ChiAddr',
+        'OTCompType',
+        355000,
+        'EmpTerms',
+        'Qualification',
+        'CareerHis',
+        'Rmk',
+        235000,
+        '1',
+        'Bank',
+        'U',
+        B '1',
+        B '1',
+        'w/c',
+        '2',
+        B '0',
+        '2017-10-23',
+        B '0',
+        'created_by',
+        '2018-03-26',
+        'last_updated_by',
+        '2018-03-24'
+    ),
+    (
+        'B92E89A4-3EBE-4DE8-8488-40EA8EB9A2903',
+        1111423,
+        'password123',
+        'Sf43234',
+        'Kareem',
+        'Mario',
+        'Mario',
+        'DeptCod',
+        'Professor',
+        'HKID',
+        '1985-04-28',
+        'POB details',
+        'M',
+        'AccNo',
+        '2016-07-10',
+        '2019-08-10',
+        150000,
+        12000,
+        '+254 828 834 5353',
+        '+254 828 834 5353',
+        'mar@gmail.com',
+        'USA',
+        'Martial',
+        'EngAddr',
+        'ChiAddr',
+        'OTCompType',
+        355000,
+        'EmpTerms',
+        'Qualification',
+        'CareerHis',
+        'Rmk',
+        235000,
+        '1',
+        'Bank',
+        'U',
+        B '1',
+        B '1',
+        'w/c',
+        '2',
+        B '0',
+        '2017-10-23',
+        B '0',
+        'created_by',
+        '2018-03-26',
+        'last_updated_by',
+        '2018-03-24'
+    ),
+    (
+        '5637F99E-F08E-40B0-91B5-7F5091269BE5',
+        87654234,
+        'password123',
+        'Sf43234',
+        'Kareem',
+        'Mario',
+        'Mario',
+        'DeptCod',
+        'Professor',
+        'HKID',
+        '1985-04-28',
+        'POB details',
+        'M',
+        'AccNo',
+        '2016-07-10',
+        '2019-08-10',
+        150000,
+        12000,
+        '+254 828 834 5353',
+        '+254 828 834 5353',
+        'mar@gmail.com',
+        'USA',
+        'Martial',
+        'EngAddr',
+        'ChiAddr',
+        'OTCompType',
+        355000,
+        'EmpTerms',
+        'Qualification',
+        'CareerHis',
+        'Rmk',
+        235000,
+        '1',
+        'Bank',
+        'U',
+        B '1',
+        B '1',
+        'w/c',
+        '2',
+        B '0',
+        '2017-10-23',
+        B '0',
+        'created_by',
+        '2018-03-26',
+        'last_updated_by',
+        '2018-03-24'
+    );
+
+CREATE TABLE tb_Usr_Language(
+    grpid VARCHAR(50) NULL,
+    MemID VARCHAR(50) NULL,
+    dept VARCHAR(50)
+);
+
+DESC tb_Usr_Language;
+
+INSERT INTO
+    tb_Usr_Language(grpid, MemID, dept)
+VALUES
+    ('2999184', '57762', 'dept'),
+    ('65657', '9939', 'dept'),
+    ('783594', '309917430', 'dept'),
+    ('110374', '40028', 'dept'),
+    ('1989402', '42994', 'dept'),
+    ('35027675', '2992', 'dept'),
+    ('3947294', '294054', 'dept'),
+    ('7537275', '309917430', 'dept'),
+    ('2037402', '20975', 'dept'),
+    ('2222940', '5993', 'dept'),
+    ('999999382', '309917430', 'dept');
+
+CREATE TABLE tb_UsrErpEmail(
+    admin VARCHAR(50) NULL,
+    Erpid INT(4) NULL,
+    CsEmail VARCHAR(1000)
+);
+
+DESC tb_UsrErpEmail;
+
+INSERT INTO
+    tb_UsrErpEmail(admin, Erpid, CsEmail)
+VALUES
+    ('Kareem mario', 4882, 'CsEmail data here'),
+    ('Marie mario', 4094, 'CsEmail data here'),
+    ('JMV', 2948, 'CsEmail data here'),
+    ('Vra mario', 112, 'CsEmail data here'),
+    ('Bruce', 101, 'CsEmail data here'),
+    ('Haleluya', 201, 'CsEmail data here'),
+    ('Christian', 301, 'CsEmail data here'),
+    ('Onyengo', 883, 'CsEmail data here'),
+    ('Chidima', 284, 'CsEmail data here');
+
+CREATE TABLE tb_VariableControlConfig(
+    GuidKey VARCHAR(50) NOT NULL PRIMARY KEY,
+    BrandId NVARCHAR(50) NULL,
+    MasterFieldId INT(4) NULL,
+    IsEnable VARCHAR(1) NULL,
+    CreateBy VARCHAR(50) NULL,
+    CreateDate DATETIME(6) NULL,
+    UpdateBy VARCHAR(50) NULL,
+    UpdateDate DATETIME(6) NULL
+);
+
+DESC tb_VariableControlConfig;
+
+INSERT INTO
+    tb_VariableControlConfig(
+        GuidKey,
+        BrandId,
+        MasterFieldId,
+        IsEnable,
+        CreateBy,
+        CreateDate,
+        UpdateBy,
+        UpdateDate
+    )
+VALUES
+    (
+        'e8c439c4-2bc0-4304-8053-e818071b5293',
+        'B8301',
+        3883,
+        'T',
+        "Mario",
+        '2010-05-24',
+        'Kareem',
+        '2015-05-10'
+    ),
+    (
+        '2c5e1041-57f9-4b20-a338-43ba91ec6238',
+        'B83094',
+        3883,
+        'T',
+        "Vara",
+        '2010-05-24',
+        'Kareem',
+        '2015-05-10'
+    ),
+    (
+        '36C4B890-E6CD-49BD-9197-7DAAA998F222',
+        'B8301',
+        3883,
+        'T',
+        "Mario",
+        '2010-05-24',
+        'Kareem',
+        '2015-05-10'
+    ),
+    (
+        '6D386D49-A9C2-4C2B-8B88-486AFAFA879F',
+        'B8301',
+        3883,
+        'T',
+        "Mario",
+        '2010-05-24',
+        'Kareem',
+        '2015-05-10'
+    ),
+    (
+        '5CC03D1E-81B4-4983-8D7A-C5EFE2054A48',
+        'B8301',
+        283,
+        'T',
+        "Mario",
+        '2010-05-24',
+        'Kareem',
+        '2015-05-10'
+    ),
+    (
+        'B92E89A4-3EBE-4DE8-8488-40EA8EB9A290',
+        'B8301',
+        3883,
+        'T',
+        "Mario",
+        '2010-05-24',
+        'Kareem',
+        '2015-05-10'
+    ),
+    (
+        '66E665F2-87CE-4F24-BF83-6031995B33BF',
+        'B83321',
+        5314,
+        'T',
+        "Mario",
+        '2010-05-24',
+        'Kareem',
+        '2015-05-10'
+    ),
+    (
+        'E42863F6-E9E0-46BA-8E20-D183B433DD3E',
+        'B8301',
+        3883,
+        'T',
+        "Mario",
+        '2010-05-24',
+        'Kareem',
+        '2015-05-10'
+    );
+
+CREATE TABLE tb_VariableControlConfigDetail(
+    guidKey VARCHAR(50) NOT NULL PRIMARY KEY,
+    masterKey VARCHAR(50) NULL,
+    fatherFieldId INT(4) NULL,
+    fatherFieldIds VARCHAR(100) NULL,
+    fieldId INT(4) NULL,
+    seqNo INT(4) NULL
+);
+
+DESC tb_VariableControlConfigDetail;
+
+INSERT INTO
+    tb_VariableControlConfigDetail(
+        guidKey,
+        masterKey,
+        fatherFieldId,
+        fatherFieldIds,
+        fieldId,
+        seqNo
+    )
+VALUES
+    (
+        'e8c439c4-2bc0-4304-8053-e818071b5293',
+        '2c5e1041-57f9-4b20-a338-43ba91ec6238',
+        48920,
+        '9993-2844',
+        1094,
+        29994
+    ),
+    (
+        '36C4B890-E6CD-49BD-9197-7DAAA998F222',
+        '2c5e1041-57f9-4b20-a338-43ba91ec6238',
+        6534,
+        '9993-2844',
+        425,
+        29994
+    ),
+    (
+        '5CC03D1E-81B4-4983-8D7A-C5EFE2054A48',
+        '2c5e1041-57f9-4b20-a338-43ba91ec6238',
+        2994,
+        '9993-2844',
+        1094,
+        29994
+    ),
+    (
+        'B92E89A4-3EBE-4DE8-8488-40EA8EB9A290',
+        '5CC03D1E-81B4-4983-8D7A-C5EFE2054A48',
+        48920,
+        '9993-2844',
+        1094,
+        29994
+    ),
+    (
+        '5637F99E-F08E-40B0-91B5-7F5091269BE5',
+        '2c5e1041-57f9-4b20-a338-43ba91ec6238',
+        342,
+        '9993-2844',
+        1094,
+        29994
+    ),
+    (
+        '66E665F2-87CE-4F24-BF83-6031995B33BF',
+        '2c5e1041-57f9-4b20-a338-43ba91ec6238',
+        39932,
+        '9993-2844',
+        1094,
+        29994
+    ),
+    (
+        'E42863F6-E9E0-46BA-8E20-D183B433DD3E',
+        '2c5e1041-57f9-4b20-a338-43ba91ec6238',
+        87434,
+        '9993-2844',
+        1094,
+        29994
+    ),
+    (
+        '83568683-2d56-4cef-860d-da02c7b639ee',
+        '2c5e1041-57f9-4b20-a338-43ba91ec6238',
+        48920,
+        '9993-2844',
+        1094,
+        29994
+    ),
+    (
+        '9844e722-8ff3-4991-bfb4-81b4cde5bdb2',
+        '2c5e1041-57f9-4b20-a338-43ba91ec6238',
+        4342,
+        '9993-2844',
+        1094,
+        29994
+    ),
+    (
+        '142c80b3-5fb2-4666-8338-db4cf09680d6',
+        '2c5e1041-57f9-4b20-a338-43ba91ec6238',
+        534,
+        '9993-2844',
+        1094,
+        29994
+    );
+
+CREATE TABLE tb_VariableControlData(
+    guidKey VARCHAR(50) NOT NULL PRIMARY KEY,
+    brandId NVARCHAR(50) NULL,
+    masterKey NVARCHAR(50) NULL,
+    grade INT(10) NULL,
+    fatherFieldIds VARCHAR(100) NULL,
+    fatherKeys TEXT NULL,
+    fatherKey VARCHAR(50) NULL,
+    fatherFieldId INT(10) NULL,
+    fieldId INT(10) NULL,
+    fatherValue TEXT NULL,
+    value TEXT NULL,
+    createDate DATETIME(6) NULL
+);
+
+DESC tb_VariableControlData;
+
+INSERT INTO
+    tb_VariableControlData(
+        guidKey,
+        brandId,
+        masterKey,
+        grade,
+        fatherFieldIds,
+        fatherKeys,
+        fatherKey,
+        fatherFieldId,
+        fieldId,
+        fatherValue,
+        value,
+        createDate
+    )
+VALUES
+    (
+        '83568683-2d56-4cef-860d-da02c7b639ee',
+        '38829',
+        '2ce37479-1d31-43cb-8768-7d94064a99f3',
+        33,
+        'fatherFieldIds',
+        'fatherKeys',
+        'fatherKey',
+        388,
+        1993,
+        'fatherValue',
+        'value',
+        '2020-12-20'
+    ),
+    (
+        '2ce37479-1d31-43cb-8768-7d94064a99f3',
+        '38829',
+        '2ce37479-1d31-43cb-8768-7d94064a99f3',
+        33,
+        'fatherFieldIds',
+        'fatherKeys',
+        'fatherKey',
+        388,
+        1993,
+        'fatherValue',
+        'value',
+        '2020-12-20'
+    ),
+    (
+        'a5c507a9-e319-44ee-8d60-c0fcbb6a18fc',
+        '38829',
+        '2ce37479-1d31-43cb-8768-7d94064a99f3',
+        33,
+        'fatherFieldIds',
+        'fatherKeys',
+        'fatherKey',
+        388,
+        1993,
+        'fatherValue',
+        'value',
+        '2020-12-20'
+    ),
+    (
+        '9844e722-8ff3-4991-bfb4-81b4cde5bdb2',
+        '38829',
+        '2ce37479-1d31-43cb-8768-7d94064a99f3',
+        33,
+        'fatherFieldIds',
+        'fatherKeys',
+        'fatherKey',
+        388,
+        1993,
+        'fatherValue',
+        'value',
+        '2020-12-20'
+    ),
+    (
+        'E42863F6-E9E0-46BA-8E20-D183B433DD3E',
+        '38829',
+        '2ce37479-1d31-43cb-8768-7d94064a99f3',
+        33,
+        'fatherFieldIds',
+        'fatherKeys',
+        'fatherKey',
+        388,
+        1993,
+        'fatherValue',
+        'value',
+        '2020-12-20'
+    ),
+    (
+        '142c80b3-5fb2-4666-8338-db4cf09680d6',
+        '38829',
+        '2ce37479-1d31-43cb-8768-7d94064a99f3',
+        33,
+        'fatherFieldIds',
+        'fatherKeys',
+        'fatherKey',
+        388,
+        1993,
+        'fatherValue',
+        'value',
+        '2020-12-20'
+    ),
+    (
+        'e8c439c4-2bc0-4304-8053-e818071b5293',
+        '38829',
+        '2ce37479-1d31-43cb-8768-7d94064a99f3',
+        33,
+        'fatherFieldIds',
+        'fatherKeys',
+        'fatherKey',
+        388,
+        1993,
+        'fatherValue',
+        'value',
+        '2020-12-20'
+    ),
+    (
+        '2c5e1041-57f9-4b20-a338-43ba91ec6238',
+        '38829',
+        '2ce37479-1d31-43cb-8768-7d94064a99f3',
+        33,
+        'fatherFieldIds',
+        'fatherKeys',
+        'fatherKey',
+        388,
+        1993,
+        'fatherValue',
+        'value',
+        '2020-12-20'
+    ),
+    (
+        'B92E89A4-3EBE-4DE8-8488-40EA8EB9A290',
+        '38829',
+        '2ce37479-1d31-43cb-8768-7d94064a99f3',
+        33,
+        'fatherFieldIds',
+        'fatherKeys',
+        'fatherKey',
+        388,
+        1993,
+        'fatherValue',
+        'value',
+        '2020-12-20'
+    ),
+    (
+        '66E665F2-87CE-4F24-BF83-6031995B33BF',
+        '38829',
+        '2ce37479-1d31-43cb-8768-7d94064a99f3',
+        33,
+        'fatherFieldIds',
+        'fatherKeys',
+        'fatherKey',
+        388,
+        1993,
+        'fatherValue',
+        'value',
+        '2020-12-20'
+    );
+
+CREATE TABLE tb_WebXmlPassIp(passIp VARCHAR(50) NULL);
+
+DESC tb_WebXmlPassIp;
+
+INSERT INTO
+    tb_WebXmlPassIp(passIp)
+VALUES
+    ('43432'),
+    ('288492'),
+    ('4253'),
+    ('64352'),
+    ('35542'),
+    ('746353'),
+    ('76435'),
+    ('4764'),
+    ('54324'),
+    ('854532');
+
+CREATE TABLE tb_ZContent(
+    id INT(4) NOT NULL AUTO_INCREMENT,
+    guid_key VARCHAR(50) NOT NULL,
+    Z_Content_Number VARCHAR(50) NULL,
+    A_Content_Number VARCHAR(50) NULL,
+    B_Content_Number VARCHAR(50) NULL,
+    C_Content_Number VARCHAR(50) NULL,
+    brand_id VARCHAR(50) NULL,
+    create_date VARCHAR(50) NULL,
+    VersionNum VARCHAR(50) NULL,
+    CONSTRAINT PK_tb_ZContent PRIMARY KEY(id, guid_key)
+);
+
+DESC tb_ZContent;
+
+INSERT INTO
+    tb_ZContent(
+        guid_key,
+        Z_Content_Number,
+        A_Content_Number,
+        B_Content_Number,
+        C_Content_Number,
+        brand_id,
+        create_date,
+        VersionNum
+    )
+VALUES
+    (
+        'e8c439c4-2bc0-4304-8053-e818071b5293',
+        'Z_Content_Number',
+        'A_Content_Number',
+        'B_Content_Number',
+        'C_Content_Number',
+        '8889284',
+        '2021-12-26',
+        '2.3'
+    ),
+    (
+        '2c5e1041-57f9-4b20-a338-43ba91ec6238',
+        'Z_Content_Number',
+        'A_Content_Number',
+        'B_Content_Number',
+        'C_Content_Number',
+        '8889284',
+        '2021-12-26',
+        '2.3'
+    ),
+    (
+        '36C4B890-E6CD-49BD-9197-7DAAA998F222',
+        'Z_Content_Number',
+        'A_Content_Number',
+        'B_Content_Number',
+        'C_Content_Number',
+        '8889284',
+        '2021-12-26',
+        '2.3'
+    ),
+    (
+        '6D386D49-A9C2-4C2B-8B88-486AFAFA879F',
+        'Z_Content_Number',
+        'A_Content_Number',
+        'B_Content_Number',
+        'C_Content_Number',
+        '8889284',
+        '2021-12-26',
+        '2.3'
+    ),
+    (
+        'e8c439c4-2bc0-4304-8053-e818071b5293',
+        'Z_Content_Number',
+        'A_Content_Number',
+        'B_Content_Number',
+        'C_Content_Number',
+        '8889284',
+        '2021-12-26',
+        '2.3'
+    ),
+    (
+        '5CC03D1E-81B4-4983-8D7A-C5EFE2054A48',
+        'Z_Content_Number',
+        'A_Content_Number',
+        'B_Content_Number',
+        'C_Content_Number',
+        '8889284',
+        '2021-12-26',
+        '2.3'
+    ),
+    (
+        'B92E89A4-3EBE-4DE8-8488-40EA8EB9A290',
+        'Z_Content_Number',
+        'A_Content_Number',
+        'B_Content_Number',
+        'C_Content_Number',
+        '8889284',
+        '2021-12-26',
+        '2.3'
+    ),
+    (
+        '5637F99E-F08E-40B0-91B5-7F5091269BE5',
+        'Z_Content_Number',
+        'A_Content_Number',
+        'B_Content_Number',
+        'C_Content_Number',
+        '8889284',
+        '2021-12-26',
+        '2.3'
+    ),
+    (
+        '66E665F2-87CE-4F24-BF83-6031995B33BF',
+        'Z_Content_Number',
+        'A_Content_Number',
+        'B_Content_Number',
+        'C_Content_Number',
+        '8889284',
+        '2021-12-26',
+        '2.3'
+    ),
+    (
+        'E42863F6-E9E0-46BA-8E20-D183B433DD3E',
+        'Z_Content_Number',
+        'A_Content_Number',
+        'B_Content_Number',
+        'C_Content_Number',
+        '8889284',
+        '2021-12-26',
+        '2.3'
+    );
+
+CREATE TABLE tb_ZContent_Error(
+    id INT(4) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    guid_key VARCHAR(50) NOT NULL,
+    Z_Content_Number VARCHAR(50) NULL,
+    A_Content_Number VARCHAR(50) NULL,
+    B_Content_Number VARCHAR(50) NULL,
+    C_Content_Number VARCHAR(50) NULL,
+    brand_id VARCHAR(50) NULL,
+    create_date VARCHAR(50) NULL,
+    VersionNum VARCHAR(50) NULL
+);
+
+DESC tb_ZContent_Error;
+
+INSERT INTO
+    tb_ZContent_Error(
+        guid_key,
+        Z_Content_Number,
+        A_Content_Number,
+        B_Content_Number,
+        C_Content_Number,
+        brand_id,
+        create_date,
+        VersionNum
+    )
+VALUES
+    (
+        'e8c439c4-2bc0-4304-8053-e818071b5293',
+        'Z_Content_Number',
+        'A_Content_Number',
+        'B_Content_Number',
+        'C_Content_Number',
+        '8889284',
+        '2021-12-26',
+        '2.3'
+    ),
+    (
+        '2c5e1041-57f9-4b20-a338-43ba91ec6238',
+        'Z_Content_Number',
+        'A_Content_Number',
+        'B_Content_Number',
+        'C_Content_Number',
+        '8889284',
+        '2021-12-26',
+        '2.3'
+    ),
+    (
+        '36C4B890-E6CD-49BD-9197-7DAAA998F222',
+        'Z_Content_Number',
+        'A_Content_Number',
+        'B_Content_Number',
+        'C_Content_Number',
+        '8889284',
+        '2021-12-26',
+        '2.3'
+    ),
+    (
+        '6D386D49-A9C2-4C2B-8B88-486AFAFA879F',
+        'Z_Content_Number',
+        'A_Content_Number',
+        'B_Content_Number',
+        'C_Content_Number',
+        '8889284',
+        '2021-12-26',
+        '2.3'
+    ),
+    (
+        'e8c439c4-2bc0-4304-8053-e818071b5293',
+        'Z_Content_Number',
+        'A_Content_Number',
+        'B_Content_Number',
+        'C_Content_Number',
+        '8889284',
+        '2021-12-26',
+        '2.3'
+    ),
+    (
+        '5CC03D1E-81B4-4983-8D7A-C5EFE2054A48',
+        'Z_Content_Number',
+        'A_Content_Number',
+        'B_Content_Number',
+        'C_Content_Number',
+        '8889284',
+        '2021-12-26',
+        '2.3'
+    ),
+    (
+        'B92E89A4-3EBE-4DE8-8488-40EA8EB9A290',
+        'Z_Content_Number',
+        'A_Content_Number',
+        'B_Content_Number',
+        'C_Content_Number',
+        '8889284',
+        '2021-12-26',
+        '2.3'
+    ),
+    (
+        '5637F99E-F08E-40B0-91B5-7F5091269BE5',
+        'Z_Content_Number',
+        'A_Content_Number',
+        'B_Content_Number',
+        'C_Content_Number',
+        '8889284',
+        '2021-12-26',
+        '2.3'
+    ),
+    (
+        '66E665F2-87CE-4F24-BF83-6031995B33BF',
+        'Z_Content_Number',
+        'A_Content_Number',
+        'B_Content_Number',
+        'C_Content_Number',
+        '8889284',
+        '2021-12-26',
+        '2.3'
+    ),
+    (
+        'E42863F6-E9E0-46BA-8E20-D183B433DD3E',
+        'Z_Content_Number',
+        'A_Content_Number',
+        'B_Content_Number',
+        'C_Content_Number',
+        '8889284',
+        '2021-12-26',
+        '2.3'
+    );
